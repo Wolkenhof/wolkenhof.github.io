@@ -5,7 +5,7 @@
 	}
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 80%) {
 
 
 	.portfolio-container {
@@ -71,7 +71,7 @@
 	}
 }
 
-@media (max-width: 991px) {
+@media (max-width: 80%) {
 
 	ul.top-menu {
 		float: none;
@@ -222,7 +222,7 @@
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 80%) {
 
 	.navbar-toggle {
 		margin-top: 15px;

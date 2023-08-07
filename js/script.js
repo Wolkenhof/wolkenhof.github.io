@@ -1,9 +1,7 @@
 /*jshint jquery:true */
 /*global $:true */
 
-var $ = jQuery.noConflict();
-
-$(document).ready(function($) {
+$(document).ready(function() {
 	"use strict";
 	/* global google: false */
 
@@ -11,6 +9,36 @@ $(document).ready(function($) {
 	/* =  portfolio isotope
 	/*-------------------------------------------------*/
 
+	// Dark mode detection
+	var isDarkMode = Cookies.get('Darkmode');
+	if (isDarkMode != null) {
+		switch (isDarkMode) {
+			case 'true':
+				document.getElementById('darkmode-button').checked = true;
+				break;
+			case 'false':
+				document.getElementById('darkmode-button').checked = false;
+				break;
+		}
+	}
+	else {
+		const runColorMode = (fn) => {
+			if (!window.matchMedia) {
+			  return;
+			}
+			
+			const query = window.matchMedia('(prefers-color-scheme: dark)');
+			fn(query.matches);
+			query.addEventListener('change', (event) => fn(event.matches));
+		}
+	
+		runColorMode((isDarkMode) => {
+		if (isDarkMode) {
+			document.getElementById('darkmode-button').checked = true;
+		}
+		})
+	}
+		
 	var winDow = $(window);
 		// Needed variables
 		var $container=$('.portfolio-container');
@@ -506,5 +534,5 @@ $.fn.countTo.defaults = {
 	refreshInterval: 100,	//how often the element should be updated
 	decimals: 0,	//the number of decimal places to show
 	onUpdate: null,	//callback method for every time the element is updated,
-	onComplete: null,//callback method for when the element finishes updating
+	onComplete: null //callback method for when the element finishes updating
 };

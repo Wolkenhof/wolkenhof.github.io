@@ -16,7 +16,7 @@ a {
 }
 
 #container {
-    background-image: url("/images/landscape-1844227.svg");
+    background-image: url("../images/landscape-1844227.svg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;

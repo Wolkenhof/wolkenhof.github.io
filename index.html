@@ -49,7 +49,7 @@
     <script type="text/javascript" src="/js/retina-1.1.0.min.js"></script>
     <script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
     <script type="text/javascript" src="/js/plugins-scroll.js"></script>
-    
+
     <script type="text/javascript" src="/js/waypoint.min.js"></script>
     <!--<script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>-->
     <script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
@@ -73,14 +73,15 @@
                             <li><a href="tel:+4958190360"><i class="fa fa-phone"></i><strong>+49 581 9036-0</strong></a>
                             </li>
                             <br>
-                            <li><a href="/download/Fernwartung_Wolkenhof.exe"><i class="fa fa-download"></i><strong>FERNWARTUNG</strong></a></li>
+                            <li><a href="/download/Fernwartung_Wolkenhof.exe"><i
+                                        class="fa fa-download"></i><strong>FERNWARTUNG</strong></a></li>
                         </ul>
                         <ul>
                             <a href="/"><img alt="Wolkenhof-Logo" src="/images/Wolkenhof_Logo.png"></a>
                         </ul>
                     </div>
                 </div>
- 
+
                 <!-- Header Menu -->
                 <div class="container">
                     <div class="navbar-header test">
@@ -163,7 +164,7 @@
             <div class="x5">
                 <div class="cloud"></div>
             </div>
-        </div>
+        </div> 
 
         <!-- Content Section -->
         <div id="content">
@@ -189,30 +190,29 @@
                                         zusammen die wolkenhof GmbH</h4>
                                 </div>
                             </div>
-                            <div class="normal-pointer" style="margin-bottom: 5%;">
-                                <!-- <h5>Unser Ziel ist es,
-                                    sowohl&nbsp;<strong>&ouml;kologisch</strong>,&nbsp;<strong>&ouml;konomisch</strong>
-                                    und&nbsp;<strong>sozial</strong> neue Wege zu gehen und&nbsp;<strong>nachhaltigere
-                                        Formen des Wirtschaftens</strong> zu entwickeln &ndash;&nbsp;<strong>f&uuml;r
-                                        eine faire Zukunft!</strong> Mit dem&nbsp;<strong>WOLKENHOF</strong> haben wir
-                                    ein Unternehmen gegr&uuml;ndet, das nicht nur unsere verschiedenen Bereiche
-                                    &ndash;&nbsp;<strong>Rechenzentrum</strong>,&nbsp;<strong>IT</strong>
-                                    und&nbsp;<strong>OFFICE</strong>&nbsp; &ndash; effizient verbindet, sondern auch
-                                    unsere&nbsp;<strong>Verantwortung f&uuml;r das Miteinander und die Umwelt</strong>
-                                    zur&nbsp;<strong>Basis unseres Handelns</strong> macht. So wird
-                                    unser&nbsp;<strong>gr&uuml;nes Rechenzentrum</strong> <strong>GREENCLOUD</strong> in
-                                    Lehm- und Holzbauweise gebaut. Um den&nbsp;<strong>CO2-Verbrauch</strong>
-                                    zu&nbsp;<strong>verringern</strong>, nutzen wir moderne Techniken,
-                                    wie&nbsp;<strong>W&auml;rmer&uuml;ckgewinnung</strong>
-                                    und&nbsp;<strong>&Ouml;kostrom</strong>. Zudem betrachten wir
-                                    unsere&nbsp;<strong>Arbeitszeit als Lebenszeit</strong> &ndash; und schaffen
-                                    daf&uuml;r Unternehmensstrukturen und ein Umfeld, in dem sich unsere Mitarbeitenden
-                                    wohlf&uuml;hlen.</h5> -->
-                            </div>
+                            <div id="value">100</div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <script>
+                function animateValue(obj, start, end, duration) {
+                    let startTimestamp = null;
+                    const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        obj.innerHTML = Math.floor(progress * (end - start) + start);
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                }
+
+                const obj = document.getElementById("value");
+                animateValue(obj, 100, 0, 5000);
+            </script>
 
             <!-- Script for Logo Darkmode -->
             <script>
@@ -338,8 +338,7 @@
                                 <div class="inner-hover-box">
                                     <h2>OFFICE</h2>
                                     <p>Druck-/Kopiersysteme und Software, Dokumentenmanagement (DMS)</p>
-                                    <a href="/druck-kopie-software" class="link"><i
-                                            class="fa fa-info-circle"></i></a>
+                                    <a href="/druck-kopie-software" class="link"><i class="fa fa-info-circle"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -351,8 +350,7 @@
                                 <div class="inner-hover-box">
                                     <h2>DATENSCHUTZSERVICE</h2>
                                     <p>sicheres Auslagern nach EU-DSGVO </p>
-                                    <a href="/datenschutzservice" class="link"><i
-                                            class="fa fa-info-circle"></i></a>
+                                    <a href="/datenschutzservice" class="link"><i class="fa fa-info-circle"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -450,7 +448,8 @@
         <!-- Dark-Mode Switch -->
         <div class='toggle-switch'>
             <label>
-                <input class="input-slide-dm" id="darkmode-button" type='checkbox' onclick="toggleDarkMode(), logoWechseln(), setCookie()">
+                <input class="input-slide-dm" id="darkmode-button" type='checkbox'
+                    onclick="toggleDarkMode(), logoWechseln(), setCookie()">
                 <span class='slider'></span>
             </label>
         </div>
@@ -515,7 +514,8 @@
                                     <li><span class="greencloud">wolkenhof</span> GmbH</li>
                                     <li><i class="fa fa-home"></i> Schillerstraße 13b, 29525 Uelzen</li>
                                     <li><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581 9036-0</a></li>
-                                    <li><i class="fa fa-envelope"></i> <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
+                                    <li><i class="fa fa-envelope"></i> <a
+                                            href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
                                     </li>
                                 </ul>
                             </div>

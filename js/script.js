@@ -536,3 +536,11 @@ $.fn.countTo.defaults = {
 	onUpdate: null,	//callback method for every time the element is updated,
 	onComplete: null //callback method for when the element finishes updating
 };
+
+/* ---------------------------------------------------------------------- */
+/*	Counter
+/* ---------------------------------------------------------------------- */
+
+
+
+

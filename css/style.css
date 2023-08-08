@@ -1018,7 +1018,8 @@ button {
 
 #container {
     padding-top: 100px;
-    background-image: url("/images/landscape-1844227.svg");
+    background-image: url("/images/Wolken.png");
+    /* background-image: linear-gradient(to top, #39aa34 0%, #95ceec 50%); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -5617,13 +5618,13 @@ input:checked~.slider::before {
 
 .cloud {
     background: #fff;
-    background: -moz-linear-gradient(top, #ddf2ece5 5%, #e2eebb 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ddf2ece5), color-stop(100%, #e2eebb));
-    background: -webkit-linear-gradient(top, #ddf2ece5 5%, #e2eebb 100%);
-    background: -o-linear-gradient(top, #ddf2ece5 5%, #e2eebb 100%);
-    background: -ms-linear-gradient(top, #ddf2ece5 5%, #e2eebb 100%);
-    background: linear-gradient(top, #ddf2ece5 5%, #e2eebb 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddf2ece5', endColorstr='#e2eebb', GradientType=0);
+    background: -moz-linear-gradient(top, #fff 5%, #fff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #fff), color-stop(100%, #fff));
+    background: -webkit-linear-gradient(top, #fff 5%, #fff 100%);
+    background: -o-linear-gradient(top, #fff 5%, #fff 100%);
+    background: -ms-linear-gradient(top, #fff 5%, #fff 100%);
+    background: linear-gradient(top, #fff 5%, #fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff', GradientType=0);
 
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
@@ -5640,7 +5641,7 @@ input:checked~.slider::before {
 
 .cloud:after,
 .cloud:before {
-    background: #ddf2ece5;
+    background: #fff;
     content: '';
     position: absolute;
     z-indeX: -1;

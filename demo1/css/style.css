@@ -151,6 +151,11 @@ ul.top-menu li a i {
     margin-right: 7px;
 }
 
+.dark-mode .top-menu li a i {
+    color: #fff;
+    margin-right: 7px;
+}
+
 header.active .top-line {
     height: 0;
     padding: 0;

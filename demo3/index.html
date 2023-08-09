@@ -212,18 +212,6 @@
                 var urspruenglicherPfad = "images/Wolkenhof-Logo_mit-UZ.png";
                 var aktuellerPfad = urspruenglicherPfad;
 
-                function logoWechseln() {
-                    var bildElement = document.getElementById("whlogo");
-                    if (aktuellerPfad === urspruenglicherPfad) {
-                        var neuerPfad = "images/Wolkenhof-Logo_mit-UZ_weiss.png";
-                        bildElement.src = neuerPfad;
-                        aktuellerPfad = neuerPfad;
-                    } else {
-                        bildElement.src = urspruenglicherPfad;
-                        aktuellerPfad = urspruenglicherPfad;
-                    }
-                }
-
                 function setCookie() {
                     var isDarkmode = document.getElementById('darkmode-button').checked;
                     if (isDarkmode == false) {

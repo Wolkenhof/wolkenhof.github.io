@@ -205,6 +205,47 @@
                     </div>
                 </div>
             </div>
+
+            <div class="stats-container counter">
+                <div class="box1">
+                    <div class="counter_content">
+                        <span class="number">50</span>
+                        <div class="text">
+                            Jahre Erfahrung
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="counter_content">
+                        <span class="number">58</span>
+                        <div class="text">
+                            Mitarbeiter
+                        </div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="counter_content">
+                        <span class="number">5</span>
+                        <div class="text">
+                            Standorte
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $('.number').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            </script>
             
 
             <!-- Script for Logo Darkmode -->

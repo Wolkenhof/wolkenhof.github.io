@@ -73,15 +73,14 @@
                             <li><a href="tel:+4958190360"><i class="fa fa-phone"></i><strong>+49 581 9036-0</strong></a>
                             </li>
                             <br>
-                            <li><a href="https://get.teamviewer.com/wolkenhof"><i
-                                        class="fa fa-download"></i><strong>FERNWARTUNG</strong></a></li>
+                            <li><a href="https://get.teamviewer.com/wolkenhof"><i class="fa fa-download"></i><strong>FERNWARTUNG</strong></a></li>
                         </ul>
                         <ul>
                             <a href="../"><img alt="Wolkenhof-Logo" src="images/Wolkenhof_Logo.png"></a>
                         </ul>
                     </div>
                 </div>
-
+ 
                 <!-- Header Menu -->
                 <div class="container">
                     <div class="navbar-header test">
@@ -137,7 +136,7 @@
                                         <li><a href="agb">AGB</a></li>
                                     </ul>
                                 </li>
-                                <li class="drop">
+                                <!-- <li class="drop">
                                     <a href="#">
                                         <span></span>DEMO
                                     </a>
@@ -146,35 +145,14 @@
                                         <li><a href="./demo2">Demo 2</a></li>
                                         <li><a href="./demo3">Demo 3</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
                 </div>
         </header>
 
-        <!-- Animated Clouds -->
-        <div id="background-wrap">
-            <div class="x1">
-                <div class="cloud"></div>
-            </div>
-
-            <div class="x2">
-                <div class="cloud"></div>
-            </div>
-
-            <div class="x3">
-                <div class="cloud"></div>
-            </div>
-
-            <div class="x4">
-                <div class="cloud"></div>
-            </div>
-
-            <div class="x5">
-                <div class="cloud"></div>
-            </div>
-        </div>
+        <div id="background-wrap" class="clouds"></div>
 
         <!-- Content Section -->
         <div id="content">
@@ -245,24 +223,12 @@
                     });
                 });
             </script>
-
+            
 
             <!-- Script for Logo Darkmode -->
             <script>
                 var urspruenglicherPfad = "images/Wolkenhof-Logo_mit-UZ.png";
                 var aktuellerPfad = urspruenglicherPfad;
-
-                function logoWechseln() {
-                    var bildElement = document.getElementById("whlogo");
-                    if (aktuellerPfad === urspruenglicherPfad) {
-                        var neuerPfad = "images/Wolkenhof-Logo_mit-UZ_weiss.png";
-                        bildElement.src = neuerPfad;
-                        aktuellerPfad = neuerPfad;
-                    } else {
-                        bildElement.src = urspruenglicherPfad;
-                        aktuellerPfad = urspruenglicherPfad;
-                    }
-                }
 
                 function setCookie() {
                     var isDarkmode = document.getElementById('darkmode-button').checked;

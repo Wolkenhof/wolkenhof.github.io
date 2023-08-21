@@ -986,7 +986,7 @@ p {
 }
 
 .dark-mode p {
-    color: #e8e6e3 !important;
+    color: #000000 !important;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;

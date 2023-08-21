@@ -144,29 +144,6 @@
 
     <div id="background-wrap" class="clouds"></div>
 
-    <!-- Animated Clouds -->
-    <!-- <div id="background-wrap">
-      <div class="x1">
-        <div class="cloud"></div>
-      </div>
-
-      <div class="x2">
-        <div class="cloud"></div>
-      </div>
-
-      <div class="x3">
-        <div class="cloud"></div>
-      </div>
-
-      <div class="x4">
-        <div class="cloud"></div>
-      </div>
-
-      <div class="x5">
-        <div class="cloud"></div>
-      </div>
-    </div> -->
-
     <!-- Content Section -->
     <div id="content">
       <!-- Banner -->
@@ -368,21 +345,21 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-4">
-                  <div class="container responsive text-center triggerAnimation animated" data-animate="bounceIn"
+                  <div class="container responsive text-center"
                     style="opacity: 0;">
                     <img class="img-responsive responsive" alt="Microsoft Gold Certified Partner"
                       src="upload/partner/microsoft_gold-certified_partner.jpg">
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="container responsive text-center triggerAnimation animated" data-animate="bounceIn"
+                  <div class="container responsive text-center"
                     style="opacity: 0;">
                     <a href="https://www.veeam.com/de" target="_blank"><img class="img-responsive responsive"
                         alt="veeam ProPartner" src="upload/partner/veeam_propartner.png"></a>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="container responsive text-center triggerAnimation animated" data-animate="bounceIn"
+                  <div class="container responsive text-center"
                     style="opacity: 0;">
                     <a href="https://www.wortmann.de" target="_blank"><img class="img-responsive responsive"
                         alt="terra Value Partner" src="/upload/partner/terra_value-partner.png"></a>
@@ -393,7 +370,7 @@
           </div>
 
           <!-- tempcore line -->
-          <div class="tempcore-line triggerAnimation animated" data-animate="fadeIn" style="opacity: 0;">
+          <div class="tempcore-line" style="opacity: 0;">
             <div class="container text-center">
               <div class="col-md-10 col-md-offset-1">
                 <a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAxpmlfoipg/dpn');">INFOS</a>
@@ -483,7 +460,7 @@
           <div class="row">
 
             <!-- Main Footer Logo -->
-            <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
+            <div class="col-md-3">
               <div class="widget footer-widgets text-widget">
                 <div>
                   <img class="img-responsive" alt="Logo Greencloud" src="/images/Wolkenhof_Logo-weiss.png">
@@ -493,7 +470,7 @@
             </div>
 
             <!-- Footer Contact Informations -->
-            <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
+            <div class="col-md-3">
               <div class="widget footer-widgets text-widget">
                 <ul>
                   <li><span class="greencloud">wolkenhof</span> GmbH</li>
@@ -507,7 +484,7 @@
             </div>
 
             <!-- Main Foot first Menu -->
-            <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
+            <div class="col-md-3">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
                   <li> <a href="#top">Start</a></li>
@@ -518,7 +495,7 @@
             </div>
 
             <!-- Main Foot second Menu -->
-            <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
+            <div class="col-md-3">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
                   <li> <a href="/wolkenhof-kontakt">Kontakt</a></li>
@@ -544,94 +521,6 @@
 
     </footer>
   </div>
-
-  <!-- Maybe Useless? -->
-
-  <!-- <div class="home-box">
-    </div>
-    <script type="text/javascript">
-
-        var tpj = jQuery;
-        tpj.noConflict();
-
-        tpj(document).ready(function () {
-
-            if (tpj.fn.cssOriginal != undefined)
-                tpj.fn.css = tpj.fn.cssOriginal;
-
-            var api = tpj('.fullwidthbanner').revolution(
-                {
-                    delay: 8000,
-                    startwidth: 1170,
-                    startheight: 500,
-
-                    onHoverStop: "off",						
-
-                    thumbWidth: 100,							
-                    thumbHeight: 50,
-                    thumbAmount: 3,
-
-                    hideThumbs: 0,
-                    navigationType: "none",				
-                    navigationArrows: "solo",				
-
-                    navigationStyle: "round",				
-
-
-                    navigationHAlign: "center",				
-                    navigationVAlign: "bottom",				
-                    navigationHOffset: 30,
-                    navigationVOffset: 40,
-
-                    soloArrowLeftHalign: "left",
-                    soloArrowLeftValign: "center",
-                    soloArrowLeftHOffset: 0,
-                    soloArrowLeftVOffset: 0,
-
-                    soloArrowRightHalign: "right",
-                    soloArrowRightValign: "center",
-                    soloArrowRightHOffset: 0,
-                    soloArrowRightVOffset: 0,
-
-                    touchenabled: "on",						
-
-                    stopAtSlide: 3,							
-                    stopAfterLoops: 0,						
-
-                    hideCaptionAtLimit: 0,					
-                    hideAllCaptionAtLilmit: 400,			
-                    hideSliderAtLimit: 0,					
-
-
-                    fullWidth: "on",
-
-                    shadow: 1
-                });
-
-            api.bind("revolution.slide.onloaded", function (e) {
-
-                jQuery('.tparrows').each(function () {
-                    var arrows = jQuery(this);
-
-                    var timer = setInterval(function () {
-
-                        if (arrows.css('opacity') == 1 && !jQuery('.tp-simpleresponsive').hasClass("mouseisover"))
-                            arrows.fadeOut(300);
-                    }, 3000);
-                })
-
-                jQuery('.tp-simpleresponsive, .tparrows').hover(function () {
-                    jQuery('.tp-simpleresponsive').addClass("mouseisover");
-                    jQuery('body').find('.tparrows').each(function () {
-                        jQuery(this).fadeIn(300);
-                    });
-                }, function () {
-                    if (!jQuery(this).hasClass("tparrows"))
-                        jQuery('.tp-simpleresponsive').removeClass("mouseisover");
-                })
-            });
-        });
-    </script> -->
 </body>
 
 </html>

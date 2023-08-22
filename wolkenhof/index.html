@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
   <link rel="manifest" href="/images/favicons/manifest.json">
- 
+
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -49,7 +49,7 @@
   <script type="text/javascript" src="/js/retina-1.1.0.min.js"></script>
   <script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
   <script type="text/javascript" src="/js/plugins-scroll.js"></script>
-  
+
   <script type="text/javascript" src="/js/waypoint.min.js"></script>
   <!--<script type="text/javascript" src="js/jquery.imagesloaded.min.js"></script>-->
   <script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
@@ -73,7 +73,7 @@
               <li><a href="tel:+4958190360"><i class="fa fa-phone"></i><strong>+49 581 9036-0</strong></a>
               </li>
               <br>
-              <li><a href="/download/Fernwartung_Wolkenhof.exe"><i
+              <li><a href="https://get.teamviewer.com/wolkenhof"><i
                     class="fa fa-download"></i><strong>FERNWARTUNG</strong></a></li>
             </ul>
             <ul>
@@ -96,7 +96,7 @@
                 <li class="drop"><a class="active" href="/#about"><span></span>Wolkenhof</a>
                   <ul class="drop-down">
                     <li><a href="/wolkenhof">Der Wolkenhof</a></li>
-                    <li><a href="/wolkenhof#standorte">Unsere Standorte</a></li>
+                    <li><a href="/wolkenhof/#standorte">Unsere Standorte</a></li>
                     <li><a href="/team">Unser Team</a></li>
                     <li><a href="/netzwerk-partner">Netzwerk &amp; Partner</a></li>
                     <li><a href="/karriere">Jobs &amp; Karriere</a></li>
@@ -104,7 +104,7 @@
                 </li>
                 <li class="drop"><a href="/#bereiche"><span></span>Leistungen</a>
                   <ul class="drop-down">
-                    <li><a href="/greencloud-rechenzentrum">GREENCLOUD</a></li>
+                    <li><a href="/greencloud">GREENCLOUD</a></li>
                     <li><a href="/it">IT</a>
                       <ul class="drop-down level3">
                         <li><a href="/it/it-service">IT-Service</a></li>
@@ -142,7 +142,9 @@
         </div>
     </header>
 
-    <!-- Animated Clouds -->
+    <div id="background-wrap" class="clouds"></div>
+
+    <!-- Animated Clouds
     <div id="background-wrap">
       <div class="x1">
         <div class="cloud"></div>
@@ -163,7 +165,7 @@
       <div class="x5">
         <div class="cloud"></div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Content Section -->
     <div id="content">
@@ -221,7 +223,7 @@
         else {
           const runColorMode = (fn) => {
             if (!window.matchMedia) {
-              return; 
+              return;
             }
 
             const query = window.matchMedia('(prefers-color-scheme: dark)');
@@ -328,6 +330,25 @@
         </div>
       </div>
 
+      <div id="standorte" class="pt-75 background-box">
+        <div class="container">
+          <div class="service-section">
+            <div class="title-section">
+              <div class="container" style="">
+                <div class="col-md-10 col-md-offset-1">
+                  <h1><span class="blue">wolkenhof Standorte</span></h1>
+                  <h3>Wir führen unsere verschiedenen Unternehmenszweige zusammen</h3>
+                  <p>Der <span class="greencloud">wolkenhof</span> baut im Uelzener Stadtteil Oldenstadt sein neues
+                    Firmenzentrum in ökologischer Bauweise. Dabei werden die beiden Firmenzweige Office und IT
+                    zusammengeführt. Für die Kunden im Kreis Hamburg bleibt in Geesthacht auch weiterhin ein technischer
+                    Service-Standort erhalten.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- slider 
       ================================================== -->
       <div class="pic-ctn">
@@ -368,7 +389,8 @@
     <!-- Dark-Mode Switch -->
     <div class='toggle-switch'>
       <label>
-        <input id="darkmode-button" type='checkbox' onclick="toggleDarkMode(), logoWechseln(), setCookie()">
+        <input class="input-slide-dm" id="darkmode-button" type='checkbox'
+          onclick="toggleDarkMode(), logoWechseln(), setCookie()">
         <span class='slider'></span>
       </label>
     </div>
@@ -379,9 +401,6 @@
         element.classList.toggle("dark-mode");
       }
     </script>
-
-    <!-- Back to top Button -->
-    <a href="#" class="top hide" id="top"><i class="fa fa-arrow-circle-o-up"></i> </a>
 
     <script>
       const scrollToTopButton = document.getElementById('top');
@@ -432,7 +451,8 @@
                   <li><span class="greencloud">wolkenhof</span> GmbH</li>
                   <li><i class="fa fa-home"></i> Schillerstraße 13b, 29525 Uelzen</li>
                   <li><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581 9036-0</a></li>
-                  <li><i class="fa fa-envelope"></i><a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
+                  <li><i class="fa fa-envelope"></i><a
+                      href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
                   </li>
                 </ul>
               </div>
@@ -477,93 +497,7 @@
     </footer>
   </div>
 
-  <!-- Maybe Useless? -->
 
-  <!-- <div class="home-box">
-    </div>
-    <script type="text/javascript">
-
-        var tpj = jQuery;
-        tpj.noConflict();
-
-        tpj(document).ready(function () {
-
-            if (tpj.fn.cssOriginal != undefined)
-                tpj.fn.css = tpj.fn.cssOriginal;
-
-            var api = tpj('.fullwidthbanner').revolution(
-                {
-                    delay: 8000,
-                    startwidth: 1170,
-                    startheight: 500,
-
-                    onHoverStop: "off",						
-
-                    thumbWidth: 100,							
-                    thumbHeight: 50,
-                    thumbAmount: 3,
-
-                    hideThumbs: 0,
-                    navigationType: "none",				
-                    navigationArrows: "solo",				
-
-                    navigationStyle: "round",				
-
-
-                    navigationHAlign: "center",				
-                    navigationVAlign: "bottom",				
-                    navigationHOffset: 30,
-                    navigationVOffset: 40,
-
-                    soloArrowLeftHalign: "left",
-                    soloArrowLeftValign: "center",
-                    soloArrowLeftHOffset: 0,
-                    soloArrowLeftVOffset: 0,
-
-                    soloArrowRightHalign: "right",
-                    soloArrowRightValign: "center",
-                    soloArrowRightHOffset: 0,
-                    soloArrowRightVOffset: 0,
-
-                    touchenabled: "on",						
-
-                    stopAtSlide: 3,							
-                    stopAfterLoops: 0,						
-
-                    hideCaptionAtLimit: 0,					
-                    hideAllCaptionAtLilmit: 400,			
-                    hideSliderAtLimit: 0,					
-
-
-                    fullWidth: "on",
-
-                    shadow: 1
-                });
-
-            api.bind("revolution.slide.onloaded", function (e) {
-
-                jQuery('.tparrows').each(function () {
-                    var arrows = jQuery(this);
-
-                    var timer = setInterval(function () {
-
-                        if (arrows.css('opacity') == 1 && !jQuery('.tp-simpleresponsive').hasClass("mouseisover"))
-                            arrows.fadeOut(300);
-                    }, 3000);
-                })
-
-                jQuery('.tp-simpleresponsive, .tparrows').hover(function () {
-                    jQuery('.tp-simpleresponsive').addClass("mouseisover");
-                    jQuery('body').find('.tparrows').each(function () {
-                        jQuery(this).fadeIn(300);
-                    });
-                }, function () {
-                    if (!jQuery(this).hasClass("tparrows"))
-                        jQuery('.tp-simpleresponsive').removeClass("mouseisover");
-                })
-            });
-        });
-    </script> -->
 </body>
 
 </html>

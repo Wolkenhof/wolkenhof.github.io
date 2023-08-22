@@ -3,17 +3,17 @@
 
 var $ = jQuery.noConflict();
 
-$(document).ready(function($) {
+$(document).ready(function ($) {
 	"use strict";
 
 	/*-------------------------------------------------*/
 	/* =   Smooth scroll
 	/*-------------------------------------------------*/
 
-	$('#container').imagesLoaded(function(){
+	$('#container').imagesLoaded(function () {
 		//Get Sections top position
-		function getTargetTop(elem){
-			
+		function getTargetTop(elem) {
+
 			//gets the id of the section header
 			//from the navigation's href e.g. ("#html")
 			var id = elem.attr("href");
@@ -30,14 +30,14 @@ $(document).ready(function($) {
 
 		var elemHref = $('.navbar-right a[href^="#"]');
 
-		elemHref.click(function(event) {
-			
+		elemHref.click(function (event) {
+
 			//gets the distance from the top of the 
 			//section refenced in the href.
 			var target = getTargetTop($(this));
 
 			//scrolls to that section.
-			$('html, body').animate({scrollTop:target}, 500);
+			$('html, body').animate({ scrollTop: target }, 500);
 
 			//prevent the browser from jumping down to section.
 			event.preventDefault();
@@ -48,21 +48,21 @@ $(document).ready(function($) {
 
 		// Go through each section to see if it's at the top.
 		// if it is add an active class
-		function checkSectionSelected(scrolledTo){
-			
+		function checkSectionSelected(scrolledTo) {
+
 			//How close the top has to be to the section.
 			var threshold = 100;
 
 			var i;
 
 			for (i = 0; i < sections.length; i++) {
-				
+
 				//get next nav item
 				var section = $(sections[i]);
 
 				//get the distance from top
 				var target = getTargetTop(section);
-				
+
 				//Check if section is at the top of the page.
 				if (scrolledTo > target - threshold && scrolledTo < target + threshold) {
 
@@ -79,7 +79,7 @@ $(document).ready(function($) {
 		//Check if page is already scrolled to a section.
 		checkSectionSelected($(window).scrollTop());
 
-		$(window).scroll(function(){
+		$(window).scroll(function () {
 			checkSectionSelected($(window).scrollTop());
 		});
 

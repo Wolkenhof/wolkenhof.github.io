@@ -1,7 +1,7 @@
 /*jshint jquery:true */
 /*global $:true */
 
-$(document).ready(function() {
+$(document).ready(function () {
 	"use strict";
 	/* global google: false */
 
@@ -24,99 +24,99 @@ $(document).ready(function() {
 	else {
 		const runColorMode = (fn) => {
 			if (!window.matchMedia) {
-			  return;
+				return;
 			}
-			
+
 			const query = window.matchMedia('(prefers-color-scheme: dark)');
 			fn(query.matches);
 			query.addEventListener('change', (event) => fn(event.matches));
 		}
-	
+
 		runColorMode((isDarkMode) => {
-		if (isDarkMode) {
-			document.getElementById('darkmode-button').checked = true;
-		}
+			if (isDarkMode) {
+				document.getElementById('darkmode-button').checked = true;
+			}
 		})
 	}
-		
+
 	var winDow = $(window);
-		// Needed variables
-		var $container=$('.portfolio-container');
-		var $filter=$('.filter');
+	// Needed variables
+	var $container = $('.portfolio-container');
+	var $filter = $('.filter');
 
-		try{
-			$container.imagesLoaded( function(){
-				$container.trigger('resize');
-				$container.isotope({
-					filter:'*',
-					layoutMode:'masonry',
-					animationOptions:{
-						duration:750,
-						easing:'linear'
-					}
-				});
-
-				$('.triggerAnimation').waypoint(function() {
-					var animation = $(this).attr('data-animate');
-					$(this).css('opacity', '');
-					$(this).addClass("animated " + animation);
-
-				},
-					{
-						offset: '80%',
-						triggerOnce: true
-					}
-				);
+	try {
+		$container.imagesLoaded(function () {
+			$container.trigger('resize');
+			$container.isotope({
+				filter: '*',
+				layoutMode: 'masonry',
+				animationOptions: {
+					duration: 750,
+					easing: 'linear'
+				}
 			});
-		} catch(err) {
+
+			$('.triggerAnimation').waypoint(function () {
+				var animation = $(this).attr('data-animate');
+				$(this).css('opacity', '');
+				$(this).addClass("animated " + animation);
+
+			},
+				{
+					offset: '80%',
+					triggerOnce: true
+				}
+			);
+		});
+	} catch (err) {
+	}
+
+	winDow.bind('resize', function () {
+		var selector = $filter.find('a.active').attr('data-filter');
+
+		try {
+			$container.isotope({
+				filter: selector,
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false,
+				}
+			});
+		} catch (err) {
 		}
+		return false;
+	});
 
-		winDow.bind('resize', function(){
-			var selector = $filter.find('a.active').attr('data-filter');
+	// Isotope Filter 
+	$filter.find('a').click(function () {
+		var selector = $(this).attr('data-filter');
 
-			try {
-				$container.isotope({ 
-					filter	: selector,
-					animationOptions: {
-						duration: 750,
-						easing	: 'linear',
-						queue	: false,
-					}
-				});
-			} catch(err) {
-			}
-			return false;
-		});
-		
-		// Isotope Filter 
-		$filter.find('a').click(function(){
-			var selector = $(this).attr('data-filter');
+		try {
+			$container.isotope({
+				filter: selector,
+				animationOptions: {
+					duration: 750,
+					easing: 'linear',
+					queue: false,
+				}
+			});
+		} catch (err) {
 
-			try {
-				$container.isotope({ 
-					filter	: selector,
-					animationOptions: {
-						duration: 750,
-						easing	: 'linear',
-						queue	: false,
-					}
-				});
-			} catch(err) {
-
-			}
-			return false;
-		});
+		}
+		return false;
+	});
 
 
-	var filterItemA	= $('.filter li a');
+	var filterItemA = $('.filter li a');
 
-		filterItemA.on('click', function(){
-			var $this = $(this);
-			if ( !$this.hasClass('active')) {
-				filterItemA.removeClass('active');
-				$this.addClass('active');
-			}
-		});
+	filterItemA.on('click', function () {
+		var $this = $(this);
+		if (!$this.hasClass('active')) {
+			filterItemA.removeClass('active');
+			$this.addClass('active');
+		}
+	});
 
 	/*-------------------------------------------------*/
 	/* =  fullwidth carousell
@@ -124,13 +124,13 @@ $(document).ready(function() {
 	try {
 		var fullCarousell = $("#owl-demo");
 		fullCarousell.owlCarousel({
-			navigation : true,
-			afterInit : function(elem){
+			navigation: true,
+			afterInit: function (elem) {
 				var that = this;
 				that.owlControls.prependTo(elem);
 			}
 		});
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -140,35 +140,35 @@ $(document).ready(function() {
 	try {
 		$.browserSelector();
 		// Adds window smooth scroll on chrome.
-		if($("html").hasClass("chrome")) {
+		if ($("html").hasClass("chrome")) {
 			$.smoothScroll();
 		}
-	} catch(err) {
+	} catch (err) {
 
 	}
-	
+
 	/*-------------------------------------------------*/
 	/* =  Animated content
 	/*-------------------------------------------------*/
 
 	try {
 		/* ================ ANIMATED CONTENT ================ */
-        if ($(".animated")[0]) {
-            $('.animated').css('opacity', '0');
-        }
+		if ($(".animated")[0]) {
+			$('.animated').css('opacity', '0');
+		}
 
-        $('.triggerAnimation').waypoint(function() {
-            var animation = $(this).attr('data-animate');
-            $(this).css('opacity', '');
-            $(this).addClass("animated " + animation);
+		$('.triggerAnimation').waypoint(function () {
+			var animation = $(this).attr('data-animate');
+			$(this).css('opacity', '');
+			$(this).addClass("animated " + animation);
 
-        },
-                {
-                    offset: '80%',
-                    triggerOnce: true
-                }
-        );
-	} catch(err) {
+		},
+			{
+				offset: '80%',
+				triggerOnce: true
+			}
+		);
+	} catch (err) {
 
 	}
 
@@ -183,44 +183,44 @@ $(document).ready(function() {
 			slideshowSpeed: 6000,
 			easing: "swing"
 		});
-	} catch(err) {
+	} catch (err) {
 
 	}
 
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Map
 	/* ---------------------------------------------------------------------- */
-	var contact = {"lat":"51.51152", "lon":"-0.104198"}; //Change a map coordinate here!
+	var contact = { "lat": "51.51152", "lon": "-0.104198" }; //Change a map coordinate here!
 
 	try {
 		var mapContainer = $('.map');
 		mapContainer.gmap3({
-			infowindow:{
-				address:"http://goo.gl/maps/Mt7xc",
-				options:{
+			infowindow: {
+				address: "http://goo.gl/maps/Mt7xc",
+				options: {
 					content: "London, Farringdon st!"
 				},
-				events:{
-					closeclick: function(infowindow){
+				events: {
+					closeclick: function (infowindow) {
 						alert("closing : " + infowindow.getContent());
 					}
 				}
 			},
 			action: 'addMarker',
-			marker:{
-				options:{
-					icon : new google.maps.MarkerImage('images/marker.png')
+			marker: {
+				options: {
+					icon: new google.maps.MarkerImage('images/marker.png')
 				}
 			},
 			latLng: [contact.lat, contact.lon],
-			map:{
+			map: {
 				center: [contact.lat, contact.lon],
 				zoom: 14
-				},
 			},
-			{action: 'setOptions', args:[{scrollwheel:false}]}
+		},
+			{ action: 'setOptions', args: [{ scrollwheel: false }] }
 		);
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -233,7 +233,7 @@ $(document).ready(function() {
 		$('.zoom').magnificPopup({
 			type: 'image'
 		});
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -242,26 +242,26 @@ $(document).ready(function() {
 	/* ---------------------------------------------------------------------- */
 	var clickElem = $('a.accord-link');
 
-	clickElem.on('click', function(e){
+	clickElem.on('click', function (e) {
 		e.preventDefault();
 
 		var $this = $(this),
 			parentCheck = $this.parents('.accord-elem'),
 			accordItems = $('.accord-elem'),
 			accordContent = $('.accord-content');
-			
-		if( !parentCheck.hasClass('active')) {
 
-			accordContent.slideUp(400, function(){
+		if (!parentCheck.hasClass('active')) {
+
+			accordContent.slideUp(400, function () {
 				accordItems.removeClass('active');
 			});
-			parentCheck.find('.accord-content').slideDown(400, function(){
+			parentCheck.find('.accord-content').slideDown(400, function () {
 				parentCheck.addClass('active');
 			});
 
 		} else {
 
-			accordContent.slideUp(400, function(){
+			accordContent.slideUp(400, function () {
 				accordItems.removeClass('active');
 			});
 
@@ -273,7 +273,7 @@ $(document).ready(function() {
 	/* ---------------------------------------------------------------------- */
 	var clickTab = $('.tab-links li a');
 
-	clickTab.on('click', function(e){
+	clickTab.on('click', function (e) {
 		e.preventDefault();
 
 		var $this = $(this),
@@ -281,7 +281,7 @@ $(document).ready(function() {
 			tabCont = $('.tab-content-sidebar'),
 			tabContIndex = $(".tab-content-sidebar:eq(" + hisIndex + ")");
 
-		if( !$this.hasClass('active')) {
+		if (!$this.hasClass('active')) {
 
 			clickTab.removeClass('active');
 			$this.addClass('active');
@@ -296,48 +296,48 @@ $(document).ready(function() {
 	/* ---------------------------------------------------------------------- */
 	/*	Bootstrap tabs
 	/* ---------------------------------------------------------------------- */
-	
+
 	var tabId = $('.nav-tabs a');
-	try{		
+	try {
 		tabId.click(function (e) {
 			e.preventDefault();
 			$(this).tab('show');
 		});
-	} catch(err) {
+	} catch (err) {
 	}
-	
+
 	/*-------------------------------------------------*/
 	/* = slider Testimonial
 	/*-------------------------------------------------*/
 
 	var slidertestimonial = $('.bxslider');
-	try{		
+	try {
 		slidertestimonial.bxSlider({
 			mode: 'horizontal'
 		});
-	} catch(err) {
+	} catch (err) {
 	}
 
 	/*-------------------------------------------------*/
 	/* = video background
 	/*-------------------------------------------------*/
 
-	try{
+	try {
 		jQuery(".player").mb_YTPlayer();
-	} catch(err) {
+	} catch (err) {
 	}
 
 	/*-------------------------------------------------*/
 	/* = skills animate
 	/*-------------------------------------------------*/
 
-	try{
+	try {
 
 		var skillBar = $('.skills-bars');
-		skillBar.appear(function() {
+		skillBar.appear(function () {
 
 			var animateElement = $(".meter > span");
-			animateElement.each(function() {
+			animateElement.each(function () {
 				$(this)
 					.data("origWidth", $(this).width())
 					.width(0)
@@ -347,15 +347,15 @@ $(document).ready(function() {
 			});
 
 		});
-	} catch(err) {
+	} catch (err) {
 	}
 
 	/*-------------------------------------------------*/
 	/* =  count increment
 	/*-------------------------------------------------*/
 	try {
-		$('.counter').appear(function() {
-			$('.counter').each(function(){
+		$('.counter').appear(function () {
+			$('.counter').each(function () {
 				var dataperc = $(this).attr('data-perc');
 				$(this).find('.numb').delay(6000).countTo({
 					from: 0,
@@ -365,7 +365,7 @@ $(document).ready(function() {
 				});
 			});
 		});
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -375,16 +375,16 @@ $(document).ready(function() {
 
 	var AccordElement = $('a.accordion-link');
 
-	AccordElement.on('click', function(e){
+	AccordElement.on('click', function (e) {
 		e.preventDefault();
 		var elemSlide = $(this).parent('li').find('.accordion-list-content');
 
-		if( !$(this).hasClass('active') ) {
+		if (!$(this).hasClass('active')) {
 			$(this).addClass('active');
 			elemSlide.slideDown(200);
 		} else {
 			$(this).removeClass('active');
-			elemSlide.slideUp(200);			
+			elemSlide.slideUp(200);
 		}
 	});
 
@@ -394,25 +394,25 @@ $(document).ready(function() {
 
 	try {
 
-		for( var i = 100; i <= 10000; i++ ){
+		for (var i = 100; i <= 10000; i++) {
 			$('#start-val').append(
 				'<option value="' + i + '">' + i + '</option>'
 			);
 		}
 		// Initialise noUiSlider
 		$('.noUiSlider').noUiSlider({
-			range: [0,1600],
-			start: [0,1000],
+			range: [0, 1600],
+			start: [0, 1000],
 			handles: 2,
 			connect: true,
 			step: 1,
 			serialization: {
-				to: [ $('#start-val'),
-					$('#end-val') ],
+				to: [$('#start-val'),
+				$('#end-val')],
 				resolution: 1
 			}
 		});
-	} catch(err) {
+	} catch (err) {
 
 	}
 
@@ -423,20 +423,20 @@ $(document).ready(function() {
 	var submitContact = $('#submit_contact'),
 		message = $('#msg');
 
-	submitContact.on('click', function(e){
+	submitContact.on('click', function (e) {
 		e.preventDefault();
 
 		var $this = $(this);
-		
+
 		$.ajax({
 			type: "POST",
 			url: 'contact.php',
 			dataType: 'json',
 			cache: false,
 			data: $('#contact-form').serialize(),
-			success: function(data) {
+			success: function (data) {
 
-				if(data.info !== 'error'){
+				if (data.info !== 'error') {
 					$this.parents('form').find('input[type=text],textarea,select').filter(':visible').val('');
 					message.hide().removeClass('success').removeClass('error').addClass('success').html(data.msg).fadeIn('slow').delay(5000).fadeOut('slow');
 				} else {
@@ -450,38 +450,38 @@ $(document).ready(function() {
 	/*	Header animate after scroll
 	/* ---------------------------------------------------------------------- */
 
-	(function() {
+	(function () {
 
 		var docElem = document.documentElement,
 			didScroll = false,
 			changeHeaderOn = 200;
-			document.querySelector( 'header' );
+		document.querySelector('header');
 		function init() {
-			window.addEventListener( 'scroll', function() {
-				if( !didScroll ) {
+			window.addEventListener('scroll', function () {
+				if (!didScroll) {
 					didScroll = true;
-					setTimeout( scrollPage, 250 );
+					setTimeout(scrollPage, 250);
 				}
-			}, false );
+			}, false);
 		}
-		
+
 		function scrollPage() {
 			var sy = scrollY();
-			if ( sy >= changeHeaderOn ) {
-				$( 'header' ).addClass('active');
+			if (sy >= changeHeaderOn) {
+				$('header').addClass('active');
 			}
 			else {
-				$( 'header' ).removeClass('active');
+				$('header').removeClass('active');
 			}
 			didScroll = false;
 		}
-		
+
 		function scrollY() {
 			return window.pageYOffset || docElem.scrollTop;
 		}
-		
+
 		init();
-		
+
 	})();
 
 });
@@ -492,7 +492,7 @@ $(document).ready(function() {
 /*	Count project function
 /* ---------------------------------------------------------------------- */
 
-$.fn.countTo = function(options) {
+$.fn.countTo = function (options) {
 	// merge the default plugin settings with the custom options
 	options = $.extend({}, $.fn.countTo.defaults, options || {});
 
@@ -500,7 +500,7 @@ $.fn.countTo = function(options) {
 	var loops = Math.ceil(options.speed / options.refreshInterval),
 		increment = (options.to - options.from) / loops;
 
-	return $(this).delay(1000).each(function() {
+	return $(this).delay(1000).each(function () {
 		var _this = this,
 			loopCount = 0,
 			value = options.from,
@@ -511,7 +511,7 @@ $.fn.countTo = function(options) {
 			loopCount++;
 			$(_this).html(value.toFixed(options.decimals));
 
-			if (typeof(options.onUpdate) == 'function') {
+			if (typeof (options.onUpdate) == 'function') {
 				options.onUpdate.call(_this, value);
 			}
 
@@ -519,7 +519,7 @@ $.fn.countTo = function(options) {
 				clearInterval(interval);
 				value = options.to;
 
-				if (typeof(options.onComplete) == 'function') {
+				if (typeof (options.onComplete) == 'function') {
 					options.onComplete.call(_this, value);
 				}
 			}

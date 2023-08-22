@@ -1,4 +1,3 @@
-
 @media (max-width: 1300px) {
 	.portfolio-box.fullwidth .portfolio-container .project-post {
 		width: 25%;
@@ -89,16 +88,16 @@
 		margin-bottom: 8px;
 	}
 
-	.navbar-default .navbar-nav > li > a {
+	.navbar-default .navbar-nav>li>a {
 		font-size: 14px;
 		padding: 44px 8px;
 	}
 
-	header .navbar-default .navbar-nav > li.drop > a {
+	header .navbar-default .navbar-nav>li.drop>a {
 		padding-right: 8px;
 	}
 
-	.navbar-default .navbar-nav > li.drop > a:after {
+	.navbar-default .navbar-nav>li.drop>a:after {
 		display: none !important;
 	}
 
@@ -115,9 +114,9 @@
 	}
 
 	.tp-caption.modern_medium_light {
-	    padding: 10px 20px;
-	    text-align: center;
-	    width: 200px;   
+		padding: 10px 20px;
+		text-align: center;
+		width: 200px;
 	}
 
 	.services-box1 .services-post {
@@ -216,7 +215,7 @@
 		margin-bottom: 40px;
 	}
 
-	header.header6 .navbar-default .navbar-nav > li a i {
+	header.header6 .navbar-default .navbar-nav>li a i {
 		display: none;
 	}
 
@@ -238,27 +237,26 @@
 	}
 
 	.navbar-collapse {
-	    border-bottom: 1px solid #e1e1e1;
-	}
-	
-
-	.navbar-default .navbar-header {
+		border-bottom: 1px solid #e1e1e1;
 	}
 
-	.navbar-default .navbar-nav > li > a {
-	    font-size: 15px;
-	    padding: 7px;
+
+	.navbar-default .navbar-header {}
+
+	.navbar-default .navbar-nav>li>a {
+		font-size: 15px;
+		padding: 7px;
 	}
 
-	.navbar-default .navbar-nav > li > a span {
-	    display: none;
+	.navbar-default .navbar-nav>li>a span {
+		display: none;
 	}
 
-	.navbar-default .navbar-nav > li > a:hover {
-	    color: #54babb;
+	.navbar-default .navbar-nav>li>a:hover {
+		color: #54babb;
 	}
 
-	.navbar-default .navbar-nav > li > ul.drop-down {
+	.navbar-default .navbar-nav>li>ul.drop-down {
 		position: relative;
 		visibility: visible;
 		opacity: 1;
@@ -276,43 +274,42 @@
 		transition: transform 0.4s, opacity 0.1s;
 	}
 
-	.navbar-default .navbar-nav > li > ul.drop-down li {
-	}
+	.navbar-default .navbar-nav>li>ul.drop-down li {}
 
-	.navbar-default .navbar-nav > li > ul.drop-down li a {
+	.navbar-default .navbar-nav>li>ul.drop-down li a {
 		background: none;
 		padding: 6px;
 		color: #e2e2e2;
 		border: none !important;
 	}
 
-	.navbar-default .navbar-nav > li > ul.drop-down li a:hover {
-		color: #27dd3f; 
+	.navbar-default .navbar-nav>li>ul.drop-down li a:hover {
+		color: #27dd3f;
 	}
 
 	ul.drop-down li ul.drop-down.level3 {
 		position: relative;
 		left: 0;
-	    visibility: visible;
-	    opacity: 1;
-	    -webkit-transform: rotateY(0deg);
-	      -moz-transform: rotateY(0deg);
-	      -ms-transform: rotateY(0deg);
-	      -o-transform: rotateY(0deg);
-	      transform: rotateY(0deg);
-	      -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-	      -moz-transition: -moz-transform 0.4s, opacity 0.1s;
-	      -mos-transition: -mos-transform 0.4s, opacity 0.1s;
-	      -o-transition: -o-transform 0.4s, opacity 0.1s;
-	      transition: transform 0.4s, opacity 0.1s;
-  	}
+		visibility: visible;
+		opacity: 1;
+		-webkit-transform: rotateY(0deg);
+		-moz-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		-o-transform: rotateY(0deg);
+		transform: rotateY(0deg);
+		-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+		-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+		-mos-transition: -mos-transform 0.4s, opacity 0.1s;
+		-o-transition: -o-transform 0.4s, opacity 0.1s;
+		transition: transform 0.4s, opacity 0.1s;
+	}
 
-  	.tp-caption.modern_small_text_dark {
-  		display: none;
-  	}
+	.tp-caption.modern_small_text_dark {
+		display: none;
+	}
 
 	.tp-caption.modern_medium_light {
-	    display: none;  
+		display: none;
 	}
 
 	.tp-rightarrow.default,
@@ -330,11 +327,11 @@
 	}
 
 	ul.clients-logo li a {
-	    display: block;
-	    height: 120px;
-	    padding: 45px 10px 0;
-	    text-align: center;
-	    background: rgba(0,0,0,0.2);
+		display: block;
+		height: 120px;
+		padding: 45px 10px 0;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.2);
 	}
 
 	.portfolio-container {
@@ -373,14 +370,14 @@
 		display: none;
 	}
 
-	header.header2 .navbar-default .navbar-nav > li:hover > a,
-	header.header2 .navbar-default .navbar-nav > li > a.active {
-	    color: #54babb;
+	header.header2 .navbar-default .navbar-nav>li:hover>a,
+	header.header2 .navbar-default .navbar-nav>li>a.active {
+		color: #54babb;
 	}
 
-	header.header4 .navbar-default .navbar-nav > li:hover > a,
-	header.header4 .navbar-default .navbar-nav > li > a.active {
-	    color: #54babb;
+	header.header4 .navbar-default .navbar-nav>li:hover>a,
+	header.header4 .navbar-default .navbar-nav>li>a.active {
+		color: #54babb;
 	}
 }
 

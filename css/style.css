@@ -859,7 +859,7 @@ header.header6 .navbar-default .navbar-nav>li a i {
 /*-------------------------------------------------*/
 
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -5988,6 +5988,7 @@ https://mkrtchyan.ga
     justify-content: center;
     font-family: 'Roboto';
 }
+
 .stats-container .box2 {
     margin-left: 40%;
     text-align: center;
@@ -6008,6 +6009,7 @@ https://mkrtchyan.ga
     justify-content: center;
     font-family: 'Roboto';
 }
+
 .stats-container .box3 {
     margin-left: 70%;
     text-align: center;
@@ -6029,8 +6031,7 @@ https://mkrtchyan.ga
     font-family: 'Roboto';
 }
 
-.counter {
-}
+.counter {}
 
 .counter .counter_content .number {
     font-size: 60px;

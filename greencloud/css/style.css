@@ -5943,7 +5943,7 @@ https://mkrtchyan.ga
 }
 
 .clouds {
-    background: transparent url("/demo3/images/da_clouds.png") repeat top center;
+    background: transparent url("/images/da_clouds.png") repeat top center;
     z-index: 3;
 
     -moz-animation: move-clouds-back 600s linear infinite;

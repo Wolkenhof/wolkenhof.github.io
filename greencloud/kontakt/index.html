@@ -153,107 +153,7 @@
         </div>
       </div>
 
-      <script>
-        var urspruenglicherPfad = "../images/Wolkenhof-Logo_mit-UZ.png";
-        var aktuellerPfad = urspruenglicherPfad;
-
-        function logoWechseln() {
-          var bildElement = document.getElementById("whlogo");
-          if (aktuellerPfad === urspruenglicherPfad) {
-            var neuerPfad = "../images/Wolkenhof-Logo_mit-UZ_weiss.png";
-            bildElement.src = neuerPfad;
-            aktuellerPfad = neuerPfad;
-          } else {
-            bildElement.src = urspruenglicherPfad;
-            aktuellerPfad = urspruenglicherPfad;
-          }
-        }
-
-        function mapWechseln() {
-          var bildElement = document.getElementById("whmap");
-          var switchElement = document.getElementById('darkmode-button');
-
-          if (switchElement.checked) {
-            console.log("checked");
-            bildElement.src = darkMode;
-          } else {
-            console.log("unchecked");
-            bildElement.src = lightMode;
-          }
-        }
-
-        function setCookie() {
-          var isDarkmode = document.getElementById('darkmode-button').checked;
-          if (isDarkmode == false) {
-            Cookies.set('Darkmode', 'false')
-          }
-          else {
-            Cookies.set('Darkmode', 'true')
-          }
-        }
-
-        var isDarkMode = Cookies.get('Darkmode');
-        if (isDarkMode != null) {
-          switch (isDarkMode) {
-            case 'true':
-              var element = document.body;
-              element.classList.toggle("dark-mode");
-              var bildElement = document.getElementById("whlogo");
-
-              try {
-                if (aktuellerPfad === urspruenglicherPfad) {
-                  var neuerPfad = "../images/Wolkenhof-Logo_mit-UZ_weiss.png";
-                  bildElement.src = neuerPfad;
-                  aktuellerPfad = neuerPfad;
-                } else {
-                  bildElement.src = urspruenglicherPfad;
-                  aktuellerPfad = urspruenglicherPfad;
-                }
-              }
-              catch {
-                // ignored
-              }
-
-              break;
-          }
-        }
-        else {
-          const runColorMode = (fn) => {
-            if (!window.matchMedia) {
-              return;
-            }
-
-            const query = window.matchMedia('(prefers-color-scheme: dark)');
-            fn(query.matches);
-            query.addEventListener('change', (event) => fn(event.matches));
-          }
-
-          runColorMode((isDarkMode) => {
-            if (isDarkMode) {
-              var element = document.body;
-              element.classList.toggle("dark-mode");
-              var bildElement = document.getElementById("whlogo");
-
-              try {
-                if (aktuellerPfad === urspruenglicherPfad) {
-                  var neuerPfad = "../images/Wolkenhof-Logo_mit-UZ_weiss.png";
-                  bildElement.src = neuerPfad;
-                  aktuellerPfad = neuerPfad;
-                } else {
-                  bildElement.src = urspruenglicherPfad;
-                  aktuellerPfad = urspruenglicherPfad;
-                }
-              }
-              catch {
-                // ignore
-              }
-
-              mapWechseln();
-            }
-          })
-        }
-
-      </script>
+      
 
       <!-- Content -->
       <div class="choose-tempcore">
@@ -328,26 +228,6 @@
               </div>
             </div>
           </div>
-
-          <script>
-            var lightMode = "../images/wolkenhof-map.jpg";
-            var darkMode = "../images/wolkenhof-map_dm.jpg";
-
-            function mapWechseln() {
-              var bildElement = document.getElementById("whmap");
-              var switchElement = document.getElementById('darkmode-button');
-
-              if (switchElement.checked) {
-                bildElement.src = darkMode;
-              } else {
-                bildElement.src = lightMode;
-              }
-            }
-
-            $(document).ready(function () {
-              mapWechseln();
-            });
-          </script>
 
           <div class="portfolio-box with-1-col">
             <div class="container">
@@ -446,21 +326,11 @@
       </div>
     </div>
 
-    <!-- Dark-Mode Switch -->
-    <div class='toggle-switch'>
-      <label>
-        <input class="input-slide-dm" id="darkmode-button" type='checkbox'
-          onclick="toggleDarkMode(), setCookie(), mapWechseln()">
-        <span class='slider'></span>
-      </label>
-    </div>
-
-    <script>
-      function toggleDarkMode() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }
-    </script>
+    <div>
+            <label>
+                <input id="darkmode-button" style="visibility: hidden;">
+            </label>
+        </div>
 
 
 

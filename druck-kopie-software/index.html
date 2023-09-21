@@ -435,21 +435,11 @@
             </div>
         </div>
 
-        <!-- Dark-Mode Switch -->
-        <div class='toggle-switch'>
+        <div>
             <label>
-                <input class="input-slide-dm" id="darkmode-button" type='checkbox'
-                    onclick="toggleDarkMode(), logoWechseln(), setCookie()">
-                <span class='slider'></span>
+                <input id="darkmode-button" style="visibility: hidden;">
             </label>
         </div>
-
-        <script>
-            function toggleDarkMode() {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
-            }
-        </script>
 
         <script>
             const scrollToTopButton = document.getElementById('top');

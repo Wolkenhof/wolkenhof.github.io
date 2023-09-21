@@ -153,80 +153,7 @@
         </div>
       </div>
 
-      <script>
-        var urspruenglicherPfad = "/images/Wolkenhof-Logo_mit-UZ.png";
-        var aktuellerPfad = urspruenglicherPfad;
-
-        function logoWechseln() {
-          var bildElement = document.getElementById("whlogo");
-          if (aktuellerPfad === urspruenglicherPfad) {
-            var neuerPfad = "/images/Wolkenhof-Logo_mit-UZ_weiss.png";
-            bildElement.src = neuerPfad;
-            aktuellerPfad = neuerPfad;
-          } else {
-            bildElement.src = urspruenglicherPfad;
-            aktuellerPfad = urspruenglicherPfad;
-          }
-        }
-
-        function setCookie() {
-          var isDarkmode = document.getElementById('darkmode-button').checked;
-          if (isDarkmode == false) {
-            Cookies.set('Darkmode', 'false')
-          }
-          else {
-            Cookies.set('Darkmode', 'true')
-          }
-        }
-
-        var isDarkMode = Cookies.get('Darkmode');
-        if (isDarkMode != null) {
-          switch (isDarkMode) {
-            case 'true':
-              var element = document.body;
-              element.classList.toggle("dark-mode");
-              var bildElement = document.getElementById("whlogo");
-              if (aktuellerPfad === urspruenglicherPfad) {
-                var neuerPfad = "/images/Wolkenhof-Logo_mit-UZ_weiss.png";
-                bildElement.src = neuerPfad;
-                aktuellerPfad = neuerPfad;
-              } else {
-                bildElement.src = urspruenglicherPfad;
-                aktuellerPfad = urspruenglicherPfad;
-              }
-              break;
-          }
-        }
-        else {
-          const runColorMode = (fn) => {
-            if (!window.matchMedia) {
-              return;
-            }
-
-            const query = window.matchMedia('(prefers-color-scheme: dark)');
-            fn(query.matches);
-            query.addEventListener('change', (event) => fn(event.matches));
-          }
-
-          runColorMode((isDarkMode) => {
-            if (isDarkMode) {
-              //document.getElementById('darkmodebutton').checked = true;
-              var element = document.body;
-              element.classList.toggle("dark-mode");
-              var bildElement = document.getElementById("whlogo");
-              if (aktuellerPfad === urspruenglicherPfad) {
-                var neuerPfad = "/images/Wolkenhof-Logo_mit-UZ_weiss.png";
-                bildElement.src = neuerPfad;
-                aktuellerPfad = neuerPfad;
-              } else {
-                bildElement.src = urspruenglicherPfad;
-                aktuellerPfad = urspruenglicherPfad;
-              }
-            }
-          })
-        }
-
-      </script>
+      
 
       <!-- Content -->
       <div class="choose-tempcore">
@@ -428,21 +355,11 @@
       </div>
     </div>
 
-    <!-- Dark-Mode Switch -->
-    <div class='toggle-switch'>
-      <label>
-        <input class="input-slide-dm" id="darkmode-button" type='checkbox'
-          onclick="toggleDarkMode(), logoWechseln(), setCookie()">
-        <span class='slider'></span>
-      </label>
-    </div>
-
-    <script>
-      function toggleDarkMode() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-      }
-    </script>
+    <div>
+            <label>
+                <input id="darkmode-button" style="visibility: hidden;">
+            </label>
+        </div>
 
 
 

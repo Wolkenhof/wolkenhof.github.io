@@ -178,7 +178,9 @@
             <div class="stats-container counter">
                 <div class="box1">
                     <div class="counter_content">
-                        <span class="number">50</span>
+                        <span class="number">
+                            <p id="jahresdifferenz"></p>
+                        </span>
                         <div class="text">
                             Jahre Erfahrung
                         </div>
@@ -186,7 +188,7 @@
                 </div>
                 <div class="box2">
                     <div class="counter_content">
-                        <span class="number">58</span>
+                        <span class="number">59</span>
                         <div class="text">
                             Mitarbeiter
                         </div>
@@ -201,6 +203,16 @@
                     </div>
                 </div>
             </div>
+
+            <script>
+                // JavaScript-Code, um die Jahresdifferenz zu berechnen
+                var jahr1973 = 1973;
+                var aktuellesJahr = new Date().getFullYear();
+                var differenz = aktuellesJahr - jahr1973;
+
+                // Den Text im HTML-Dokument aktualisieren
+                document.getElementById("jahresdifferenz").innerHTML = differenz;
+            </script>
 
             <script>
                 $('.number').each(function () {
@@ -364,21 +376,55 @@
                     }
                 </script>
 
-                <div id="cf" style="height: 500px;">
-                    <img class="img-responsive"
-                    src="/upload/revolution/gc_4.png" />
-                    <img class="img-responsive"
-                    src="/upload/revolution/gc_7.png" />
-                    <img class="img-responsive"
-                    src="/upload/revolution/gc_8.png" />
-                    <img class="img-responsive" src="/upload/revolution/gc_4.png" />
-                    <img class="img-responsive"
-                    src="/upload/revolution/gc_7.png" />
-                    <img class="img-responsive"
-                    src="/upload/revolution/gc_8.png" />
+                <div id="badge-slider-container">
+                    <div id="badge-logo-slider">
+                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 1">
+                        </div>
+                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 2">
+                        </div>
+                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 3">
+                        </div>
+                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 4">
+                        </div>
+                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 5">
+                        </div>
+                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 6">
+                        </div>
+                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 7">
+                        </div>
+                    </div>
+                    <div id="badge-prev-btn" onclick="prevSlide()">&#9665;</div>
+                    <div id="badge-next-btn" onclick="nextSlide()">&#9655;</div>
                 </div>
 
+                <script>
+                    let currentSlide = 0;
+
+                    function showSlide(index) {
+                        const slider = document.getElementById('badge-logo-slider');
+                        currentSlide = index;
+                        const offset = -index * (100 + 10); // 100px für das Logo plus 10px Abstand
+                        slider.style.transform = `translateX(${offset}px)`;
+                    }
+
+                    function nextSlide() {
+                        const totalSlides = 8;
+                        currentSlide = (currentSlide + 1) % (totalSlides - 3); // Zeige nur 4 Logos gleichzeitig
+                        showSlide(currentSlide);
+                    }
+
+                    function prevSlide() {
+                        const totalSlides = 8;
+                        currentSlide = (currentSlide - 1 + totalSlides - 3) % (totalSlides - 3); // Zeige nur 4 Logos gleichzeitig
+                        showSlide(currentSlide);
+                    }
+
+                    setInterval(nextSlide, 5000); // Automatischer Wechsel alle 5 Sekunden
+                </script>
+
+
             </div>
+
 
             <!--##################-->
 

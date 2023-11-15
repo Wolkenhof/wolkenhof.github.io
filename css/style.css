@@ -6037,9 +6037,9 @@ https://mkrtchyan.ga
 }
 
 .badge-logo {
-    width: 200px; /* Ändere die Breite und Höhe nach Bedarf */
+    width: 400px; /* Ändere die Breite und Höhe nach Bedarf */
     height: 10%;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 
@@ -6058,6 +6058,14 @@ https://mkrtchyan.ga
 
 #badge-next-btn {
     right: 10px;
+}
+
+.badge1{
+    margin-top: 3%;
+}
+
+.badge2{
+    max-width: 500px;
 }
 
 .counter {}

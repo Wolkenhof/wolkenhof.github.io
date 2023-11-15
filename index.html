@@ -378,20 +378,20 @@
 
                 <div id="badge-slider-container">
                     <div id="badge-logo-slider">
-                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 1">
+                        <a href="https://winwin-office.net"><div class="badge-logo badge1"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 1"></a>
                         </div>
-                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 2">
+                        <a href="https://www.trendmicro.com/de_de/"><div class="badge-logo badge2"><img src="images/TM_Secondary_Logo_2_color_800x857.png" alt="Logo 2" style="height: 175px;"></a>
                         </div>
-                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 3">
+                        <a href="https://www.microsoft.com/de-de/"><div class="badge-logo"><img src="images/Solution Partner (1).png" style="height: 175px;" alt="Logo 3"></a>
                         </div>
-                        <div class="badge-logo"><img src="images/elo_bp_logo_int.png" alt="Logo 4"
-                                style="width: 200px;">
+                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/elo_bp_logo_int.png" alt="Logo 4"
+                                style="width: 200px;"></a>
                         </div>
-                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 5">
+                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 5"></a>
                         </div>
-                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 6">
+                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 6"></a>
                         </div>
-                        <div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 7">
+                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 7"></a>
                         </div>
                     </div>
                     <div id="badge-prev-btn" onclick="prevSlide()">&#9665;</div>
@@ -404,7 +404,7 @@
                     function showSlide(index) {
                         const slider = document.getElementById('badge-logo-slider');
                         currentSlide = index;
-                        const offset = -index * (100 + 10); // 100px für das Logo plus 10px Abstand
+                        const offset = -index * (156 + 20); // 156px für das Logo plus 20px Abstand
                         slider.style.transform = `translateX(${offset}px)`;
                     }
 
@@ -549,8 +549,11 @@
             <div class="footer-line">
                 <div class="container">
                     <div class="col-md-12">
-                        <h5 class="text-center white">© 2023 Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
+                        <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
                     </div>
+                    <script> 
+                        document.getElementById("currentYear").innerText = new Date().getFullYear();
+                    </script>
                 </div>
             </div>
 

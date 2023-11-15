@@ -424,13 +424,16 @@
       </div>
 
       <!-- Copyright Footer -->
-      <div class="footer-line">
-        <div class="container">
-          <div class="col-md-12">
-            <h5 class="text-center white">© 2023 Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
-          </div>
-        </div>
-      </div>
+            <div class="footer-line">
+                <div class="container">
+                    <div class="col-md-12">
+                        <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
+                    </div>
+                    <script> 
+                        document.getElementById("currentYear").innerText = new Date().getFullYear();
+                    </script>
+                </div>
+            </div>
 
     </footer>
   </div>

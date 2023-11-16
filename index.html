@@ -387,11 +387,13 @@
                         <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/elo_bp_logo_int.png" alt="Logo 4"
                                 style="width: 200px;"></a>
                         </div>
-                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 5"></a>
+                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/VCSP_silver_color_with_border_rgb.png" style="height: 175px;" alt="Logo 5"></a>
                         </div>
-                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 6"></a>
+                        <a href="https://www.datev.de/web/de/startseite/startseite-n/"><div class="badge-logo"><img src="images/DATEV_SOLUTION_PARTNER_RGB_500px.png" style="height: 175px;" alt="Logo 6"></a>
                         </div>
                         <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 7"></a>
+                        </div>
+                        <a href="https://www.elo.com/de-de"><div class="badge-logo"><img src="images/win-win-office-network-Logo-GOLD.jpg" alt="Logo 8"></a>
                         </div>
                     </div>
                     <div id="badge-prev-btn" onclick="prevSlide()">&#9665;</div>
@@ -404,19 +406,19 @@
                     function showSlide(index) {
                         const slider = document.getElementById('badge-logo-slider');
                         currentSlide = index;
-                        const offset = -index * (156 + 20); // 156px für das Logo plus 20px Abstand
+                        const offset = -index * (216 + 20); // 216px für das Logo plus 20px Abstand
                         slider.style.transform = `translateX(${offset}px)`;
                     }
 
                     function nextSlide() {
                         const totalSlides = 8;
-                        currentSlide = (currentSlide + 1) % (totalSlides - 3); // Zeige nur 4 Logos gleichzeitig
+                        currentSlide = (currentSlide + 1) % (totalSlides - 3); // Zeige nur 5 Logos gleichzeitig
                         showSlide(currentSlide);
                     }
 
                     function prevSlide() {
                         const totalSlides = 8;
-                        currentSlide = (currentSlide - 1 + totalSlides - 3) % (totalSlides - 3); // Zeige nur 4 Logos gleichzeitig
+                        currentSlide = (currentSlide - 1 + totalSlides - 3) % (totalSlides - 3); // Zeige nur 5 Logos gleichzeitig
                         showSlide(currentSlide);
                     }
 

@@ -1444,7 +1444,7 @@ button {
 }
 
 .project-post img {
-    width: 100%;
+    width: 300%;
 }
 
 .hover-box {
@@ -1470,6 +1470,7 @@ button {
 .project-post:hover .hover-box {
     visibility: visible;
     \0/;
+    width: 300%;
     opacity: 1\0/;
     -webkit-transform: rotateY(0deg) scale(1);
     -moz-transform: rotateY(0deg) scale(1);
@@ -2055,7 +2056,20 @@ ul.filter li a:hover {
 }
 
 .portfolio-container .project-post img {
-    width: 100%;
+    width: 300%;
+}
+
+.portfolio-container table {
+    width: 100%; 
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.portfolio-container th {
+    width: 33.33%; /* Adjust the width as needed */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .with-4-col .portfolio-container .project-post {

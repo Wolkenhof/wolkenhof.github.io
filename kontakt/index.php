@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
   ';
   $headers = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-  $headers .= 'From: ' . $from . "\r\n";
+  //$headers .= 'From: ' . $from . "\r\n";
 
   if (empty($name)) {
     $errors[] = "Bitte geben Sie Ihren Namen an.";

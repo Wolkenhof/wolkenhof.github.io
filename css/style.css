@@ -1779,7 +1779,6 @@ button {
     top: 100%;
     z-index: 2;
     height: 53px;
-    background: url('/images/shadow.png') center center no-repeat;
 }
 
 .tempcore-line p {
@@ -5971,8 +5970,7 @@ https://mkrtchyan.ga
     margin-left: -585px;
     top: 100%;
     z-index: 2;
-    height: 53px;
-    background: url('/images/shadow.png') center center no-repeat; */
+    height: 53px;*/
 }
 
 .stats-container .box1 {

@@ -463,6 +463,28 @@
 
     </div>
 
+    <script>
+        let clickCount = 0;
+    
+        function handleClick() {
+            clickCount++;
+    
+            if (clickCount === 10) {
+                changeCursor();
+                activateSpecial();
+            }
+        }
+    
+        function changeCursor() {
+            document.body.style.cursor = 'url(../images/Cursor_alternativ.png), auto';
+        }
+    
+        function activateSpecial() {
+            const specialDiv = document.getElementById('footer');
+            specialDiv.classList.add('special-active');
+        }
+    </script>
+
 
     <!--##################-->
 
@@ -500,7 +522,7 @@
 
     <!-- Main Footer -->
     <footer>
-        <div class="up-footer">
+        <div id="footer" class="up-footer">
             <div class="container">
                 <div class="row">
 
@@ -508,7 +530,8 @@
                     <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
                         <div class="widget footer-widgets text-widget">
                             <div>
-                                <img class="img-responsive" alt="Logo Greencloud" src="images/Wolkenhof_Logo-weiss.png">
+                                <img id="wolkenhof-img" onclick="handleClick()" class="img-responsive"
+                                    alt="Logo Greencloud" src="images/Wolkenhof_Logo-weiss.png">
                             </div>
 
                         </div>

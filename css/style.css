@@ -2059,13 +2059,14 @@ ul.filter li a:hover {
 }
 
 .portfolio-container table {
-    width: 100%; 
+    width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
 }
 
 .portfolio-container th {
-    width: 33.33%; /* Adjust the width as needed */
+    width: 33.33%;
+    /* Adjust the width as needed */
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
@@ -5843,6 +5844,17 @@ img:nth-child(5) {
     animation-delay: 32s;
 }
 
+.special-active {
+    min-height: 100%;
+    background:
+        linear-gradient(rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%) 0 0/100% 200%;
+    animation: a 2s linear infinite;
+}
+
+@keyframes a {
+    to {background-position:0 -200%}
+  }
+
 /* ============================================================================================== 
 SED Innovations
 https://sed.am
@@ -6049,7 +6061,8 @@ https://mkrtchyan.ga
 }
 
 .badge-logo {
-    width: 400px; /* Ändere die Breite und Höhe nach Bedarf */
+    width: 400px;
+    /* Ändere die Breite und Höhe nach Bedarf */
     height: 10%;
     margin: 0 20px;
 }
@@ -6072,11 +6085,11 @@ https://mkrtchyan.ga
     right: 10px;
 }
 
-.badge1{
+.badge1 {
     margin-top: 3%;
 }
 
-.badge2{
+.badge2 {
     max-width: 500px;
 }
 
@@ -6171,7 +6184,6 @@ body {
         top: 0
     }
 }
-
 
 img {
     vertical-align: middle;

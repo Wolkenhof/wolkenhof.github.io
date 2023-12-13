@@ -512,6 +512,22 @@ $.fn.countTo.defaults = {
 /*	Counter
 /* ---------------------------------------------------------------------- */
 
-
-
-
+let clickCount = 0;
+    
+        function handleClick() {
+            clickCount++;
+    
+            if (clickCount === 10) {
+                changeCursor();
+                activateSpecial();
+            }
+        }
+    
+        function changeCursor() {
+            document.body.style.cursor = 'url(../images/Cursor_alternativ.png), auto';
+        }
+    
+        function activateSpecial() {
+            const specialDiv = document.getElementById('wh');
+            specialDiv.classList.add('special-active');
+        }

@@ -150,7 +150,7 @@
         <div id="content">
 
             <!-- Banner -->
-            <div class="services-boxgc pointer">
+            <div class="services-boxgc pointer" id="wh">
                 <div id="about" class="container">
 
                     <!-- Banner Logo -->
@@ -462,29 +462,6 @@
 
 
     </div>
-
-    <script>
-        let clickCount = 0;
-    
-        function handleClick() {
-            clickCount++;
-    
-            if (clickCount === 10) {
-                changeCursor();
-                activateSpecial();
-            }
-        }
-    
-        function changeCursor() {
-            document.body.style.cursor = 'url(../images/Cursor_alternativ.png), auto';
-        }
-    
-        function activateSpecial() {
-            const specialDiv = document.getElementById('footer');
-            specialDiv.classList.add('special-active');
-        }
-    </script>
-
 
     <!--##################-->
 

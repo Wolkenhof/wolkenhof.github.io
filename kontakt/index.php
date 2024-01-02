@@ -196,6 +196,7 @@ if (isset($_POST['submit'])) {
                         <li><a href="../it/it-sicherheit">IT-Sicherheit</a></li>
                       </ul>
                     </li>
+                    <li><a href="/datev/">DATEV</a></li>
                     <li><a href="../office">Office</a>
                       <ul class="drop-down level3">
                         <li><a href="../office/bueroplanung">Büroplanung</a></li>

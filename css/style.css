@@ -2044,9 +2044,7 @@ ul.filter li a:hover {
     background: #056598;
 }
 
-.comment-row {
-
-}
+.comment-row {}
 
 /* .comment-spacer-a {
     width: 10.8%;
@@ -5892,45 +5890,72 @@ img:nth-child(5) {
     animation: a 2s linear infinite;
 } */
 
-.special-active{
-      background: #2980b9 url('/images/wp8775763.png') repeat 0 0;
+.special-active {
+    background: #2980b9 url('/images/wp8775763.png') repeat 0 0;
     -webkit-animation: 10s linear 0s normal none infinite animate;
     -moz-animation: 10s linear 0s normal none infinite animate;
     -ms-animation: 10s linear 0s normal none infinite animate;
     -o-animation: 10s linear 0s normal none infinite animate;
     animation: 10s linear 0s normal none infinite animate;
-    
-   
-  }
-   
-  @-webkit-keyframes animate {
-    from {background-position:0 0;}
-    to {background-position: 500px 0;}
-  }
-   
-  @-moz-keyframes animate {
-    from {background-position:0 0;}
-    to {background-position: 500px 0;}
-  }
-   
-  @-ms-keyframes animate {
-    from {background-position:0 0;}
-    to {background-position: 500px 0;}
-  }
-   
-  @-o-keyframes animate {
-    from {background-position:0 0;}
-    to {background-position: 500px 0;}
-  }
-   
-  @keyframes animate {
-    from {background-position:0 0;}
-    to {background-position: 500px 0;}
-  }
+
+
+}
+
+@-webkit-keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 500px 0;
+    }
+}
+
+@-moz-keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 500px 0;
+    }
+}
+
+@-ms-keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 500px 0;
+    }
+}
+
+@-o-keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 500px 0;
+    }
+}
+
+@keyframes animate {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 500px 0;
+    }
+}
 
 @keyframes a {
-    to {background-position:0 -200%}
-  }
+    to {
+        background-position: 0 -200%
+    }
+}
 
 /* ============================================================================================== 
 SED Innovations
@@ -6627,123 +6652,150 @@ img {
     animation-delay: 10s;
 }
 
-[speech-bubble], [speech-bubble] * { box-sizing: border-box }
-
-[speech-bubble]{
-  --bbColor: grey;
-  --bbArrowSize: 1.5rem;
-  --bbBorderRadius: 0.25rem;
-  --bbPadding: 1rem;
-  background: var(--bbColor);
-  border-radius: var(--bbBorderRadius);
-  padding: var(--bbPadding);
-  position: relative;
+[speech-bubble],
+[speech-bubble] * {
+    box-sizing: border-box
 }
 
-[speech-bubble]::before{
-  content: ''; 
-  position: absolute;
-  background: var(--bbColor);
+[speech-bubble] {
+    --bbColor: grey;
+    --bbArrowSize: 1.5rem;
+    --bbBorderRadius: 0.25rem;
+    --bbPadding: 1rem;
+    background: var(--bbColor);
+    border-radius: var(--bbBorderRadius);
+    padding: var(--bbPadding);
+    position: relative;
 }
 
-[speech-bubble][pbottom]{ margin-bottom: var(--bbArrowSize) }
-[speech-bubble][ptop]   { margin-top: var(--bbArrowSize); }
-[speech-bubble][pleft]  { margin-left: var(--bbArrowSize); }
-[speech-bubble][pright] { margin-right: var(--bbArrowSize); }
+[speech-bubble]::before {
+    content: '';
+    position: absolute;
+    background: var(--bbColor);
+}
+
+[speech-bubble][pbottom] {
+    margin-bottom: var(--bbArrowSize)
+}
+
+[speech-bubble][ptop] {
+    margin-top: var(--bbArrowSize);
+}
+
+[speech-bubble][pleft] {
+    margin-left: var(--bbArrowSize);
+}
+
+[speech-bubble][pright] {
+    margin-right: var(--bbArrowSize);
+}
 
 
 /* bottom and top  */
 [speech-bubble][pbottom]::before,
-[speech-bubble][ptop]::before{
-  --width: calc(var(--bbArrowSize) / 2 * 3);
-  height: var(--bbArrowSize);
-  width: var(--width);
+[speech-bubble][ptop]::before {
+    --width: calc(var(--bbArrowSize) / 2 * 3);
+    height: var(--bbArrowSize);
+    width: var(--width);
 }
 
 /* bottom */
-[speech-bubble][pbottom]::before{
-  top: calc(100% - 2px);
+[speech-bubble][pbottom]::before {
+    top: calc(100% - 2px);
 }
-[speech-bubble][pbottom][aleft]::before{
-  left: 1rem;
-  clip-path: polygon(25% 0, 100% 0, 0% 100%)
+
+[speech-bubble][pbottom][aleft]::before {
+    left: 1rem;
+    clip-path: polygon(25% 0, 100% 0, 0% 100%)
 }
-[speech-bubble][pbottom][acenter]::before{
-  left: calc(50% - var(--width) / 2);
-  clip-path: polygon(12.5% 0, 87.5% 0, 50% 100%)
+
+[speech-bubble][pbottom][acenter]::before {
+    left: calc(50% - var(--width) / 2);
+    clip-path: polygon(12.5% 0, 87.5% 0, 50% 100%)
 }
-[speech-bubble][pbottom][aright]::before{
-  right: 1rem;
-  clip-path: polygon(0 0, 75% 0, 100% 100%)
+
+[speech-bubble][pbottom][aright]::before {
+    right: 1rem;
+    clip-path: polygon(0 0, 75% 0, 100% 100%)
 }
 
 /* top */
-[speech-bubble][ptop]::before{
-  bottom: calc(100% - 2px);
+[speech-bubble][ptop]::before {
+    bottom: calc(100% - 2px);
 }
-[speech-bubble][ptop][aleft]::before{
-  left: var(--bbPadding);
-  clip-path: polygon(0 0, 100% 100%, 25% 100%)
+
+[speech-bubble][ptop][aleft]::before {
+    left: var(--bbPadding);
+    clip-path: polygon(0 0, 100% 100%, 25% 100%)
 }
-[speech-bubble][ptop][acenter]::before{
-  left: calc(50% - var(--width) / 2);
-  clip-path: polygon(12.5% 100%, 50% 0, 87.5% 100%)
+
+[speech-bubble][ptop][acenter]::before {
+    left: calc(50% - var(--width) / 2);
+    clip-path: polygon(12.5% 100%, 50% 0, 87.5% 100%)
 }
-[speech-bubble][ptop][aright]::before{
-  right: var(--bbPadding);
-  clip-path: polygon(0 100%, 100% 0, 75% 100%)
+
+[speech-bubble][ptop][aright]::before {
+    right: var(--bbPadding);
+    clip-path: polygon(0 100%, 100% 0, 75% 100%)
 }
 
 /* left and right  */
 [speech-bubble][pleft]::before,
-[speech-bubble][pright]::before{
-  --height: calc(var(--bbArrowSize) / 2 * 3);
-  width: var(--bbArrowSize);
-  height: var(--height);
+[speech-bubble][pright]::before {
+    --height: calc(var(--bbArrowSize) / 2 * 3);
+    width: var(--bbArrowSize);
+    height: var(--height);
 }
 
 /* right */
-[speech-bubble][pright]::before{
-  left: calc(100% - 2px);
+[speech-bubble][pright]::before {
+    left: calc(100% - 2px);
 }
-[speech-bubble][pright][atop]::before{
-  top: var(--bbPadding);
-  clip-path: polygon(100% 0, 0 100%, 0 25%)
+
+[speech-bubble][pright][atop]::before {
+    top: var(--bbPadding);
+    clip-path: polygon(100% 0, 0 100%, 0 25%)
 }
-[speech-bubble][pright][acenter]::before{
-  top: calc(50% - var(--height) / 2);
-  clip-path: polygon(0 12.5%, 100% 50%, 0 87.5%)
+
+[speech-bubble][pright][acenter]::before {
+    top: calc(50% - var(--height) / 2);
+    clip-path: polygon(0 12.5%, 100% 50%, 0 87.5%)
 }
-[speech-bubble][pright][abottom]::before{
-  bottom: var(--bbPadding);
-  clip-path: polygon(0 0, 100% 100%, 0 75%)
+
+[speech-bubble][pright][abottom]::before {
+    bottom: var(--bbPadding);
+    clip-path: polygon(0 0, 100% 100%, 0 75%)
 }
 
 /* left */
-[speech-bubble][pleft]::before{
-  right: calc(100% - 2px);
+[speech-bubble][pleft]::before {
+    right: calc(100% - 2px);
 }
-[speech-bubble][pleft][atop]::before{
-  top: var(--bbPadding);
-  clip-path: polygon(0 0, 100% 25%, 100% 100%)
+
+[speech-bubble][pleft][atop]::before {
+    top: var(--bbPadding);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%)
 }
-[speech-bubble][pleft][acenter]::before{
-  top: calc(50% - var(--height) / 2);
-  clip-path: polygon(0 50%, 100% 12.5%, 100% 87.5%);
+
+[speech-bubble][pleft][acenter]::before {
+    top: calc(50% - var(--height) / 2);
+    clip-path: polygon(0 50%, 100% 12.5%, 100% 87.5%);
 }
-[speech-bubble][pleft][abottom]::before{
-  bottom: var(--bbPadding);
-  clip-path: polygon(0 100%, 100% 0, 100% 75%)
+
+[speech-bubble][pleft][abottom]::before {
+    bottom: var(--bbPadding);
+    clip-path: polygon(0 100%, 100% 0, 100% 75%)
 }
 
 /* flip */
 [speech-bubble][pbottom][flip]::before,
-[speech-bubble][ptop][flip]::before{
-  transform: scaleX(-1)
+[speech-bubble][ptop][flip]::before {
+    transform: scaleX(-1)
 }
+
 [speech-bubble][pleft][flip]::before,
-[speech-bubble][pright][flip]::before{
-  transform: scaleY(-1)
+[speech-bubble][pright][flip]::before {
+    transform: scaleY(-1)
 }
 
 
@@ -6766,9 +6818,9 @@ img {
     -webkit-animation: type 1s steps(40, end);
     animation: type 1s steps(40, end);
     /* border-right: .15em solid orange; */
-  }
-  
-  .css-typing p:nth-child(2) {
+}
+
+.css-typing p:nth-child(2) {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -6778,9 +6830,9 @@ img {
     animation-delay: 1s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  
-  .css-typing p:nth-child(3) {
+}
+
+.css-typing p:nth-child(3) {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -6790,8 +6842,9 @@ img {
     animation-delay: 2s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  .css-typing p:nth-child(4) {
+}
+
+.css-typing p:nth-child(4) {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -6801,8 +6854,9 @@ img {
     animation-delay: 3s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  .css-typing p:nth-child(5) {
+}
+
+.css-typing p:nth-child(5) {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -6812,8 +6866,9 @@ img {
     animation-delay: 4s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  .css-typing p:nth-child(6) {
+}
+
+.css-typing p:nth-child(6) {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -6823,8 +6878,9 @@ img {
     animation-delay: 5s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  .css-typing p:nth-child(7) {
+}
+
+.css-typing p:nth-child(7) {
     white-space: nowrap;
     overflow: hidden;
     opacity: 0;
@@ -6834,56 +6890,66 @@ img {
     animation-delay: 6s;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes type {
+}
+
+@keyframes type {
     from {
-      width: 0;
+        width: 0;
     }
-  }
-  
-  @-webkit-keyframes type {
+}
+
+@-webkit-keyframes type {
     from {
-      width: 0;
+        width: 0;
     }
-  }
-  
-  span {
+}
+
+span {
     animation: blink 1s infinite;
-  }
-  
-  @keyframes type2 {
+}
+
+@keyframes type2 {
     0% {
-      width: 0;
+        width: 0;
     }
+
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     1% {
-      opacity: 1;
+        opacity: 1;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @-webkit-keyframes type2 {
+}
+
+@-webkit-keyframes type2 {
     0% {
-      width: 0;
+        width: 0;
     }
+
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     1% {
-      opacity: 1;
+        opacity: 1;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
+
+

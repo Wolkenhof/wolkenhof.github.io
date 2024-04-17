@@ -137,23 +137,63 @@
                 <div id="about" class="container" style="padding-top: 5%; padding-bottom: 5%;">
 
                     <!-- Banner Logo -->
-                    <img id="whlogo" alt="Wolkenhof Logo – GREENCLOUD, IT, OFFICE" src="images/Greencloud-Logo_s.png"
-                        style="width: 50%;">
+                    <img id="whlogo" alt="Wolkenhof Logo – GREENCLOUD, IT, OFFICE"
+                        src="images/Greencloud-Logo_mit-UZ.png" style="width: 50%;">
+                </div>
+            </div>
 
-                    <!-- Banner Text -->
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="services-boxgc">
-                                <div class="services-post triggerAnimation animated fadeInLeft"
-                                    data-animate="fadeInLeft">
-                                    <h1 class="banner-überschrift normal-pointer" style="margin-top: -2%;"><b>Sicher, nachhaltig und flexibel in die Zukunft.</b>
-                                    </h1>
-                                </div>
-                            </div>
+            <!-- <div class="stats-container counter">
+                <div class="box1">
+                    <div class="counter_content">
+                        <span class="number">
+                            <p id="jahresdifferenz"></p>
+                        </span>
+                        <div class="text" style="white-space: nowrap; margin-top: -12%;">
+                            Jahre Erfahrung
+                        </div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="counter_content">
+                        <span class="number">61</span>
+                        <div class="text" style="white-space: nowrap; margin-top: -12%;">
+                            Mitarbeiter
+                        </div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div class="counter_content">
+                        <span class="number">5</span>
+                        <div class="text" style="white-space: nowrap; margin-top: -12%;">
+                            Standorte
                         </div>
                     </div>
                 </div>
             </div>
+
+            <script>
+                // JavaScript-Code, um die Jahresdifferenz zu berechnen
+                var jahr1973 = 1973;
+                var aktuellesJahr = new Date().getFullYear();
+                var differenz = aktuellesJahr - jahr1973;
+
+                // Den Text im HTML-Dokument aktualisieren
+                document.getElementById("jahresdifferenz").innerHTML = differenz;
+            </script>
+
+            <script>
+                $('.number').each(function () {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 4000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            </script> -->
 
 
 
@@ -167,182 +207,175 @@
                             </br>
                             <p>
                                 Auch die Digitalisierung wirkt sich auf das Klima aus.
-                                Herkömmliche Rechenzentren verbrauchen enorme Energiemengen, geben den größten Teil davon als 
-                                Abwärme ab und versuchen dies in der Regel durch den Kauf von Co2-Zertifikaten zu kompensieren.<br>
-                                Mit <span class="green"><strong>GREENCLOUD</strong></span> haben wir ein 
-                                <span class="green"><strong>modernes, sicheres und nachhaltiges Rechenzentrum</strong></span> 
-                                geschaffen, das stattdessen auf <span class="green"><strong>echte Maßnahmen</strong></span> 
+                                Herkömmliche Rechenzentren verbrauchen enorme Energiemengen, geben den größten Teil
+                                davon als
+                                Abwärme ab und versuchen dies in der Regel durch den Kauf von Co2-Zertifikaten zu
+                                kompensieren.<br>
+                                Mit <span class="green"><strong>GREENCLOUD</strong></span> haben wir ein
+                                <span class="green"><strong>modernes, sicheres und nachhaltiges
+                                        Rechenzentrum</strong></span>
+                                geschaffen, das stattdessen auf <span class="green"><strong>echte
+                                        Maßnahmen</strong></span>
                                 zur Reduzierung des ökologischen Fußabdrucks setz.
-                                Die <span class="green"><strong>GREENCLOUD</strong></span> ist auf minimalen Energie- und 
-                                Materialeinsatz optimiert. Sie wird nicht nur mit 100% Öko-Strom, sondern mit 
-                                <span class="green"><strong>direkt angebundenen, lokalen, erneuerbaren Energien</strong></span> 
-                                wie Wind- und Solarkraft versorgt. Die dabei entstehende Abwärme wird anschließend sinnvoll genutzt.
+                                Die <span class="green"><strong>GREENCLOUD</strong></span> ist auf minimalen Energie-
+                                und
+                                Materialeinsatz optimiert. Sie wird nicht nur mit 100% Öko-Strom, sondern mit
+                                <span class="green"><strong>direkt angebundenen, lokalen, erneuerbaren
+                                        Energien</strong></span>
+                                wie Wind- und Solarkraft versorgt. Die dabei entstehende Abwärme wird anschließend
+                                sinnvoll genutzt.
                             </p>
                         </div>
                     </div>
 
-                    <!-- kann weg?
-                    <div class="title-section">
-                        <div class="container" style="">
-                            <h1 class="green">Warum <span class="greencloud">Greencloud</span>?</h1>
-                            <h3>Es gibt gute Gründe, die für uns sprechen!</h3>
-                        </div>
-                    </div>
-                    -->
-                    
-                    <!-- Warum Greencloud Kurzfassung -->  
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="services-boxgc">
-                                <div class="services-post " data-animate="fadeInLeft" style="">
-                                    <a><i class="fa fa-lock"></i></a>
-                                    <h3>hochverfügbar &amp; sicher</h3>
+                    <div class="icon-card-wrapper">
+                        <div class="icon-card-cols">
+                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="icon-card-container">
+                                    <div class="icon-card-front">
+                                        <div class="icon-card-inner">
+                                            <p><i class="fa fa-shield"></i></p>
+                                            <span>Hochverfügbar & Sicher</span>
+                                        </div>
+                                    </div>
+                                    <div class="icon-card-back">
+                                        <div class="icon-card-inner">
+                                            <p>GREENCLOUD ist ein unabhängiges, deutsches, regionales Rechenzentrum und
+                                                erfüllt höchste Anforderungen an die Sicherheit auf allen Ebenen.
+                                                Redundanzen in allen Bereichen gewährleisten eine hochverfügbare
+                                                IT-Infrastruktur.
+                                            </p>
+                                            
+                                            <div class="icon-card-button">
+                                                <a href="ueber-uns/#warum"><i class="fa fa-arrow-circle-o-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-holder" style="">
-                                <p>
-                                    GREENCLOUD ist ein unabhängiges, deutsches, regionales Rechenzentrum und erfüllt höchste 
-                                    Anforderungen an die Sicherheit auf allen Ebenen.<br>
-                                    Redundanzen in allen Bereichen gewährleisten eine hochverfügbare IT-Infrastruktur.<br>
-                                    GREENCLOUD ist nach TÜVIT Verfügbarkeitsklasse 3 und DIN EN 50600 zertifiziert und übertrifft sie teilweise.
-                                </p>
-                            </div>
-                        </div>
+                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="icon-card-container">
+                                    <div class="icon-card-front">
+                                        <div class="icon-card-inner">
+                                            <p><i class="fa fa-cogs"></i></p>
+                                            <span>Flexibel &amp; Einfach</span>
+                                        </div>
+                                    </div>
+                                    <div class="icon-card-back">
+                                        <div class="icon-card-inner">
+                                            <p>GREENCLOUD bietet flexible IT-Lösungen, ob teilweise oder vollständig
+                                                ausgelagert. Wir unterstützen von Konzeption bis Betreuung, auch vor
+                                                Ort. Flexibel, dynamisch, zuverlässig.
+                                            </p>
 
-                        <div class="col-md-4">
-                            <div class="services-boxgc">
-                                <div class="services-post " style="">
-                                    <a><i class="fa fa-cogs"></i></a>
-                                    <h3>flexibel &amp; einfach</h3>
+                                            <div class="icon-card-button">
+                                                <a href="ueber-uns/#warum"><i class="fa fa-arrow-circle-o-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-holder " style="">
-                                <p>
-                                    GREENCLOUD passt sich Ihren Bedürfnissen an. Mit unseren besonders flexiblen 
-                                    Lösungen können Sie Ihre IT vollständig oder teilweise zu uns auslagern, um den 
-                                    aufwändigen Eigenbetrieb einzusparen und jederzeit dynamisch auf Veränderungen reagieren zu können.<br>
-                                    Wir begleiten Sie über Konzeptionierung und Umsetzung bis zur fortlaufenden Betreuung, 
-                                    oder führen all dies vollständig für Sie durch. Bei Bedarf betreuen wir nicht nur Ihre Systeme 
-                                    in der GREENCLOUD sondern auch Ihre vollständige IT- und Büro-Landschaft vor Ort.
-                                </p>
-                            </div>
-                        </div>
+                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="icon-card-container">
+                                    <div class="icon-card-front">
+                                        <div class="icon-card-inner">
+                                            <p><i class="fa fa-handshake-o"></i></p>
+                                            <span>Nachhaltig &amp; Fair</span>
+                                        </div>
+                                    </div>
+                                    <div class="icon-card-back">
+                                        <div class="icon-card-inner">
+                                            <p>
+                                                GREENCLOUD: Nachhaltigkeit ist unsere Philosophie. Wir reduzieren den
+                                                ökologischen Fußabdruck unseres Rechenzentrums und fördern ein faires
+                                                Zusammenspiel von Ökologie, Ökonomie und Sozialem. 
+                                            </p>
 
-                        <div class="col-md-4">
-                            <div class="services-boxgc">
-                                <div class="services-post" style="">
-                                    <a><i class="fa fa-globe"></i></a>
-                                    <h3>nachhaltig &amp; fair</h3>
+                                            <div class="icon-card-button">
+                                                <a href="ueber-uns/#warum"><i class="fa fa-arrow-circle-o-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-holder" style="">
-                                <p>
-                                    Wir setzen auf reale Maßnahmen zur Steigerung unserer Nachhaltigkeit.
-                                    Doch wir gehen noch einen Schritt weiter: Unter dem Begriff GREENCLOUD verstehen 
-                                    wir nicht nur die ganzheitliche Reduzierung des ökologischen Fußabdrucks unseres 
-                                    Rechenzentrums, sondern eine konsequent nachhaltige Unternehmensphilosophie.<br>
-                                    Wir setzen uns für ein faires Zusammenspiel von Ökologie, Ökonomie und Sozialem ein.
-
-
-                                </p>
-                            </div>
                         </div>
-                        
-                    </div>
+                        <div class="icon-card-cols">
+                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="icon-card-container">
+                                    <div class="icon-card-front">
+                                        <div class="icon-card-inner">
+                                            <p><i class="fa fa-server"></i></p>
+                                            <span>Virtuelle Server</span>
+                                        </div>
+                                    </div>
+                                    <div class="icon-card-back">
+                                        <div class="icon-card-inner">
+                                            <p>
+                                                GREENCLOUD IaaS: Unkomplizierte Auslagerung von Windows-Programmen in
+                                                die Cloud ohne Herstellerunterstützung. Kein eigener Serverbetrieb
+                                                nötig. Hohe Sicherheit, Verfügbarkeit und Skalierbarkeit für
+                                                anspruchsvolle Anwendungen. </p>
 
-                     <div class="row pt-20">
-                        <div class="text-holder triggerAnimation animated fadeInRight" data-animate="fadeInRight" style="">
-                            <p class="text-center"><a href="./ueber-uns/#warum"><span><strong>Mehr erfahren</strong></span></a></p>
-                        </div>
-                    </div>
-                    <br>
-                    <hr>
-                    <br>
-                    
-                    <div class="title-section">
-                        <div class="container" style="">
-                            <h1 class="green">Unsere Leistungen</h1>
-                            <!-- <h3>Untertitel</h3> -->
-                        </div>
-                    </div>
-                    
-                     <!-- Leistungen Kurzfassung --> 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="services-boxgc">
-                                <div class="services-post " data-animate="fadeInLeft" style="">
-                                    <a><i class="fa fa-lock"></i></a>
-                                    <h3>Virtuelle Server</h3>
+                                            <div class="icon-card-button">
+                                                <a href="iaas"><i class="fa fa-arrow-circle-o-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-holder" style="">
-                                <p>
-                                    GREENCLOUD IaaS (Infrastructure as a Service) ermöglicht es Ihnen, unkompliziert annähernd 
-                                    jedes unter Microsoft Windows betriebene Programm in die Cloud auszulagern und wie gewohnt 
-                                    zu verwenden – selbst dann, wenn seitens des Herstellers keine Cloud-Variante existiert.<br> 
-                                    Für Sie entfällt der aufwändige Betrieb eigener Server und Sie gewinnen volle Flexibilität.<br>
-                                    Höchste Sicherheit und Verfügbarkeit, die vor Ort nur mit immensen Investitionen erreichbar wären, 
-                                    ermöglichen Ihnen nahtlos von überall zu Arbeiten – egal ob mit einem oder tausenden Mitarbeitern.<br>
-                                    Unsere Server sind auf anspruchsvollste Echtzeit-Anwendungen wie Remotedesktop und Telefonie ausgelegt.
-                                </p>
-                            </div>
-                        </div>
+                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="icon-card-container">
+                                    <div class="icon-card-front">
+                                        <div class="icon-card-inner">
+                                            <p><i class="fa fa-lock"></i></p>
+                                            <span>Datensicherung</span>
+                                        </div>
+                                    </div>
+                                    <div class="icon-card-back">
+                                        <div class="icon-card-inner">
+                                            <p>
+                                                GREENCLOUD Backup: Automatisierte, DSGVO-konforme Datenverschlüsselung
+                                                und Sicherung in zwei Brandabschnitten. Zusätzliche lokale Sicherungen
+                                                mit Veeam-Software möglich. Notfallwiederherstellung vor Ort oder in
+                                                unserem Rechenzentrum.
+                                            </p>
 
-                        <div class="col-md-4">
-                            <div class="services-boxgc">
-                                <div class="services-post" style="">
-                                    <a><i class="fa fa-globe"></i></a>
-                                    <h3>Datensicherung</h3>
+                                            <div class="icon-card-button">
+                                                <a href="backup"><i class="fa fa-arrow-circle-o-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="text-holder" style="">
-                                <p>
-                                    GREENCLOUD Backup schützt Sie vor Verlust Ihrer Daten und Server, indem es sie 
-                                    automatisiert und DSGVO-Konform verschlüsselt in 2 Brandabschnitten unseres Rechenzentrums sichert.<br>
-                                    So wird maximale Distanz zwischen Ihren Daten und Sicherungen erreicht und menschliche Fehler beim Handling 
-                                    der Sicherung werden vermieden.<br>
-                                    Durch die eingesetzte Software des Herstellers Veeam können Sie darüber hinaus ohne weitere Kosten zusätzliche 
-                                    Sicherungen bei Ihnen vor Ort auf allen gängigen Medien ablegen.<br>
-                                    Die gesicherten Daten und Server können im Falle einer Katastrophe nicht nur bei Ihnen vor Ort 
-                                    sondern auch in unserem Rechenzentrum für Sie verfügbar gemacht werden.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="services-boxgc">
-                                <div class="services-post " style="">
-                                    <a><i class="fa fa-cogs"></i></a>
-                                    <h3>und Vieles mehr</h3>
+                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
+                                <div class="icon-card-container">
+                                    <div class="icon-card-front">
+                                        <div class="icon-card-inner">
+                                            <p><i class="fa fa-ellipsis-h"></i></p>
+                                            <span>und vieles mehr</span>
+                                        </div>
+                                    </div>
+                                    <div class="icon-card-back">
+                                        <div class="icon-card-inner">
+                                            <p>Beispielangebote: Cloud-Telefonie, Microsoft Exchange,
+                                                E-Mail-Archivierung, Hosting & Housing, Software & Lizenzen.
+                                                Komplettservice inklusive Monitoring, Service und maßgeschneiderten
+                                                Lösungen.
+                                            </p>
+
+                                            <div class="icon-card-button">
+                                                <a href="individuelle-loesungen"><i class="fa fa-arrow-circle-o-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="text-holder " style="">
-                                <p>
-                                    Zum Beispiel:<br>
-                                    Cloud-Telefonie: vollwertige Telefonanlage, überall verfügbar.<br>
-                                    Microsoft Exchange: E-Mail-Server mit vollem Funktionsumfang.<br>
-                                    E-Mail-Archiv: nach rechtlichen Vorgaben und EU-DSGVO.<br>
-                                    Hosting & Housing: sicherer Betrieb von eigener oder gemieteter Hardware.<br>
-                                    Software & Lizenzen: von Microsoft und allen üblichen Anbietern.<br>
-                                    Alles aus einer Hand:  Monitoring, Service und die passende Hardware vor Ort.<br>
-                                    Individuelle Lösungen: Wir analysieren Ihren Bedarf und konzipieren nach Maß.<br>
-                                </p>
                             </div>
                         </div>
                     </div>
-
-                     <div class="row pt-20">
-                        <div class="text-holder triggerAnimation animated fadeInRight" data-animate="fadeInRight" style="">
-                            <p class="text-center"><a href="./ueber-uns/#warum"><span><strong>Mehr erfahren</strong></span></a></p>
-                        </div>
-                    </div>
-                    
-
-
-                    
                 </div>
             </div>
 
-            <!-- kann weg?
+            <!-- 
             <div class="accord-skills">
                 <div class="title-section white">
                     <div class="container" style="">-
@@ -455,11 +488,10 @@
                 </div>
             </div>
             -->
-            
-            
-            
-            
-            <!-- Sponsor Logos > kann weg?
+
+
+            <!--WICHTIG: https://ibb.co/qNbqvGV -->
+            <!-- Sponsor Logos -->
             <div class="foerderer">
                 <div class="title-section">
                     <div class="container">
@@ -472,7 +504,6 @@
                     <img alt="" src="upload/efre-300x144.png">
                 </div>
             </div>
-            -->
 
             <!-- Get to know -->
             <div class="tempcore-line">

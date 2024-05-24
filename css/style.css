@@ -1862,6 +1862,7 @@ button {
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .tempcore-line a:hover {
@@ -7231,21 +7232,24 @@ span {
     background-color: #056598;
     padding-top: 15px;
     padding-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .portfolio-header:hover {
     background-color: #1F9819;
+    cursor: pointer;
 }
 
 .portfolio-content {
-    background-color: #fff;
+    background-color: rgba(247, 247, 247);
     font-family: roboto;
     padding-left: 10px;
     padding-top: 8px;
     padding-bottom: 8px;
     font-size: 15px;
-    border-top: 2px solid #E4E4E4;
+    border-top: 2px solid grey;
     font-weight: 400;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .portfolio-content:hover {
@@ -7255,6 +7259,7 @@ span {
     animation-iteration-count: 1;
     background-color: #E4E4E4;
     box-shadow: 0 0 8px grey;
+    cursor: pointer;
 }
 
 .toptext {
@@ -7312,74 +7317,102 @@ span {
 /* Logo Slider */
 
 .logo-slider {
-	background: white;
-	-webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
-	box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
-	margin: auto;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
+    background: white;
+    -webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
-.logo-slider::before, .logo-slider::after {
-	background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
-	background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-	content: "";
-	height: 250px;
-	position: absolute;
-	width: 200px;
-	z-index: 2;
+.logo-slider::before,
+.logo-slider::after {
+    background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 250px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
 }
 
 .logo-slider::after {
-	right: 0;
-	top: 0;
-	-webkit-transform: rotateZ(180deg);
-	transform: rotateZ(180deg);
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
 }
 
 .logo-slider::before {
-	left: 0;
-	top: 0;
+    left: 0;
+    top: 0;
 }
 
 .logo-slider .logo-slide-track {
-	-webkit-animation: logo-scroll 60s linear infinite;
-	animation: logo-scroll 60s linear infinite;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	width: calc(250px * 14);
-  animation-duration: 30s;
-  animation-iteration-count: infinite;
+    -webkit-animation: logo-scroll 60s linear infinite;
+    animation: logo-scroll 60s linear infinite;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(250px * 14);
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
 }
 
 .logo-slider .slide {
-	height: 250px;
-	width: 260px;
-	padding: 20px;
+    height: 250px;
+    width: 260px;
+    padding: 20px;
 }
 
 @-webkit-keyframes logo-scroll {
-	0% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-	100% {
-		-webkit-transform: translateX(calc(-250px * 7));
-		transform: translateX(calc(-250px * 7));
-	}
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
 }
 
 @keyframes logo-scroll {
-	0% {
-		-webkit-transform: translateX(0);
-		transform: translateX(0);
-	}
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-	100% {
-		-webkit-transform: translateX(calc(-250px * 7));
-		transform: translateX(calc(-250px * 7));
-	}
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
 }
+
+.navigator {
+    margin-left: 10px;
+    margin-top: -30px;
+}
+
+.devider-50px {
+    height: 50px;
+}
+
+
+.section-image {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

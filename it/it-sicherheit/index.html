@@ -96,7 +96,7 @@
                 <li class="drop"><a href="/#about"><span></span>Wolkenhof</a>
                   <ul class="drop-down">
                     <li><a href="/wolkenhof">Der Wolkenhof</a></li>
-                    <li><a href="/wolkenhof/#standorte">Unsere Standorte</a></li>
+
                     <li><a href="/team">Unser Team</a></li>
                     <li><a href="/netzwerk-partner">Netzwerk &amp; Partner</a></li>
                     <li><a href="/karriere">Jobs &amp; Karriere</a></li>
@@ -144,7 +144,9 @@
         </div>
     </header>
 
-    <div id="background-wrap" class="clouds"></div>
+    <div id="background-wrap" class=""
+      style="background-image: url(/upload/it/digital-security-lock-uhd-4k-wallpaper.jpg); background-size: cover;">
+    </div>
 
     <!-- Content Section -->
     <div id="content">
@@ -159,15 +161,41 @@
 
       <!-- Content -->
       <div class="choose-tempcore">
+        <div class="navigator">
+          <ul>
+            <li>
+              <a href="/"><i class="fa fa-home"></i></a>
+              <a>></a>
+              <a href="/" class="">Leistungen</a>
+              <a>></a>
+              <a href="/it/index.html" class="">IT</a>
+              <a>></a>
+              <span class="">IT-Sicherheit</span>
+            </li>
+          </ul>
+        </div>
         <div id="content">
           <!-- vertical tabs -->
           <div class="horizontal-tabs">
             <div class="title-section">
               <div class="container">
-                <h1 class="blue">IT-Sicherheit</h1>
-                <h3>Schützen Sie Ihr Netzwerk</h3>
+                <h1 class="blue" style="font-weight: 600;">IT-Sicherheit</h1>
+                <h3>Schützen Sie Ihr Netzwerk, rechtzeitig!</h3>
               </div>
             </div>
+
+            <script>
+              $('.panel-collapse').on('show.bs.collapse', function () {
+                $(this).siblings('.panel-heading').addClass('active');
+                $(this).siblings('.panel-heading').find('.title').addClass('active');
+              });
+
+              $('.panel-collapse').on('hide.bs.collapse', function () {
+                $(this).siblings('.panel-heading').removeClass('active');
+                $(this).siblings('.panel-heading').find('.title').removeClass('active');
+              });
+
+            </script>
 
             <div class="horizontal-tabs-box">
               <div class="container">
@@ -197,79 +225,230 @@
                       bereit.</p>
                   </div>
                 </div>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" id="myTab">
-                  <li class="active"><a href="#stresstest" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>
-                      &nbsp; Stresstest</a></li>
-                  <li><a href="#firewall" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i> &nbsp;
-                      Firewall</a></li>
-                  <li><a href="#datensicherung" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i> &nbsp;
-                      Datensicherung</a></li>
-                  <li><a href="#redundanz" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i> &nbsp;
-                      Redundanz</a></li>
-                  <li><a href="#datenschutz" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i> &nbsp;
-                      Datenschutz</a></li>
-                </ul>
 
-                <div class="tab-content">
-                  <div class="tab-pane active" id="stresstest">
-                    <h4>Wenn es drauf ankommt sicher – unser <span class="blue"><strong>Stresstest</strong></span></h4>
-                    <br>
-                    <p>Wir lassen von <strong>professionellen</strong> und <strong>legalen</strong>
-                      <strong>Hackern</strong> Ihre <strong>IT-Struktur</strong> testen und zeigen Ihnen auf, wo
-                      <strong>Sicherheitslücken</strong> sind und wie Sie diese schließen können. So können Sie Ihr
-                      System unter realistischen Szenarien prüfen und die effektivsten Maßnahmen zur Vorsorge ergreifen.
-                    </p>
-                  </div>
-                  <div class="tab-pane" id="firewall">
-                    <h4>Schutz gegen Angriffe von außen – die <span class="blue"><strong>Firewall</strong></span></h4>
-                    <br>
-                    <p>Die <strong>Firewall</strong> ist ein <strong>essenzieller</strong> <strong>Baustein</strong>, um
-                      Ihr <strong>Netzwerk</strong> vor <strong>Angriffen</strong> <strong>von außen</strong> zu
-                      schützen. Mit unserem <strong>Servicekonzept</strong> sorgen wir dafür, dass Ihre
-                      <strong>Firewall</strong> immer auf dem <strong>aktuellen</strong> <strong>Stand</strong> ist, um
-                      Sie wirkungsvoll zu schützen.
-                    </p>
-                  </div>
-                  <div class="tab-pane" id="datensicherung">
-                    <h4>Risiken minimieren – unsere <span class="blue"><strong>Datensicherung</strong></span></h4><br>
-                    <p>Es gibt viele Möglichkeiten, <strong>Daten zu sichern</strong>. Ob bei Ihnen <strong>vor
-                        Ort</strong> oder über eine <strong>Cloudlösung</strong>. Wir beraten Sie, zeigen Ihnen die
-                      verschieden Lösungen auf und prüfen für Sie, ob die <strong>Datensicherung</strong> auch wirklich
-                      funktioniert. So stellen Sie sicher, dass Sie auch nach einem <strong>Angriff</strong> oder einer
-                      <strong>Datenverschlüsselung</strong> ohne einen fatalen <strong>Datenverlust</strong>
-                      weiterarbeiten können.
-                    </p>
-                  </div>
-                  <div class="tab-pane" id="redundanz">
-                    <h4>Mehrfach gesichert – <span class="blue"><strong>redundante Systeme</strong></span></h4><br>
-                    <p>Wenn Sie sich keine <strong>Ausfallzeiten</strong> Ihrer <strong>Server</strong> leisten können,
-                      stellen wir Ihre <strong>Serverstruktur</strong> so auf, dass sie durch redundante Systeme
-                      mehrfach abgesichert ist. Selbst bei einem ausgeprägten <strong>Absturz</strong> Ihres
-                      <strong>Hauptservers</strong> werden die Ausfallzeit und der Datenverlust auf ein Minimum (1-15
-                      Minuten) beschränkt .
-                    </p>
-                  </div>
-                  <div class="tab-pane" id="datenschutz">
-                    <h4>Immer gesetzeskonform – unser <span class="blue"><strong>Datenschutz nach DSGVO</strong></span>
-                    </h4><br>
-                    <p>Mit der neuen <strong>DSGVO</strong> treten einige neue Gesetze in Kraft, die voraussetzten, dass
-                      Sie Ihre <strong>IT-Struktur</strong> kennen, dokumentieren und nachweisen können, dass Sie mit
-                      <strong>personenbezogenen</strong> <strong>Daten</strong> <strong>gesetzeskonform</strong> umgehen
-                      und ein nachvollziehbares <strong>Sicherheitskonzept</strong> in Ihrem Unternehmen anwenden, um
-                      die <strong>Daten</strong> zu <strong>schützen</strong>.
-                    </p>
+                <h1 class="devider-50px">Leistungsüberblick</h1>
+
+
+                <div class="wrapper center-block">
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading active" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                          <a class="collapsed title" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Stresstest
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingOne">
+                        <div class="panel-body">
+                          <h1>Vorteile von Stresstests im IT-Bereich</h1>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Leistungsoptimierung</h3>
+                          Stresstests im IT-Bereich optimieren die Leistungsfähigkeit Ihrer Systeme, indem sie
+                          Leistungsgrenzen und Engpässe aufdecken. Dies führt zu einer verbesserten Effizienz und
+                          Stabilität Ihrer IT-Infrastruktur.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Fehlerprävention</h3>
+                          Durch die Früherkennung potenzieller Schwachstellen und Fehlerquellen verhindern Stresstests
+                          Systemausfälle und Datenverluste. Dies gewährleistet einen reibungslosen Betrieb Ihrer
+                          IT-Systeme.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Erhöhte Sicherheit</h3>
+                          Stresstests stärken Ihre Sicherheitsmaßnahmen, indem sie Belastungsgrenzen austesten und
+                          Sicherheitslücken aufdecken. So können Sie Ihre IT-Systeme gegen mögliche Bedrohungen besser
+                          absichern.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Verlässlichkeit</h3>
+                          Die Durchführung von Stresstests stellt die Verfügbarkeit und Zuverlässigkeit Ihrer IT-Systeme
+                          sicher. Dies verbessert die Nutzererfahrung erheblich und sorgt für stabile Betriebsabläufe.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Kostenersparnis</h3>
+                          Stresstests sparen langfristig Kosten, indem sie ungeplante Ausfallzeiten und Wartungskosten
+                          reduzieren. Eine optimierte Systemleistung führt zu einer nachhaltigeren und
+                          kosteneffizienteren IT-Infrastruktur.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Planungssicherheit</h3>
+                          Stresstests bieten fundierte Entscheidungsgrundlagen für IT-Investitionen und Erweiterungen.
+                          Sie bereiten Ihre Systeme auf unerwartete Lastspitzen und Traffic-Anstiege vor, was eine
+                          kontinuierliche Verfügbarkeit und Zuverlässigkeit sicherstellt.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Firewall
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                          <h1>Schützen sie sich effizient</h1>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Leistungsoptimierung</h3>
+                          Firewalls optimieren die Leistungsfähigkeit Ihrer IT-Systeme, indem sie den Datenverkehr
+                          effizient überwachen und regulieren. Dies führt zu einer besseren Systemleistung und erhöhten
+                          Sicherheit.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Schutz vor Cyberangriffen</h3>
+                          Firewalls bieten einen grundlegenden Schutz vor Cyberangriffen, indem sie unerlaubten Zugriff
+                          auf Ihre Netzwerke verhindern. Sie identifizieren und blockieren schädliche Aktivitäten, bevor
+                          diese Schaden anrichten können.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Datenschutz</h3>
+                          Durch den Einsatz von Firewalls wird der Schutz sensibler Daten erheblich verbessert. Sie
+                          verhindern unbefugten Zugriff und Datenlecks, was zur Einhaltung gesetzlicher
+                          Datenschutzbestimmungen beiträgt.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Netzwerküberwachung</h3>
+                          Firewalls überwachen kontinuierlich den Netzwerkverkehr und identifizieren ungewöhnliche
+                          Aktivitäten. Dies ermöglicht eine schnelle Reaktion auf potenzielle Bedrohungen und erhöht die
+                          Sicherheit Ihres Netzwerks.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Benutzerfreundlichkeit</h3>
+                          Moderne Firewalls bieten benutzerfreundliche Verwaltungsoberflächen, die eine einfache
+                          Konfiguration und Überwachung ermöglichen. Dies reduziert den Aufwand für IT-Mitarbeiter und
+                          verbessert die Effizienz des IT-Managements.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Kosteneffizienz</h3>
+                          Firewalls tragen zur Kosteneffizienz bei, indem sie Systemausfälle und Sicherheitsvorfälle
+                          reduzieren. Durch den Schutz vor Cyberangriffen und Datenverlusten werden langfristig Kosten
+                          eingespart, die durch Sicherheitsverletzungen entstehen könnten.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i> Skalierbarkeit</h3>
+                          Firewalls sind skalierbar und können an die wachsenden Bedürfnisse Ihres Unternehmens
+                          angepasst werden. Sie bieten flexible Lösungen, die mit Ihrem Unternehmen mitwachsen und stets
+                          optimalen Schutz gewährleisten.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Datensicherung
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingThree">
+                        <div class="panel-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                          labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                          Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                          haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Redundanz
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingFour">
+                        <div class="panel-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                          squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                          nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                          single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer
+                          labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                          Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                          haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- End nav-tab -->
-              </div>
-              <div class="container pt-50">
+                <div class="devider-50px"></div>
+
+                <!-- Nav tabs -->
                 <div class="no-tab-content">
-                  <div class="tab-pane active">
-                    <p><a href="/">&nbsp;<i class="fa fa-arrow-circle-o-left"></i>&nbsp;<strong> Zurück
-                          zur Leistungsübersicht IT</strong></a></p>
+                  <div class="tab-pane active" id="sicherheit" style="margin-left: 150px;">
+                    <img class="pb-20" alt="wolkenhof IT-Sicherheit" src="../../upload/it/wolkenhof_it-service.jpg">
+                    <div class="toptext">
+                      <h1>Ihre Vorteile</h1>
+                      <p><i class="fa fa-check"></i>Individuelle Lösungen in den Bereichen IT-Support, IT-Sicherheit,
+                        IT-Infrastruktur und Cloud
+                        Computing</p>
+                      <p><i class="fa fa-check"></i>Flexibel anpassbare Services, die sich den Bedürfnissen Ihres
+                        Unternehmens anpassen</p>
+                      <p><i class="fa fa-check"></i>Expertise und Erfahrung, um Ihre IT-Herausforderungen zu meistern
+                      </p>
+                      <p><i class="fa fa-check"></i>Kontaktieren Sie uns für weitere Informationen darüber, wie wir
+                        Ihnen
+                        helfen können</p>
+                      <a class="content-text-button" style="color: #fff; margin-left: 20%;">
+                        Jetzt Anfragen!
+                      </a>
+                    </div>
+
                   </div>
                 </div>
+
+                <!-- ansprechpartner section -->
+                <div class="ansprechpartner">
+                  <div class="title-section">
+                    <div class="container">
+                      <h1 class="blue">Ansprechpartner</h1>
+                      <h3><span class="wolkenhof">wolkenhof</span> Abteilung IT</h3>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="staff-post-circle">
+                        <div class="col-md-2 col-md-offset-2 col-xs-4 image-sect pt-20">
+                          <img class="img-circle img-responsive" alt="Sönke Elbers, Abteilungsleiter IT"
+                            src="../../upload/SoenkeElbers_FotoJQuast_500.jpg">
+                        </div>
+                        <div class="col-md-8 plr-20">
+                          <ul class="tempcore-features">
+                            <li>
+                              <h4>Haben Sie Fragen oder wünschen Sie ein individuelles Angebot?</h4>
+                              <p>Wir helfen Ihnen gerne weiter!</p>
+                            </li>
+                          </ul>
+                          <div class="staff-post">
+                            <h3 class="blue text-left">Sönke Elbers</h3>
+                            <h5>Abteilungsleiter IT, Prokurist</h5>
+                            <h5 class="blue text-left pt-15"><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49
+                                581
+                                9036-0</a><br>
+                              <i class="fa fa-envelope"></i> <a
+                                href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x73;&#x65;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x73;&#x65;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="devider-50px"></div>
+                <h1>Unsere Partner</h1>
               </div>
             </div>
           </div>
@@ -316,11 +495,14 @@
       </div>
 
       <!-- Get to know -->
-      <div class="tempcore-line">
+      <div class="tempcore-line" style="background-color: rgba(0, 0, 0, 0.418)">
         <div class="container text-center">
           <div class="col-md-10 col-md-offset-1">
             <a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAxpmlfoipg/dpn');">INFOS</a>
-            <p><i class="fa fa-arrow-right"></i><span class="greencloud">wolkenhof</span> kennenlernen.
+            <p style="color: white !important;">
+              <i class="fa fa-arrow-right" style="color: white !important;"></i>
+              <span class="greencloud">wolkenhof</span>
+              kennenlernen.
               <span>Jetzt INFOS anfragen!</span>
             </p>
           </div>
@@ -343,25 +525,79 @@
       <div class="up-footer">
         <div class="container">
           <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-7 ap-left">
+              <div class="row">
+                <h3 class="col-xs-12" style="color: #fff;">Haben sie Fragen zum wolkenhof?</h3>
+                <div class="col-xs-12 col-md-6" id="contact-team-img"> <img loading="lazy"
+                    class="img-responsive contact-team-img" alt="IT-SERVICE.NETWORK Ansprechpartner" height="233"
+                    width="350" src="../../images/wolkenhof-team.jpg">
+                </div>
+                <div class="col-xs-12 col-md-6 ap-daten">
+                  <ul>
+                    <p class="h4" id="contact-team-sub-heading">Unser Team steht Ihnen gern zur
+                      Verfügung</p>
+                    <br>
+                    <li style="color: #fff;"><a href="tel:+4958190360" style="color: #fff;"><i class="fa fa-phone"></i>
+                        +49 581 9036-0</a>
+                    </li>
+                    <br>
+                    <li style="color: #fff;"><i class="fa fa-envelope"></i> <a style="color: #fff;"
+                        href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 ap-right">
+              <form id="contact-form" class="form-inline" method="post" action="">
+                <h3 style="color: #fff;">Senden Sie uns Ihr Anliegen</h3>
+                <div class="text-fields">
+                  <div class="float-input">
+                    <input name="name" id="name" type="text" placeholder="Name*" required="required">
+                    <span><i class="fa fa-user"></i></span>
+                  </div>
+                  <div class="float-input">
+                    <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
+                    <span><i class="fa fa-envelope-o"></i></span>
+                  </div>
+                </div>
+                <div class="submit-area">
+                  <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
+                  <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a
+                    href="../../datenschutz" target="_blank"><strong
+                      style="color: #b3ddff;">Datenschutzerklärung</strong></a>
+                  <strong>
+                    gelesen</strong><br>
+                  <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
+                  <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="up-footer">
+        <div class="container">
+          <div class="row">
 
             <!-- Main Footer Logo -->
-            <div class="col-md-3">
+            <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
               <div class="widget footer-widgets text-widget">
                 <div>
-                  <img class="img-responsive" alt="Logo Greencloud" src="/images/Wolkenhof_Logo-weiss.png">
+                  <img id="wolkenhof-img" onclick="handleClick()" class="img-responsive" alt="Logo Greencloud"
+                    src="../../images/Wolkenhof_Logo-weiss.png">
                 </div>
-
               </div>
             </div>
 
             <!-- Footer Contact Informations -->
-            <div class="col-md-3">
+            <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
               <div class="widget footer-widgets text-widget">
                 <ul>
                   <li><span class="greencloud">wolkenhof</span> GmbH</li>
                   <li><i class="fa fa-home"></i> Schillerstraße 13b, 29525 Uelzen</li>
                   <li><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581 9036-0</a></li>
-                  <li><i class="fa fa-envelope"></i><a
+                  <li><i class="fa fa-envelope"></i> <a
                       href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
                   </li>
                 </ul>
@@ -372,9 +608,9 @@
             <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
-                  <li> <a href="#top">Start</a></li>
-                  <li> <a href="../../wolkenhof">Wolkenhof – über uns</a></li>
-                  <li> <a href="../../index.html#bereiche">Leistungen</a></li>
+                  <li> <a href="../index.html">Start</a></li>
+                  <li> <a href="../wolkenhof">Wolkenhof – über uns</a></li>
+                  <li> <a href="../bereiche">Leistungen</a></li>
                 </ul>
               </div>
             </div>
@@ -383,14 +619,12 @@
             <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
-                  <li> <a href="../../kontakt">Kontakt</a></li>
-                  <li> <a href="../../impressum">Impressum</a></li>
-                  <li> <a href="../../datenschutz">Datenschutz</a></li>
+                  <li> <a href="../kontakt">Kontakt</a></li>
+                  <li> <a href="../impressum">Impressum</a></li>
+                  <li> <a href="../datenschutz">Datenschutz</a></li>
                 </ul>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -399,7 +633,8 @@
       <div class="footer-line">
         <div class="container">
           <div class="col-md-12">
-            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
+            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte
+              vorbehalten.</h5>
           </div>
           <script>
             document.getElementById("currentYear").innerText = new Date().getFullYear();

@@ -180,7 +180,7 @@ if (isset($_POST['submit'])) {
                 <li class="drop"><a href="../#about"><span></span>Wolkenhof</a>
                   <ul class="drop-down">
                     <li><a href="../wolkenhof">Der Wolkenhof</a></li>
-                    <li><a href="../wolkenhof/#standorte">Unsere Standorte</a></li>
+                     
                     <li><a href="../team">Unser Team</a></li>
                     <li><a href="../netzwerk-partner">Netzwerk &amp; Partner</a></li>
                     <li><a href="../karriere">Jobs &amp; Karriere</a></li>

@@ -389,14 +389,58 @@
       <div class="up-footer">
         <div class="container">
           <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-7 ap-left">
+              <div class="row">
+                <h3 class="col-xs-12" style="color: #fff;">Haben sie Fragen zum wolkenhof?</h3>
+                <div class="col-xs-12 col-md-6" id="contact-team-img"><a href="../../team/index.html"> <img
+                      loading="lazy" class="img-responsive contact-team-img" alt="IT-SERVICE.NETWORK Ansprechpartner"
+                      src="../../images/wolkenhof-team.jpg"></a>
+                </div>
+                <div class="col-xs-12 col-md-6 ap-daten">
+                  <ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 ap-right">
+              <form id="contact-form" class="form-inline" method="post" action="">
+                <h3 style="color: #fff;">Senden Sie uns Ihr Anliegen</h3>
+                <div class="text-fields">
+                  <div class="float-input">
+                    <input name="name" id="name" type="text" placeholder="Name*" required="required">
+                    <span><i class="fa fa-user"></i></span>
+                  </div>
+                  <div class="float-input">
+                    <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
+                    <span><i class="fa fa-envelope-o"></i></span>
+                  </div>
+                </div>
+                <div class="submit-area">
+                  <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
+                  <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a
+                    href="../../datenschutz" target="_blank"><strong
+                      style="color: #b3ddff;">Datenschutzerklärung</strong></a>
+                  <strong>
+                    gelesen</strong><br>
+                  <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
+                  <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="up-footer">
+        <div class="container">
+          <div class="row">
 
             <!-- Main Footer Logo -->
             <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
               <div class="widget footer-widgets text-widget">
                 <div>
-                  <img class="img-responsive" alt="Logo Greencloud" src="/images/Wolkenhof_Logo-weiss.png">
+                  <img id="wolkenhof-img" onclick="handleClick()" class="img-responsive" alt="Logo Greencloud"
+                    src="../../images/Wolkenhof_Logo-weiss.png">
                 </div>
-
               </div>
             </div>
 
@@ -407,7 +451,7 @@
                   <li><span class="greencloud">wolkenhof</span> GmbH</li>
                   <li><i class="fa fa-home"></i> Schillerstraße 13b, 29525 Uelzen</li>
                   <li><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581 9036-0</a></li>
-                  <li><i class="fa fa-envelope"></i><a
+                  <li><i class="fa fa-envelope"></i> <a
                       href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
                   </li>
                 </ul>
@@ -418,9 +462,9 @@
             <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
-                  <li> <a href="#top">Start</a></li>
-                  <li> <a href="wolkenhof">Wolkenhof – über uns</a></li>
-                  <li> <a href="../index.html#bereiche">Leistungen</a></li>
+                  <li> <a href="../../">Start</a></li>
+                  <li> <a href="../../wolkenhof/">Wolkenhof – über uns</a></li>
+                  <li> <a href="../../">Leistungen</a></li>
                 </ul>
               </div>
             </div>
@@ -429,33 +473,52 @@
             <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
-                  <li> <a href="../kontakt">Kontakt</a></li>
-                  <li> <a href="../impressum">Impressum</a></li>
-                  <li> <a href="../datenschutz">Datenschutz</a></li>
+                  <li> <a href="../../kontakt">Kontakt</a></li>
+                  <li> <a href="../../impressum">Impressum</a></li>
+                  <li> <a href="../../datenschutz">Datenschutz</a></li>
                 </ul>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
+
+      <!-- TBD Daten zusammenfügen -->
 
       <!-- Copyright Footer -->
       <div class="footer-line">
         <div class="container">
           <div class="col-md-12">
-            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
+            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte
+              vorbehalten.</h5>
           </div>
           <script>
             document.getElementById("currentYear").innerText = new Date().getFullYear();
           </script>
         </div>
       </div>
-
     </footer>
   </div>
-
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 10 seconds
+    }
+  </script>
 
 </body>
 

@@ -93,8 +93,10 @@
                         </button>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="active" href="#"><span></span>Start</a></li>
-                                <li class="drop"><a href="#about"><span></span>Wolkenhof</a>
+                                <li>
+                                    <a class="active" href="#"><span></span>Start</a>
+                                </li>
+                                <li class="drop"><a><span></span>Wolkenhof</a>
                                     <ul class="drop-down">
                                         <li><a href="wolkenhof">Der Wolkenhof</a></li>
                                         <li><a href="team">Unser Team</a></li>
@@ -104,12 +106,19 @@
                                 </li>
                                 <li class="drop"><a href="#bereiche"><span></span>Leistungen</a>
                                     <ul class="drop-down">
-                                        <li><a href="greencloud">GREENCLOUD</a></li>
+                                        <li><a href="greencloud">GREENCLOUD</a>
+                                            <ul class="drop-down level3">
+                                                <li><a href="greencloud/iaas/">Virtuelle Server</a></li>
+                                                <li><a href="greencloud/backup/">Datensicherung</a></li>
+                                                <li><a href="greencloud/individuelle-loesungen/">Individuelle
+                                                        Lösungen</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="it">IT</a>
                                             <ul class="drop-down level3">
-                                                <li><a href="it/it-service">IT-Service</a></li>
-                                                <li><a href="it/it-consulting">IT-Consulting</a></li>
-                                                <li><a href="it/it-sicherheit">IT-Sicherheit</a></li>
+                                                <li><a href="it/it-service">Service</a></li>
+                                                <li><a href="it/it-consulting">Consulting</a></li>
+                                                <li><a href="it/it-sicherheit">Sicherheit</a></li>
                                                 <li><a href="/datev/">DATEV</a></li>
                                                 <li><a href="/ELO/">ELO</a></li>
                                             </ul>
@@ -138,7 +147,6 @@
                                         <li><a href="agb">AGB</a></li>
                                     </ul>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -152,7 +160,7 @@
 
             <!-- Banner -->
             <div class="services-boxgc pointer">
-                <div id="about" class="container" >
+                <div id="about" class="container">
 
                     <!-- Banner Logo -->
                     <img id="whlogo" alt="Wolkenhof Logo – GREENCLOUD, IT, OFFICE"
@@ -214,19 +222,20 @@
             </script>
 
             <div style="background-color: #fff;">
-                <div class="container" style="margin-left: 25%;">
+                <div class="container">
                     <div class="toptext">
+                        <center>
                         <h1>Unsere Vision</h1>
-                        <p><i class="fa fa-check"></i>Individuelle Lösungen in den Bereichen IT-Support, IT-Sicherheit,
-                            IT-Infrastruktur und Cloud
-                            Computing</p>
-                        <p><i class="fa fa-check"></i>Flexibel anpassbare Services, die sich den Bedürfnissen Ihres
-                            Unternehmens anpassen</p>
-                        <p><i class="fa fa-check"></i>Expertise und Erfahrung, um Ihre IT-Herausforderungen zu meistern
-                        </p>
-                        <p><i class="fa fa-check"></i>Kontaktieren Sie uns für weitere Informationen darüber, wie wir
-                            Ihnen
-                            helfen können</p>
+                        <p>Unser Ziel ist es, sowohl ökologisch, ökonomisch und sozial neue Wege zu gehen und
+                            nachhaltigere Formen des Wirtschaftens zu entwickeln – für eine faire Zukunft! Mit dem
+                            WOLKENHOF haben wir ein Unternehmen gegründet, das nicht nur unsere verschiedenen Bereiche –
+                            Rechenzentrum, IT und OFFICE – effizient verbindet, sondern auch unsere Verantwortung für
+                            das Miteinander und die Umwelt zur Basis unseres Handelns macht. So wird unser grünes
+                            Rechenzentrum GREENCLOUD in Lehm- und Holzbauweise gebaut. Um den CO2-Verbrauch zu
+                            verringern, nutzen wir moderne Techniken, wie Wärmerückgewinnung und Ökostrom. Zudem
+                            betrachten wir unsere Arbeitszeit als Lebenszeit – und schaffen dafür Unternehmensstrukturen
+                            und ein Umfeld, in dem sich unsere Mitarbeitenden wohlfühlen.</p>
+                        </center>
                     </div>
                 </div>
                 <table
@@ -372,7 +381,7 @@
                             rootMargin: '0px',
                             threshold: 0.1
                         };
-            
+
                         const observerCallback = (entries, observer) => {
                             entries.forEach(entry => {
                                 if (entry.isIntersecting) {
@@ -382,9 +391,9 @@
                                 }
                             });
                         };
-            
+
                         const observer = new IntersectionObserver(observerCallback, observerOptions);
-            
+
                         const images = document.querySelectorAll('.section-image');
                         images.forEach(image => {
                             observer.observe(image);

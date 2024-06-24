@@ -92,24 +92,32 @@
             </button>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="../"><span></span>Start</a></li>
-                <li class="drop"><a href="../#about"><span></span>Wolkenhof</a>
+                <li>
+                  <a href="../"><span></span>Start</a>
+                </li>
+                <li class="drop"><a><span></span>Wolkenhof</a>
                   <ul class="drop-down">
                     <li><a href="../wolkenhof">Der Wolkenhof</a></li>
-                    <li><a href="../wolkenhof/#standorte">Unsere Standorte</a></li>
                     <li><a href="../team">Unser Team</a></li>
                     <li><a href="../netzwerk-partner">Netzwerk &amp; Partner</a></li>
                     <li><a href="../karriere">Jobs &amp; Karriere</a></li>
                   </ul>
                 </li>
-                <li class="drop"><a href="../#bereiche" class="active"><span></span>Leistungen</a>
+                <li class="drop"><a class="active" href="#bereiche"><span></span>Leistungen</a>
                   <ul class="drop-down">
-                    <li><a href="../greencloud">GREENCLOUD</a></li>
+                    <li><a href="../greencloud/">GREENCLOUD</a>
+                      <ul class="drop-down level3">
+                        <li><a href="../greencloud/iaas/">Virtuelle Server</a></li>
+                        <li><a href="../greencloud/backup/">Datensicherung</a></li>
+                        <li><a href="../greencloud/individuelle-loesungen/">Individuelle
+                            Lösungen</a></li>
+                      </ul>
+                    </li>
                     <li><a href="../it">IT</a>
                       <ul class="drop-down level3">
-                        <li><a href="../it/it-service">IT-Service</a></li>
-                        <li><a href="../it/it-consulting">IT-Consulting</a></li>
-                        <li><a href="../it/it-sicherheit">IT-Sicherheit</a></li>
+                        <li><a href="../it/it-service">Service</a></li>
+                        <li><a href="../it/it-consulting">Consulting</a></li>
+                        <li><a href="../it/it-sicherheit">Sicherheit</a></li>
                         <li><a href="../datev/">DATEV</a></li>
                         <li><a href="../ELO/">ELO</a></li>
                       </ul>
@@ -148,6 +156,11 @@
 
     <!-- Content Section -->
     <div id="content">
+      <div class="services-boxgc pointer">
+        <div id="about" class="container" style="height: 100px;">
+          <h1 class="page-title" style="margin-top: 90px;"></h1>
+        </div>
+      </div>
       <!-- Banner -->
       <div class="left-img" style="padding-top: 5%;margin-bottom: -5% ;background-color: #FFFFFF;">
         <div class="container">
@@ -173,6 +186,7 @@
         </div>
       </div>
 
+
       <!-- Content -->
       <div class="choose-tempcore">
         <!-- horizontal tabs -->
@@ -183,36 +197,20 @@
               <br>
             </div>
           </div>
-
-          <div class="horizontal-tabs-box">
-            <div class="container">
-
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs" id="myTab">
-                <li class="active"><a href="#kanzleien" data-toggle="tab" aria-expanded="true"><i
-                      class="fa fa-chevron-circle-right"></i> <strong>Für Kanzleien</strong></a></li>
-                <li class=""><a href="#mandanten" data-toggle="tab" aria-expanded="false"><i
-                      class="fa fa-chevron-circle-right"></i> <strong>Für Mandanten</strong></a></li>
-                <li class=""><a href="#unternehmen" data-toggle="tab" aria-expanded="false"><i
-                      class="fa fa-chevron-circle-right"></i> <strong>Unternehmen Online</strong></a></li>
-                <li class=""><a href="#scanner" data-toggle="tab" aria-expanded="true"><i
-                      class="fa fa-chevron-circle-right"></i> <strong>Scannerlösungen</strong></a></li>
-                <li class=""><a href="#elo" data-toggle="tab" aria-expanded="true"><i
-                      class="fa fa-chevron-circle-right"></i> <strong>ELO for DATEV</strong></a></li>
-                <li class=""><a href="#swyx" data-toggle="tab" aria-expanded="true"><i
-                      class="fa fa-chevron-circle-right"></i> <strong>Swyx for Datev</strong></a></li>
-                <li class=""><a href="#partner" data-toggle="tab" aria-expanded="true"><i
-                      class="fa fa-chevron-circle-right"></i> <strong>Partner ASP</strong></a></li>
-              </ul>
-
-
-              <!-- Tab Content -->
-              <div class="tab-content">
-                <!-- Tab 1 -->
-                <div class="tab-pane active" id="kanzleien">
-                  <h4>Ihre Schlüssel zur Effizienz und Erfolgsoptimierung!</h4>
-                  <h3>DATEV für Kanzleien</h3>
-                  <p>
+          <div class="wrapper center-block">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading active" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a class="collapsed title" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Für Kanzleien
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <h1>Ihre Schlüssel zur Effizienz und Erfolgsoptimierung!</h1>
                     </br>
                     Entdecken Sie mit DATEV eine herausragende Softwarelösung, die speziell für Kanzleien entwickelt
                     wurde, um Arbeitsprozesse zu optimieren und nachhaltigen Erfolg zu sichern. Als Verfechter dieser
@@ -224,19 +222,26 @@
                     Wir stehen für Sie bereit, wenn es um DATEV Updates, DATEV Installationen und auch wenn es um alle
                     sonstigen DATEV Themen geht. Unsere Stärke ist hierbei, dass wir Fachwissen aus allen Abteilungen
                     für Sie zusammenbringen, egal ob IT, Drucker, Scanner, Datenschutz, Möbel oder DATEV wir stehen mit
-                    mehr als 60 Mitarbeitern für Sie bereit.</br>
-                  </p>
-                  <center>
-                    <video src="/videos/DATEV Solution Partner – der echte IT-Experte für Ihre Kanzlei.mp4" controls width="50%"></video>
-                  </center>
+                    mehr als 60 Mitarbeitern für Sie bereit.</br></br>
+                    <center>
+                      <video src="/videos/DATEV Solution Partner – der echte IT-Experte für Ihre Kanzlei.mp4" controls
+                        width="50%"></video>
+                    </center>
+                  </div>
                 </div>
-
-                <!-- Tab 2 -->
-                <div class="tab-pane" id="mandanten">
-                  <h4>Ihr Weg zu Transparenz und Effizienz in der Finanzverwaltung!
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Für Mandanten
+                    </a>
                   </h4>
-                  <h3>DATEV für Mandanten</h3>
-                  <p>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <h1>Ihr Weg zu Transparenz und Effizienz in der Finanzverwaltung!</h1>
                     </br>
                     Entdecken Sie mit DATEV eine herausragende Softwarelösung, die die Arbeitsprozesse für Mandanten
                     optimiert und den einfachen Austausch mit dem Steuerberater in den Vordergrund stellt. Als
@@ -248,16 +253,25 @@
                     immer den Blick auf die Interessen unserer Kunden gerichtet.
                     Wir stehen für Sie bereit, wenn es um DATEV Updates, DATEV Installationen und auch wenn es um alle
                     sonstigen DATEV Themen geht. Unsere Stärke ist hierbei, dass wir Fachwissen aus allen Abteilungen
-                    für Sie zusammenbringen, egal ob IT, Drucker, Scanner, Datenschutz, Möbel oder DATEV wir stehen mit
+                    für Sie zusammenbringen, egal ob IT, Drucker, Scanner, Datenschutz, Möbel oder DATEV wir stehen
+                    mit
                     mehr als 60 Mitarbeitern für Sie bereit.</br>
-                  </p>
+                  </div>
                 </div>
-
-                <!-- Tab 3 -->
-                <div class="tab-pane" id="unternehmen">
-                  <h4>Steigern Sie Ihre Finanzeffizienz im digitalen Zeitalter!</h4>
-                  <h3>Datev Unternehmen Online</h3>
-                  <p>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Unternehmen online
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                  <div class="panel-body">
+                    <h1>Steigern Sie Ihre Finanzeffizienz im digitalen Zeitalter!</h1>
+                    <br>
                     </br>
                     DATEV Unternehmen Online schafft individuelle Möglichkeiten der Zusammenarbeit zwischen
                     Steuerberater und Mandant über die DATEV-Cloud. Als Ihr DATEV Solution Partner beraten wir Sie
@@ -273,78 +287,105 @@
                     Online-Unternehmen zugeschnitten ist. Als Unterstützer dieser modernen Plattform möchten wir Ihnen
                     die zahlreichen Vorteile vorstellen, die DATEV Ihrem Online-Geschäft bieten kann.
                     </br>
-                  </p>
+                  </div>
                 </div>
-
-                <!-- Tab 4 -->
-                <div class="tab-pane" id="scanner">
-                  <h4>Effiziente Digitalisierung für Ihr Unternehmen!</h4>
-                  <h3>Scannerlösungen für Datev</h3>
-                  <p>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFour">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Scannerlösungen
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                  <div class="panel-body">
+                    <h1>Effiziente Digitalisierung für Ihr Unternehmen!</h1>
+                    <h3>Scannerlösungen für Datev</h3>
                     </br>
                     Unsere Scannerlösungen digitalisieren Ihre Belege und übertragen diese wie von selbst an DATEV
-                    Unternehmen Online.</br>
-                    Einfache Belegtrennung durch künstliche Intelligenz, sprechen Sie uns gerne an, wenn wir Sie in der
-                    Digitalisierung auf ein neues Level bringen sollen.</br>
+                    Unternehmen Online.
                     </br>
-                    Scannerbox
-                    Unsere scannerbox für Kanzleien und Mandanten, die Smart-Scan-Lösung zum Digitalisieren von Belegen.
+                    Einfache Belegtrennung durch künstliche Intelligenz, sprechen Sie uns gerne an, wenn wir Sie in
+                    der
+                    Digitalisierung auf ein neues Level bringen sollen.
+                    </br>
+                    </br>
+                    <h3>Scannerbox</h3>
+                    </br>
+                    Unsere scannerbox für Kanzleien und Mandanten, die Smart-Scan-Lösung zum Digitalisieren von
+                    Belegen.
                     Einfache und schnelle Übermittlung großer Belegmengen zu DATEV Unternehmen online inklusive
-                    Mandantenzuordnung, zu DATEV Meine Steuern direkt ins richtige Steuerjahr, Haupt- und Unterkategorie
-                    und DATEV DMS.</br>
+                    Mandantenzuordnung, zu DATEV Meine Steuern direkt ins richtige Steuerjahr, Haupt- und
+                    Unterkategorie
+                    und DATEV DMS.
+                    </br>
                     </br>
                     <center>
                       <video src="/videos/scannerbox. Mandant connect II _ Produktvideo.mp4" controls
                         width="50%"></video>
                     </center>
                     </br>
+                    <h3>Toshiba e-ScanFlow</h3>
                     </br>
-                    <h4>Toshiba e-ScanFlow</h4></br>
                     Erweitern Sie Ihr Toshiba MFP System und e-ScanFlow mit dem Datev Modul.</br>
                     Wenn der Workflow im Unternehmen stimmt und firmeninterne Prozesse vereinfacht sowie optimiert
                     werden, kann dies zu einer erheblichen Effizienzsteigerung führen und damit auch den Erfolg des
-                    Unternehmens positiv beeinflussen.</br>
-                    Sprechen Sie uns gerne an, wenn wir Ihnen bei der Optimierung Ihrer Workflows
-                    helfen dürfen.</br>
-
-                  </p>
-                </div>
-
-                <!-- Tab 5 -->
-                <div class="tab-pane" id="elo">
-                  <h4>Digitale Archivierung für eine effiziente DATEV-Integration!</h4>
-                  <h3>Elo for Datev</h3>
-                  <p>
+                    Unternehmens positiv beeinflussen.
                     </br>
-                    Digitales Rechnungsmanagement mit ELO for DATEV</br>
-                    Mit einem ECM-System werden eingehende Belege digital geprüft und freigegeben. Durch ELO for DATEV
-                    besteht hier das perfekte Zusammenspiel mit den Rechnungswesen-Programmen der DATEV.</br>
-                    Damit sparen Sie wertvolle Zeit, bekommen einen durchgängigen und effizienten Prozess und senken
-                    Ihre Verwaltungskosten.</br>
-
-
-                  <div style="background-color: #056598; width: 11%; text-align: center; font-size: medium;">
-                    <a href="/download/elo_datev_flyer_de.pdf"><i class="fa fa-download" style="color: #FFFFFF;"></i>
-                      <strong style="color: #FFFFFF;">Info-Broschüre</strong>
-                    </a>
+                    Sprechen Sie uns gerne an, wenn wir Ihnen bei der Optimierung Ihrer Workflows
+                    helfen dürfen.
+                    </br>
                   </div>
-                  <center>
-                    <video src="/videos/ELO for DATEV.mp4" controls width="50%"></video>
-                  </center>
-
-
-                  <!-- ################ -->
-                  <!-- ELO FOR DATEV YOUTUBE -->
-                  <!-- ################ -->
-
-                  </p>
                 </div>
-
-                <!-- Tab 6 -->
-                <div class="tab-pane" id="swyx">
-                  <h4>[[[HIER KOMMT EIN SLOGAN HIN]]]</h4>
-                  <h3>Swyx for Datev</h3>
-                  <p>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingFive">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      ELO for DATEV
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                  <div class="panel-body">
+                    </br>
+                    <h1>Digitale Archivierung für eine effiziente DATEV-Integration!</h1>
+                    <h3>Digitales Rechnungsmanagement mit ELO for DATEV</h3>
+                    </br>
+                    Mit einem ECM-System werden eingehende Belege digital geprüft und freigegeben. Durch ELO for DATEV
+                    besteht hier das perfekte Zusammenspiel mit den Rechnungswesen-Programmen der DATEV.
+                    </br>
+                    Damit sparen Sie wertvolle Zeit, bekommen einen durchgängigen und effizienten Prozess und senken
+                    Ihre Verwaltungskosten.
+                    </br>
+                    </br>
+                    <div style="background-color: #056598; width: 11%; text-align: center; font-size: medium;">
+                      <a href="/download/elo_datev_flyer_de.pdf"><i class="fa fa-download" style="color: #FFFFFF;"></i>
+                        <strong style="color: #FFFFFF;">Info-Broschüre</strong>
+                      </a>
+                    </div>
+                    <center>
+                      <video src="/videos/ELO for DATEV.mp4" controls width="50%"></video>
+                    </center>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingSix">
+                  <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      Swyx for DATEV
+                    </a>
+                  </h4>
+                </div>
+                <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                  <div class="panel-body">
+                    <h1>Swyx for DATEV</h1>
+                    <br>
                     </br>
                     Die Digitalisierung ist im vollen Gang und auch Steuerkanzleien sollten sich damit
                     auseinandersetzen, um nicht den Anschluss zu verlieren.</br>
@@ -360,53 +401,14 @@
                     </br>
                     Sprechen Sie uns gerne an, wenn wir Ihr Telefonsystem bestmöglich mit DATEV verbinden dürfen.</br>
 
-                  <div style="background-color: #056598; width: 11%; text-align: center; font-size: medium;">
-                    <a href="/download/Swyx_und_DATEV_Integration_DE.pdf"><i class="fa fa-download"
-                        style="color: #FFFFFF;"></i>
-                      <strong style="color: #FFFFFF;">Info-Broschüre</strong>
-                    </a>
-                  </div>
-                  </p>
-                </div>
-
-                <!-- Tab 7 -->
-                <div class="tab-pane" id="partner">
-                  <h4>Wir helfen ihnen gerne Weiter</h4>
-                  <h3>Datev Partner ASP</h3>
-                  <div class="container" style="margin-top: 3%;">
-                    <div class="col-md-3" style="margin-left: -15%;">
-                      <div class="staff-post">
-                        <div class="staff-post-gal">
-                          <img alt="" src="/upload/team_SoenkeElbers.jpg">
-                        </div>
-                        <h4 class="pt-15 blue">Sönke Elbers</h4>
-                        <p class="text-center">AbtL IT, Prokurist</p>
-                        <p class="blue pt-15"><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581
-                            9036-0</a><br>
-                          <i class="fa fa-envelope"></i>
-                          <a
-                            href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x73;&#x65;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x73;&#x65;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="staff-post">
-                        <div class="staff-post-gal">
-                          <img alt="" src="/upload/team_404.jpg">
-                        </div>
-                        <h4 class="pt-15 blue">Philipp Krötzsch</h4>
-                        <p class="text-center">Techniker, Datev Spezialist</p>
-                        <p class="blue pt-15"><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581
-                            9036-0</a><br>
-                          <i class="fa fa-envelope"></i>
-                          <a
-                            href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x50;&#x4b;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x70;&#x6b;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
-                        </p>
-                      </div>
+                    <div style="background-color: #056598; width: 11%; text-align: center; font-size: medium;">
+                      <a href="/download/Swyx_und_DATEV_Integration_DE.pdf"><i class="fa fa-download"
+                          style="color: #FFFFFF;"></i>
+                        <strong style="color: #FFFFFF;">Info-Broschüre</strong>
+                      </a>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -462,18 +464,6 @@
           <img alt="Sponsors" src="/upload/efre-300x144.png">
         </div>
       </div>
-
-      <!-- Get to know -->
-      <div class="tempcore-line">
-        <div class="container text-center">
-          <div class="col-md-10 col-md-offset-1">
-            <a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAxpmlfoipg/dpn');">INFOS</a>
-            <p><i class="fa fa-arrow-right"></i><span class="greencloud">wolkenhof</span> kennenlernen.
-              <span>Jetzt INFOS anfragen!</span>
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div>
@@ -489,14 +479,57 @@
       <div class="up-footer">
         <div class="container">
           <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-7 ap-left">
+              <div class="row">
+                <h3 class="col-xs-12" style="color: #fff;">Haben sie Fragen zum wolkenhof?</h3>
+                <div class="col-xs-12 col-md-6" id="contact-team-img"><a href="../team/index.html"> <img loading="lazy"
+                      class="img-responsive contact-team-img" alt="IT-SERVICE.NETWORK Ansprechpartner"
+                      src="../images/wolkenhof-team.jpg"></a>
+                </div>
+                <div class="col-xs-12 col-md-6 ap-daten">
+                  <ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-5 ap-right">
+              <form id="contact-form" class="form-inline" method="post" action="">
+                <h3 style="color: #fff;">Senden Sie uns Ihr Anliegen</h3>
+                <div class="text-fields">
+                  <div class="float-input">
+                    <input name="name" id="name" type="text" placeholder="Name*" required="required">
+                    <span><i class="fa fa-user"></i></span>
+                  </div>
+                  <div class="float-input">
+                    <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
+                    <span><i class="fa fa-envelope-o"></i></span>
+                  </div>
+                </div>
+                <div class="submit-area">
+                  <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
+                  <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a href="../datenschutz"
+                    target="_blank"><strong style="color: #b3ddff;">Datenschutzerklärung</strong></a>
+                  <strong>
+                    gelesen</strong><br>
+                  <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
+                  <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="up-footer">
+        <div class="container">
+          <div class="row">
 
             <!-- Main Footer Logo -->
             <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
               <div class="widget footer-widgets text-widget">
                 <div>
-                  <img class="img-responsive" alt="Logo Greencloud" src="/images/Wolkenhof_Logo-weiss.png">
+                  <img id="wolkenhof-img" onclick="handleClick()" class="img-responsive" alt="Logo Greencloud"
+                    src="../images/Wolkenhof_Logo-weiss.png">
                 </div>
-
               </div>
             </div>
 
@@ -507,7 +540,7 @@
                   <li><span class="greencloud">wolkenhof</span> GmbH</li>
                   <li><i class="fa fa-home"></i> Schillerstraße 13b, 29525 Uelzen</li>
                   <li><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581 9036-0</a></li>
-                  <li><i class="fa fa-envelope"></i><a
+                  <li><i class="fa fa-envelope"></i> <a
                       href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
                   </li>
                 </ul>
@@ -518,9 +551,9 @@
             <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
-                  <li> <a href="#top">Start</a></li>
-                  <li> <a href="wolkenhof">Wolkenhof – über uns</a></li>
-                  <li> <a href="../index.html#bereiche">Leistungen</a></li>
+                  <li> <a href="../">Start</a></li>
+                  <li> <a href="../wolkenhof/">Wolkenhof – über uns</a></li>
+                  <li> <a href="../">Leistungen</a></li>
                 </ul>
               </div>
             </div>
@@ -535,27 +568,46 @@
                 </ul>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
+
+        
 
       <!-- Copyright Footer -->
       <div class="footer-line">
         <div class="container">
           <div class="col-md-12">
-            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
+            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte
+              vorbehalten.</h5>
           </div>
           <script>
             document.getElementById("currentYear").innerText = new Date().getFullYear();
           </script>
         </div>
       </div>
-
     </footer>
   </div>
-
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 10 seconds
+    }
+  </script>
 
 </body>
 

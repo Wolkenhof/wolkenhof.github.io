@@ -5,7 +5,7 @@
     <title>wolkenhof</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="css/googlefont_roboto.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
@@ -93,11 +93,12 @@
                         </button>
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="active" href="#"><span></span>Start</a></li>
-                                <li class="drop"><a href="#about"><span></span>Wolkenhof</a>
+                                <li>
+                                    <a class="active" href="#"><span></span>Start</a>
+                                </li>
+                                <li class="drop"><a><span></span>Wolkenhof</a>
                                     <ul class="drop-down">
                                         <li><a href="wolkenhof">Der Wolkenhof</a></li>
-                                        <li><a href="wolkenhof#standorte">Unsere Standorte</a></li>
                                         <li><a href="team">Unser Team</a></li>
                                         <li><a href="netzwerk-partner">Netzwerk &amp; Partner</a></li>
                                         <li><a href="karriere">Jobs &amp; Karriere</a></li>
@@ -105,12 +106,19 @@
                                 </li>
                                 <li class="drop"><a href="#bereiche"><span></span>Leistungen</a>
                                     <ul class="drop-down">
-                                        <li><a href="greencloud">GREENCLOUD</a></li>
+                                        <li><a href="greencloud">GREENCLOUD</a>
+                                            <ul class="drop-down level3">
+                                                <li><a href="greencloud/iaas/">Virtuelle Server</a></li>
+                                                <li><a href="greencloud/backup/">Datensicherung</a></li>
+                                                <li><a href="greencloud/individuelle-loesungen/">Individuelle
+                                                        Lösungen</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="it">IT</a>
                                             <ul class="drop-down level3">
-                                                <li><a href="it/it-service">IT-Service</a></li>
-                                                <li><a href="it/it-consulting">IT-Consulting</a></li>
-                                                <li><a href="it/it-sicherheit">IT-Sicherheit</a></li>
+                                                <li><a href="it/it-service">Service</a></li>
+                                                <li><a href="it/it-consulting">Consulting</a></li>
+                                                <li><a href="it/it-sicherheit">Sicherheit</a></li>
                                                 <li><a href="/datev/">DATEV</a></li>
                                                 <li><a href="/ELO/">ELO</a></li>
                                             </ul>
@@ -139,7 +147,6 @@
                                         <li><a href="agb">AGB</a></li>
                                     </ul>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -153,7 +160,7 @@
 
             <!-- Banner -->
             <div class="services-boxgc pointer">
-                <div id="about" class="container" style="padding-top: 5%; padding-bottom: 5%;">
+                <div id="about" class="container">
 
                     <!-- Banner Logo -->
                     <img id="whlogo" alt="Wolkenhof Logo – GREENCLOUD, IT, OFFICE"
@@ -214,379 +221,521 @@
                 });
             </script>
 
-            <!-- Image Tile Section -->
-            <div id="bereiche" class="portfolio-box with-3-col background-box">
+            <div style="background-color: #fff;">
                 <div class="container">
-                    <!-- Portfolio Section -->
-                    <!-- <div class="portfolio-container" style="overflow: hidden; display: inline-block;">
-                        <table>
-                            <tr>
-                                <th>
-                                    <div class="project-post isotope-item">
-                                        <img alt="GREENCLOUD Rechenzentrum" src="upload/image1.jpg">
-                                        <div class="hover-box">
-                                            <div class="inner-hover-box">
-                                                <h2>GREENCLOUD</h2>
-                                                <p>Grünes Rechenzentrum</p>
-                                                <a href="greencloud" class="link"><i class="fa fa-info-circle"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th>
-
-                                    <div class="project-post isotope-item">
-                                        <img alt="wolkenhof IT" src="upload/image2-1.jpg">
-                                        <div class="hover-box">
-                                            <div class="inner-hover-box">
-                                                <h2>IT</h2>
-                                                <p>Support &amp; Service, Consulting, Sicherheit</p>
-                                                <a href="it" class="link"><i class="fa fa-info-circle"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th>
-
-                                    <div class="project-post isotope-item">
-                                        <img alt="wolkenhof office" src="upload/image3.jpg">
-                                        <div class="hover-box">
-                                            <div class="inner-hover-box">
-                                                <h2>OFFICE</h2>
-                                                <p>Büroplanung, Büroeinrichtung</p>
-                                                <a href="office" class="link"><i class="fa fa-info-circle"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </th>
-                            </tr>
-
-                            <tr>
-                                <th>
-                                    <div class="project-post isotope-item">
-                                        <img alt="wolkenhof office" src="upload/image4.jpg">
-                                        <div class="hover-box">
-                                            <div class="inner-hover-box">
-                                                <h2>OFFICE</h2>
-                                                <p>Druck-/Kopiersysteme und Software, Dokumentenmanagement (DMS)</p>
-                                                <a href="druck-kopie-software" class="link"><i
-                                                        class="fa fa-info-circle"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="project-post isotope-item">
-                                        <img alt="wolkenhof datenschutzservice" src="upload/datenschutz.jpg">
-                                        <div class="hover-box">
-                                            <div class="inner-hover-box">
-                                                <h2>DATENSCHUTZSERVICE</h2>
-                                                <p>sicheres Auslagern nach EU-DSGVO </p>
-                                                <a href="datenschutzservice" class="link"><i
-                                                        class="fa fa-info-circle"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </th>
-                                <th>
-                                    <div class="project-post isotope-item">
-                                        <img alt="wolkenhof – über uns" src="upload/image6.jpg">
-                                        <div class="hover-box">
-                                            <div class="inner-hover-box">
-                                                <h2>WOLKENHOF&nbsp;</h2>
-                                                <p>Lebenswert/e nachhaltig gestalten!</p>
-                                                <a href="wolkenhof" class="link"><i class="fa fa-info-circle"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </th>
-                            </tr>
-                        </table>
-                    </div> -->
-                    <div class="icon-card-wrapper">
-                        <div class="icon-card-cols">
-                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
-                                <div class="icon-card-container">
-                                    <div class="icon-card-front" style="background-image: url(upload/image1.jpg)">
-                                    </div>
-                                    <div class="icon-card-back">
-                                        <div class="icon-card-inner">
-                                            <p>Grünes Rechenzentrum</p>
-
-                                            <div class="icon-card-button">
-                                                <a href="greencloud"><i class="fa fa-arrow-circle-o-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
-                                <div class="icon-card-container">
-                                    <div class="icon-card-front" style="background-image: url(upload/image2-1.jpg)">
-                                    </div>
-                                    <div class="icon-card-back">
-                                        <div class="icon-card-inner">
-                                            <p>Support &amp; Service, Consulting, Sicherheit</p>
-
-                                            <div class="icon-card-button">
-                                                <a href="it"><i class="fa fa-arrow-circle-o-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
-                                <div class="icon-card-container">
-                                    <div class="icon-card-front" style="background-image: url(upload/image3.jpg)">
-                                    </div>
-                                    <div class="icon-card-back">
-                                        <div class="icon-card-inner">
-                                            <p>Büroplanung, Büroeinrichtung</p>
-
-                                            <div class="icon-card-button">
-                                                <a href="office"><i class="fa fa-arrow-circle-o-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="icon-card-cols">
-                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
-                                <div class="icon-card-container">
-                                    <div class="icon-card-front" style="background-image: url(upload/image4.jpg)">
-                                    </div>
-                                    <div class="icon-card-back">
-                                        <div class="icon-card-inner">
-                                            <p>Druck-/Kopiersysteme und Software, Dokumentenmanagement (DMS)</p>
-
-                                            <div class="icon-card-button">
-                                                <a href="druck-kopie-software"><i class="fa fa-arrow-circle-o-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
-                                <div class="icon-card-container">
-                                    <div class="icon-card-front" style="background-image: url(upload/datenschutz.jpg)">
-                                    </div>
-                                    <div class="icon-card-back">
-                                        <div class="icon-card-inner">
-                                            <p>sicheres Auslagern nach EU-DSGVO </p>
-
-                                            <div class="icon-card-button">
-                                                <a href="datenschutz"><i class="fa fa-arrow-circle-o-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="icon-card-col" ontouchstart="this.classList.toggle('hover');">
-                                <div class="icon-card-container">
-                                    <div class="icon-card-front" style="background-image: url(upload/image6.jpg)">
-                                    </div>
-                                    <div class="icon-card-back">
-                                        <div class="icon-card-inner">
-                                            <p>Lebenswert/e nachhaltig gestalten!</p>
-
-                                            <div class="icon-card-button">
-                                                <a href="wolkenhof"><i class="fa fa-arrow-circle-o-right"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- REVIEWS AND COMMENTS -->
-                    <div id="comments" style="margin-top: 30px;">
-                        <table class="container">
-                            <tr class="comment-row">
-                                <td class="comment-a-image">
-                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodix.com%2Flogo%2F1084022.png&f=1&nofb=1&ipt=29201d02da02d4e965ffadb47e7cd64a95392fd1d38c1a91d3fcd52775d04d52&ipo=images"
-                                        alt="Logo" style="width: 250px;">
-                                </td>
-                                <td class="comment-a-column">
-                                    <div speech-bubble pleft abottom
-                                        style="--bbColor:#056598; color: white; border: outset; border-radius: 16px;">
-                                        <div class="css-typing">
-                                            <p>Wir sind begeistert von der Zusammenarbeit mit der Wolkenhof GmbH! Ihr
-                                            </p>
-                                            <p>Team reagiert prompt, ist äußerst professionell und geht aktiv auf unsere
-                                            </p>
-                                            <p>individuellen Bedürfnisse ein. Die maßgeschneiderten Lösungen haben</p>
-                                            <p>nicht nur unsere Erwartungen erfüllt, sondern übertroffen. Transparente
-                                            </p>
-                                            <p>Kommunikation und offene Zusammenarbeit haben eine starke und</p>
-                                            <p>erfolgreiche Partnerschaft ermöglicht. Wir empfehlen die Wolkenhof GmbH
-                                            </p>
-                                            <p>uneingeschränkt als zuverlässigen und innovativen Geschäftspartner!</p>
-                                        </div>
-                                    </div>
-                                    <div class="comment-autor-a">
-                                        TESTINGER GmbH
-                                    </div>
-                                </td>
-                                <td class="comment-spacer-b"></td>
-                            </tr>
-                        </table>
-                        <table class="container">
-                            <tr class="comment-row">
-                                <td class="comment-spacer-b"></td>
-                                <td class="comment-column">
-                                    <div speech-bubble pright abottom
-                                        style="--bbColor:#056598; color: white; border: outset; border-radius: 16px;">
-                                        <div class="css-typing">
-                                            <p>Unsere Zusammenarbeit war herausragend! Schnelle Reaktion,
-                                                professionelles</p>
-                                            <p>Engagement und maßgeschneiderte Lösungen, die unsere Erwartungen
-                                                übertroffen</p>
-                                            <p>haben. Die transparente Kommunikation schafft Vertrauen, und eure</p>
-                                            <p>Innovationsbereitschaft beeindruckt.</p>
-                                        </div>
-                                    </div>
-                                    <div class="comment-autor-b">
-                                        Platzhalter GmbH
-                                    </div>
-                                </td>
-                                <td class="comment-image">
-                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F021%2F615%2F987%2Foriginal%2Ftv-signal-test-screen-retro-television-color-test-vector.jpg&f=1&nofb=1&ipt=a445bee2a77c7462d775137f889952189a6d6559d2a7b07343a39bf26195a8e2&ipo=images"
-                                        alt="Logo" style="width: 250px;">
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <!-- Block 1 -->
-                    <div class="title-section">
-                        <div class="container">
-                            <h1 class="blue">Zusammen etwas bewegen!</h1>
-                            <h4>Der wolkenhof ist offen für alle</h4>
-                        </div>
-                        <div class="container col-md-8 col-md-offset-2 pt-20 pb-40">
-                            <p>Werden Sie Teil von etwas Großem: <strong>Menschen und Organisationen</strong>, die
-                                teilhaben
-                                möchten, die unsere <strong>Werte teilen</strong> und zur
-                                <strong>Weiterentwicklung</strong>
-                                beitragen möchten, sind bei uns willkommen!
-                            </p>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12 image-sect"
-                                    style="display: flex; justify-content: center; align-items: center;">
-                                    <img class="img-responsive" alt="wolkenhof Team" src="images/wolkenhof-team.jpg">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-10 col-md-offset-1 pt-50 pb-20">
-                                    <ul class="tempcore-features">
-                                        <li>
-                                            <span><i class="fa fa-cogs"></i></span>
-                                            <h4>Ziele &amp; Unternehmenskultur</h4>
-                                            <p>Mit dem wolkenhof möchten wir Digitalisierung, Nachhaltigkeit und
-                                                Gemeinwohlorientierung in Einklang bringen.
-                                                <strong>
-                                                    <a href="wolkenhof/">Über uns...</a>
-                                                </strong>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <span><i class="fa fa-link"></i></span>
-                                            <h4>wolkenhof Kooperationen</h4>
-                                            <p>Langjährige Kooperationen, Netzwerk- und Win-Win-Denken sind der
-                                                Schlüssel unseres Erfolgs.
-                                                <strong>
-                                                    <a href="netzwerk-partner/">Netzwerk &amp; Partner...</a>
-                                                </strong>
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <span><i class="fa fa-star-half-full"></i></span>
-                                            <h4>Ausbildung &amp; Mitarbeit</h4>
-                                            <p>Werde Teil unseres wolkenhof-Teams und starte mit uns in eine
-                                                nachhaltige, digitale Zukunft!
-                                                <strong>
-                                                    <a href="karriere/">Jobs &amp; Karriere...</a>
-                                                </strong>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="toptext">
+                        <center>
+                            <h1>Unsere Vision</h1>
+                            <p>Unser Ziel ist es, sowohl ökologisch, ökonomisch und sozial neue Wege zu gehen und
+                                nachhaltigere Formen des Wirtschaftens zu entwickeln – für eine faire Zukunft! Mit dem
+                                WOLKENHOF haben wir ein Unternehmen gegründet, das nicht nur unsere verschiedenen
+                                Bereiche –
+                                Rechenzentrum, IT und OFFICE – effizient verbindet, sondern auch unsere Verantwortung
+                                für
+                                das Miteinander und die Umwelt zur Basis unseres Handelns macht. So wird unser grünes
+                                Rechenzentrum GREENCLOUD in Lehm- und Holzbauweise gebaut. Um den CO2-Verbrauch zu
+                                verringern, nutzen wir moderne Techniken, wie Wärmerückgewinnung und Ökostrom. Zudem
+                                betrachten wir unsere Arbeitszeit als Lebenszeit – und schaffen dafür
+                                Unternehmensstrukturen
+                                und ein Umfeld, in dem sich unsere Mitarbeitenden wohlfühlen.</p>
+                        </center>
                     </div>
                 </div>
+                <table
+                    style="width: 80%; margin-left: 10%; margin-top: 50px; background-image: linear-gradient(to right, rgba(196, 196, 196, 0.274), rgba(255, 255, 255, 0))">
+                    <tr>
+                        <th style="width: 60%;">
+                            <div style="height: 500px;">
+                                <div style="margin-left: 10%; margin-right: 10%;">
+                                    </br>
+                                    <h2>REVOLUTION IHRER IT MIT GREENCLOUD</h2>
+                                    <p style="color: #3F3F3F;
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-weight: 300;
+                                    -webkit-font-smoothing: antialiased;">
+                                        Möchten Sie Ihre IT-Infrastruktur nachhaltig und effizient gestalten? Dann ist
+                                        die Wolkenhof GreenCloud ideal für Sie.
+                                        </br>
+                                        </br>
+                                        Unsere umweltfreundliche Cloud-Lösung sorgt für sicheren und reibungslosen
+                                        Betrieb Ihrer Anwendungen und Daten, reduziert Ihren ökologischen Fußabdruck und
+                                        bietet eine flexible, skalierbare Infrastruktur – sowohl vor Ort als auch remote
+                                        verwaltbar.
+                                        </br>
+                                        </br>
+                                        Mit der Wolkenhof GreenCloud verbinden Sie Effizienz, Nachhaltigkeit und
+                                        Kostenersparnis, sodass Sie sich auf Ihr Kerngeschäft konzentrieren können.
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <center>
+                                        <a class="content-text-button">
+                                            Mehr erfahren
+                                        </a>
+                                    </center>
+                                </div>
+                            </div>
+                        </th>
+                        <th style="width: 40%;">
+                            <div class="triggerAnimation animated isotope fadeIn" data-animate="fadeIn">
+                                <img alt="Wolkenhof-Logo" src="upload/image1.jpg" class="section-image">
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+                <table
+                    style="width: 80%; margin-left: 10%;  margin-top: 50px; background-image: linear-gradient(to left, rgba(196, 196, 196, 0.274), rgba(255, 255, 255, 0))">
+                    <tr>
+                        <th style="width: 40%;">
+                            <div class="triggerAnimation animated isotope fadeIn" data-animate="fadeIn">
+                                <img alt="Wolkenhof-Logo" src="upload/image2-1.jpg" class="section-image">
+                            </div>
+                        </th>
+                        <th style="width: 60%;">
+                            <div style="height: 500px;">
+                                <div style="margin-left: 10%; margin-right: 10%;">
+                                    </br>
+                                    <h2>WIR BEGLEITEN SIE VON ANFANG BIS ENDE</h2>
+                                    <p style="color: #3F3F3F;
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-weight: 300;
+                                    -webkit-font-smoothing: antialiased;">
+                                        In enger Zusammenarbeit mit unseren Kunden entwickeln und gestalten wir
+                                        individuelle
+                                        Lösungen für den Aufbau, Betrieb und die Optimierung ihrer IT-Infrastrukturen.
+                                        Wir
+                                        bieten Ihnen ein umfassendes Leistungsspektrum aus einer Hand: von der
+                                        unabhängigen
+                                        Beratung und Analyse über die Konzeption bis hin zur Implementierung und dem
+                                        Betrieb
+                                        Ihrer IT-Lösung.
+                                        </br>
+                                        </br>
+                                        Unser Anspruch ist es, Sie von Beginn an bis zum erfolgreichen Abschluss eines
+                                        Projekts
+                                        kompetent und engagiert zu unterstützen. Dabei setzen wir auf bewährte
+                                        Projektmanagement-Methoden und eine systematische Vorgehensweise, die sich in
+                                        vier
+                                        Phasen gliedert: Analyze, Plan, Build, Run.
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <center>
+                                        <a class="content-text-button" href="/it">
+                                            Mehr erfahren
+                                        </a>
+                                    </center>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+                <table
+                    style="width: 80%; margin-left: 10%; margin-top: 50px; background-image: linear-gradient(to right, rgba(196, 196, 196, 0.274), rgba(255, 255, 255, 0))">
+                    <tr>
+                        <th style="width: 60%;">
+                            <div style="height: 500px;">
+                                <div style="margin-left: 10%; margin-right: 10%;">
+                                    </br>
+                                    <h2>MODERNE OFFICE-LÖSUNGEN</h2>
+                                    <p style="color: #3F3F3F;
+                                    font-size: 20px;
+                                    line-height: 30px;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-weight: 300;
+                                    -webkit-font-smoothing: antialiased;">
+                                        In enger Zusammenarbeit mit unseren Kunden gestalten wir individuelle
+                                        Bürolösungen von der Planung bis zur Einrichtung. Unser umfassendes
+                                        Leistungsspektrum umfasst Beratung, Analyse, Konzeption, Implementierung und
+                                        Betrieb.
+                                        </br>
+                                        </br>
+                                        Wir setzen auf bewährte Projektmanagement-Methoden und eine
+                                        systematische Vorgehensweise in vier Phasen: Analysieren, Planen, Umsetzen,
+                                        Betreiben. Mit unserer Erfahrung und unserem Engagement schaffen wir
+                                        inspirierende und funktionale Arbeitsumgebungen.
+                                    </p>
+                                    <br>
+                                    <br>
+                                    <center>
+                                        <a class="content-text-button">
+                                            Mehr erfahren
+                                        </a>
+                                    </center>
+                                </div>
+                            </div>
+                        </th>
+                        <th style="width: 40%;">
+                            <div class="triggerAnimation animated isotope fadeIn" data-animate="fadeIn">
+                                <img alt="Wolkenhof-Logo" src="upload/image3.jpg" class="section-image">
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                        const observerOptions = {
+                            root: null,
+                            rootMargin: '0px',
+                            threshold: 0.1
+                        };
+
+                        const observerCallback = (entries, observer) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('visible');
+                                    entry.target.classList.remove('hidden');
+                                    observer.unobserve(entry.target);
+                                }
+                            });
+                        };
+
+                        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+                        const images = document.querySelectorAll('.section-image');
+                        images.forEach(image => {
+                            observer.observe(image);
+                        });
+                    });
+                </script>
 
 
+                <div class="devider-50px"></div>
 
-                <div id="badge-slider-container">
-                    <div id="badge-logo-slider">
-                        <div class="badge-logo badge1">
-                            <img src="images/win-win-office-network-Logo-GOLD.jpg" alt="WIN-WIN Office">
+
+                <!-- <div class="service-container">
+                    <table class="portfolio-table">
+                        <tr>
+                            <th class="portfolio-header">
+                                IT-Support
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-header">
+                                IT-Sicherheit
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-header">
+                                IT-Infrastruktur
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-header">
+                                Office
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-header">
+                                Greencloud
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="portfolio-content">
+                                Server-Management
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Backup-Management
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                IT-Infrastrukturanalyse
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Druckermanagement
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Datensicherung in der Cloud
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="portfolio-content">
+                                Desktop-Management
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Anti-Virus-Management
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Hardware- und Software-Beschaffung
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Büromöbel
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                E-Mail-Archivierung
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="portfolio-content">
+                                Dokumentenmanagement
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Patch-Management
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Server-Virtualisierung
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Scannerlösungen
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Firewall in der Cloud
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="portfolio-content">
+                                Webentwicklung
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Firewall-Management
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Einrichtung Telefonanlagen
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Bürokonzepte
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Arbeitsplätze in der Cloud
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="portfolio-content">
+                                ERP-Lösung
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                IT-Sicherheitscheck
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Videoüberwachung
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th></th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Server in der Cloud
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="portfolio-content">
+                                Digitalisierung von Geschäftsprozessen
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                DSGVO: EU-Datenschutz-Grundverordnung
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th class="portfolio-content">
+                                Mobile Device Management
+                            </th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th></th>
+                            <th class="portfolio-divider">
+
+                            </th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th class="portfolio-content">
+                                Consulting
+                            </th>
+                            <th class="portfolio-divider"></th>
+                            <th></th>
+                            <th class="portfolio-divider"></th>
+                            <th></th>
+                            <th class="portfolio-divider"></th>
+                            <th></th>
+                            <th class="portfolio-divider"></th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div> -->
+
+                <div class="devider-50px"></div>
+
+                <div class="logo-slider">
+                    <div class="logo-slide-track">
+
+
+                        <div class="slide">
+                            <a href="netzwerk-partner/#datev"><img src="images/partner-logos/DATEVx250.png"></a>
                         </div>
-                        <div class="badge-logo badge2">
-                            <img src="images/our-partners_trend-micro_331x0.png" alt="Trend Micro"
-                                style="height: 175px;">
+                        <div class="slide">
+                            <a href="netzwerk-partner/#elo"><img src="images/partner-logos/ELOx250.png"></a>
                         </div>
-                        <div class="badge-logo badge3">
-                            <img src="images/Solution Partner (1).png" alt="Microsoft Solution Partner"
-                                style="height: 175px; width: 380px;">
+                        <div class="slide">
+                            <a href="netzwerk-partner/#fujitsu"><img src="images/partner-logos/FUJITSUx250.png"></a>
                         </div>
-                        <div class="badge-logo badge4">
-                            <img src="images/elo_bp_logo_int.png" alt="ELO" style="width: 200px;">
+                        <div class="slide">
+                            <a href="netzwerk-partner/#microsoft"><img src="images/partner-logos/Microsoftx250.png"></a>
                         </div>
-                        <div class="badge-logo badge5">
-                            <img src="images/VCSP_silver_color_with_border_rgb.png" alt="Veeam" style="height: 175px;">
+                        <div class="slide">
+                            <a href="netzwerk-partner/#securepoint"><img src="images/partner-logos/SECUREPOINTx250.png"></a>
                         </div>
-                        <div class="badge-logo badge6">
-                            <img src="images/DATEV_SOLUTION_PARTNER_RGB_500px.png" alt="Datev" style="height: 175px;">
+                        <div class="slide">
+                            <a href="netzwerk-partner/#trendmicro"><img src="images/partner-logos/TrendMicrox250.png"></a>
                         </div>
-                        <div class="badge-logo badge7">
-                            <img src="images/professional.png" alt="Securepoint" style="height: 110px;">
+                        <div class="slide">
+                            <a href="netzwerk-partner/#veeam"><img src="images/partner-logos/VEEAMx250.png"></a>
                         </div>
-                        <div class="badge-logo badge8">
-                            <img src="images/fujitsu (1).png" alt="Logo 1" style="height: 175px;">
+                        <div class="slide">
+                            <a href="netzwerk-partner/#winwin"><img src="images/partner-logos/WinWinx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#artemide"><img src="images/partner-logos/ARTEMIDEx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#swyx"><img src="images/partner-logos/ENREACHx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#epson"><img src="images/partner-logos/EPSONx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#interstuhl"><img src="images/partner-logos/INTERSTUHLx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#kn"><img src="images/partner-logos/KÖNIGNEURATHx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#terra"><img src="images/partner-logos/TERRAx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#toshiba"><img src="images/partner-logos/TOSHIBAx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#utax"><img src="images/partner-logos/UTAXx250.png"></a>
+                        </div>
+                        <div class="slide">
+                            <a href="netzwerk-partner/#walterknoll"><img src="images/partner-logos/WALTERKNOLLx250.png"></a>
                         </div>
                     </div>
-                    <div id="badge-prev-btn" onclick="prevSlide()">&#9665;</div>
-                    <div id="badge-next-btn" onclick="nextSlide()">&#9655;</div>
-                </div>
-            </div>
-        </div>
-
-
-        <!--##################-->
-
-        <!-- Sponsor Logos -->
-        <div class="foerderer">
-            <div class="title-section">
-                <div class="container">
-                    <p>Errichtung einer neuen Betriebsstätte:<br>
-                        Gefördert mit Mitteln des Europäischen Fonds für regionale Entwicklung.</p>
-                </div>
-            </div>
-            <div class="container text-center">
-                <img alt="EFRE" src="upload/efre-300x144.png">
-            </div>
-        </div>
-
-        <!-- Get to know -->
-        <div class="tempcore-line">
-            <div class="container text-center">
-                <div class="col-md-10 col-md-offset-1">
-                    <a href="javascript:linkTo_UnCryptMailto('nbjmup;jogpAxpmlfoipg/dpn');">INFOS</a>
-                    <p><i class="fa fa-arrow-right"></i><span class="greencloud">wolkenhof</span> kennenlernen.
-                        <span>Jetzt INFOS anfragen!</span>
-                    </p>
                 </div>
             </div>
         </div>
 
         <!-- Main Footer -->
         <footer>
+            <div class="up-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-7 ap-left">
+                            <div class="row">
+                                <h3 class="col-xs-12" style="color: #fff;">Haben sie Fragen zum wolkenhof?</h3>
+                                <div class="col-xs-12 col-md-6" id="contact-team-img"><a href="team/index.html"> <img loading="lazy"
+                                        class="img-responsive contact-team-img" alt="IT-SERVICE.NETWORK Ansprechpartner"
+                                        src="../images/wolkenhof-team.jpg"></a>
+                                </div>
+                                <div class="col-xs-12 col-md-6 ap-daten">
+                                    <ul>
+                                        <!-- <p class="h4" id="contact-team-sub-heading">Unser Team steht Ihnen gern zur
+                                            Verfügung</p>
+                                        <br> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-5 ap-right">
+                            <form id="contact-form" class="form-inline" method="post" action="">
+                                <h3 style="color: #fff;">Senden Sie uns Ihr Anliegen</h3>
+                                <div class="text-fields">
+                                    <div class="float-input">
+                                        <input name="name" id="name" type="text" placeholder="Name*"
+                                            required="required">
+                                        <span><i class="fa fa-user"></i></span>
+                                    </div>
+                                    <div class="float-input">
+                                        <input name="mail" id="mail" type="text" placeholder="E-Mail*"
+                                            required="required">
+                                        <span><i class="fa fa-envelope-o"></i></span>
+                                    </div>
+                                </div>
+                                <div class="submit-area">
+                                    <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
+                                    <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a
+                                        href="/datenschutz" target="_blank"><strong
+                                            style="color: #b3ddff;">Datenschutzerklärung</strong></a>
+                                    <strong>
+                                        gelesen</strong><br>
+                                    <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
+                                    <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="footer" class="up-footer">
                 <div class="container">
                     <div class="row">
@@ -596,7 +745,7 @@
                             <div class="widget footer-widgets text-widget">
                                 <div>
                                     <img id="wolkenhof-img" onclick="handleClick()" class="img-responsive"
-                                        alt="Logo Greencloud" src="images/Wolkenhof_Logo-weiss.png">
+                                        alt="Logo Greencloud" src="../images/Wolkenhof_Logo-weiss.png">
                                 </div>
                             </div>
                         </div>
@@ -673,32 +822,6 @@
             dots[slideIndex - 1].className += " active";
             setTimeout(showSlides, 10000); // Change image every 10 seconds
         }
-    </script>
-
-
-    <script>
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            const slider = document.getElementById('badge-logo-slider');
-            currentSlide = index;
-            const offset = -index * (214 + 20); // 214px für das Logo plus 20px Abstand
-            slider.style.transform = `translateX(${offset}px)`;
-        }
-
-        function nextSlide() {
-            const totalSlides = 8;
-            currentSlide = (currentSlide + 1) % (totalSlides - 3); // Zeige nur 5 Logos gleichzeitig
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            const totalSlides = 8;
-            currentSlide = (currentSlide - 1 + totalSlides - 3) % (totalSlides - 3); // Zeige nur 5 Logos gleichzeitig
-            showSlide(currentSlide);
-        }
-
-        setInterval(nextSlide, 5000); // Automatischer Wechsel alle 5 Sekunden
     </script>
 
 </body>

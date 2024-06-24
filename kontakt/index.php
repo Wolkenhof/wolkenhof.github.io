@@ -1,3 +1,87 @@
+<?php
+
+// Uncomment to enable debugging on this script
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+
+$errors = [];
+
+if (isset($_POST['submit'])) {
+  $to = "info@wolkenhof.com";
+  $from = $_POST['mail'];
+  $name = $_POST['name'];
+  $website = $_POST['website'];
+  $datenschutz = $_POST['datenschutz'];
+  $comment = $_POST['comment'];
+  $subject = "wolkenhof Kontaktformular: Von " . $name . "";
+  $message = '
+  <html>
+  <head>
+    <title>Nachricht von '. $name .'</title>
+  </head>
+  <body>
+    <table style="width: 500px; font-family: arial; font-size: 14px;" border="1">
+    <tr style="height: 32px;">
+      <th align="right" style="width:150px; padding-right:5px;">Name:</th>
+      <td align="left" style="padding-left:5px; line-height: 20px;">'. $name .'</td>
+    </tr>
+    <tr style="height: 32px;">
+      <th align="right" style="width:150px; padding-right:5px;">E-mail:</th>
+      <td align="left" style="padding-left:5px; line-height: 20px;">'. $from .'</td>
+    </tr>
+    <tr style="height: 32px;">
+      <th align="right" style="width:150px; padding-right:5px;">Website:</th>
+      <td align="left" style="padding-left:5px; line-height: 20px;">'. $website .'</td>
+    </tr>
+    <tr style="height: 32px;">
+      <th align="right" style="width:150px; padding-right:5px;">Nachricht:</th>
+      <td align="left" style="padding-left:5px; line-height: 20px;">'. $comment .'</td>
+    </tr>
+    <tr style="height: 32px;">
+      <th align="right" style="width:150px; padding-right:5px;">Datenschutzerklärung:</th>
+      <td align="left" style="padding-left:5px; line-height: 20px;">'. $datenschutz .'</td>
+    </tr>
+    </table>
+  </body>
+  </html>
+  ';
+  $headers = 'MIME-Version: 1.0' . "\r\n";
+  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+  //$headers .= 'From: ' . $from . "\r\n";
+
+  if (empty($name)) {
+    $errors[] = "Bitte geben Sie Ihren Namen an.";
+  }
+
+  if (empty($from)) {
+    $errors[] = "Bitte geben Sie Ihre E-Mail-Adresse an.";
+  } else if (!filter_var($from, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Bitte geben Sie eine gültige E-Mail-Adresse an.";
+  }
+
+  if (empty($_POST['comment'])) {
+    $errors[] = "Bitte geben Sie Ihre Nachricht ein.";
+  }
+
+  if ($datenschutz != "gelesen") {
+    $errors[] = "Bitte akzeptieren Sie die Datenschutzerklärung.";
+  }
+
+  if (empty($errors)) {
+    $mail = mail($to, $subject, $message, $headers);
+    if ($mail) {
+      $errorMessage = "<p style='color: #333; font-size: 14px;'>Vielen Dank, " . $name . "! Wir werden uns in Kürze bei Ihnen melden.</p>";
+    } else {
+      $errorMessage = "<p style='color: red; font-size: 14px;'>Oops, etwas ist schief gelaufen. Bitte versuchen Sie es später noch einmal.</p>";
+    }
+  } else {
+    $allErrors = join('<br/>', $errors);
+    $errorMessage = "<p style='color: red; font-size: 14px;'>{$allErrors}</p>";
+  }
+}
+
+?>
+
 <!doctype html>
 <html lang="de" class="no-js">
 
@@ -92,32 +176,24 @@
             </button>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <a href="../"><span></span>Start</a>
-                </li>
-                <li class="drop"><a><span></span>Wolkenhof</a>
+                <li><a href="../"><span></span>Start</a></li>
+                <li class="drop"><a href="../#about"><span></span>Wolkenhof</a>
                   <ul class="drop-down">
                     <li><a href="../wolkenhof">Der Wolkenhof</a></li>
+                     
                     <li><a href="../team">Unser Team</a></li>
                     <li><a href="../netzwerk-partner">Netzwerk &amp; Partner</a></li>
                     <li><a href="../karriere">Jobs &amp; Karriere</a></li>
                   </ul>
                 </li>
-                <li class="drop"><a href="#bereiche"><span></span>Leistungen</a>
+                <li class="drop"><a href="../#bereiche"><span></span>Leistungen</a>
                   <ul class="drop-down">
-                    <li><a href="../greencloud/">GREENCLOUD</a>
-                      <ul class="drop-down level3">
-                        <li><a href="../greencloud/iaas/">Virtuelle Server</a></li>
-                        <li><a href="../greencloud/backup/">Datensicherung</a></li>
-                        <li><a href="../greencloud/individuelle-loesungen/">Individuelle
-                            Lösungen</a></li>
-                      </ul>
-                    </li>
+                    <li><a href="../greencloud">GREENCLOUD</a></li>
                     <li><a href="../it">IT</a>
                       <ul class="drop-down level3">
-                        <li><a href="../it/it-service">Service</a></li>
-                        <li><a href="../it/it-consulting">Consulting</a></li>
-                        <li><a href="../it/it-sicherheit">Sicherheit</a></li>
+                        <li><a href="../it/it-service">IT-Service</a></li>
+                        <li><a href="../it/it-consulting">IT-Consulting</a></li>
+                        <li><a href="../it/it-sicherheit">IT-Sicherheit</a></li>
                         <li><a href="../datev/">DATEV</a></li>
                         <li><a href="../ELO/">ELO</a></li>
                       </ul>
@@ -136,7 +212,7 @@
                   </ul>
                 </li>
                 <li class="drop">
-                  <a class="active" href="#">
+                  <a href="#" class="active">
                     <span></span>Kontakt
                   </a>
                   <ul class="drop-down">
@@ -158,24 +234,13 @@
     <div id="content">
       <!-- Banner -->
       <div class="services-boxgc pointer">
-        <div id="about" class="container" style="height: 100px;">
-          <h1 class="page-title" style="margin-top: 90px;"><span>Kontakt</span></h1>
+        <div id="about" class="container" style="height: 30%;">
+          <h1 class="page-title" style="margin-top: 15%;"><span>Kontakt</span></h1>
         </div>
       </div>
 
       <!-- Content -->
       <div class="choose-tempcore">
-        <div class="navigator">
-          <ul>
-            <li>
-              <a href="/"><i class="fa fa-home"></i></a>
-              >
-              <a href="../kontakt/">Kontakt</a>
-              >
-              <span class="">Kontakt</span>
-            </li>
-          </ul>
-        </div>
         <div class="contact-box">
           <div class="title-section">
             <div class="container">
@@ -286,30 +351,30 @@
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <form id="contact-form" class="form-inline">
-                        <h3>Senden Sie uns Ihr Anliegen</h3>
-                        <div class="text-fields">
-                            <div class="float-input">
-                                <input name="name" id="name" type="text" placeholder="Name*" required="required">
-                                <span><i class="fa fa-user"></i></span>
-                            </div>
-                            <div class="float-input">
-                                <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
-                                <span><i class="fa fa-envelope-o"></i></span>
-                            </div>
-                            <div class="float-input">
-                                <input name="website" id="website" type="text" placeholder="Website">
-                                <span><i class="fa fa-link"></i></span>
-                            </div>
+                    <form id="contact-form" class="form-inline" method="post" action="">
+                      <h3>Senden Sie uns Ihr Anliegen</h3>
+                      <div class="text-fields">
+                        <div class="float-input">
+                          <input name="name" id="name" type="text" placeholder="Name*" required="required">
+                          <span><i class="fa fa-user"></i></span>
                         </div>
-                        <div class="submit-area">
-                            <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
-                            <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a href="/datenschutz"
-                                target="_blank"><strong>Datenschutzerklärung</strong></a> <strong>
-                                gelesen</strong><br>
-                            <input type="submit" id="submit" class="main-button" value="Senden">
-                            <div id="form-status"></div>
+                        <div class="float-input">
+                          <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
+                          <span><i class="fa fa-envelope-o"></i></span>
                         </div>
+                        <div class="float-input">
+                          <input name="website" id="website" type="text" placeholder="Website">
+                          <span><i class="fa fa-link"></i></span>
+                        </div>
+                      </div>
+                      <div class="submit-area">
+                        <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
+                        <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a
+                          href="/datenschutz" target="_blank"><strong>Datenschutzerklärung</strong></a> <strong>
+                          gelesen</strong><br>
+                        <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
+                        <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -338,57 +403,14 @@
       <div class="up-footer">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-7 ap-left">
-              <div class="row">
-                <h3 class="col-xs-12" style="color: #fff;">Haben sie Fragen zum wolkenhof?</h3>
-                <div class="col-xs-12 col-md-6" id="contact-team-img"><a href="../team/index.html"> <img loading="lazy"
-                      class="img-responsive contact-team-img" alt="IT-SERVICE.NETWORK Ansprechpartner"
-                      src="../images/wolkenhof-team.jpg"></a>
-                </div>
-                <div class="col-xs-12 col-md-6 ap-daten">
-                  <ul>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-5 ap-right">
-              <form id="contact-form" class="form-inline" method="post" action="">
-                <h3 style="color: #fff;">Senden Sie uns Ihr Anliegen</h3>
-                <div class="text-fields">
-                  <div class="float-input">
-                    <input name="name" id="name" type="text" placeholder="Name*" required="required">
-                    <span><i class="fa fa-user"></i></span>
-                  </div>
-                  <div class="float-input">
-                    <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
-                    <span><i class="fa fa-envelope-o"></i></span>
-                  </div>
-                </div>
-                <div class="submit-area">
-                  <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
-                  <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a href="../datenschutz"
-                    target="_blank"><strong style="color: #b3ddff;">Datenschutzerklärung</strong></a>
-                  <strong>
-                    gelesen</strong><br>
-                  <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
-                  <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="footer" class="up-footer">
-        <div class="container">
-          <div class="row">
 
             <!-- Main Footer Logo -->
             <div class="col-md-3 triggerAnimation animated fadeInLeft" data-animate="fadeInLeft">
               <div class="widget footer-widgets text-widget">
                 <div>
-                  <img id="wolkenhof-img" onclick="handleClick()" class="img-responsive" alt="Logo Greencloud"
-                    src="../images/Wolkenhof_Logo-weiss.png">
+                  <img class="img-responsive" alt="Logo Greencloud" src="../images/Wolkenhof_Logo-weiss.png">
                 </div>
+
               </div>
             </div>
 
@@ -399,7 +421,7 @@
                   <li><span class="greencloud">wolkenhof</span> GmbH</li>
                   <li><i class="fa fa-home"></i> Schillerstraße 13b, 29525 Uelzen</li>
                   <li><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49 581 9036-0</a></li>
-                  <li><i class="fa fa-envelope"></i> <a
+                  <li><i class="fa fa-envelope"></i><a
                       href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x69;&#x6e;&#x66;&#x6f;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
                   </li>
                 </ul>
@@ -410,9 +432,9 @@
             <div class="col-md-3 triggerAnimation animated fadeInUp" data-animate="fadeInUp">
               <div class="widget footer-widgets tag-widget">
                 <ul class="posts-widget-list">
-                  <li> <a href="../">Start</a></li>
-                  <li> <a href="../wolkenhof/">Wolkenhof – über uns</a></li>
-                  <li> <a href="../">Leistungen</a></li>
+                  <li> <a href="#top">Start</a></li>
+                  <li> <a href="#wolkenhof">Wolkenhof – über uns</a></li>
+                  <li> <a href="#bereiche">Leistungen</a></li>
                 </ul>
               </div>
             </div>
@@ -427,18 +449,17 @@
                 </ul>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
-
-        
 
       <!-- Copyright Footer -->
       <div class="footer-line">
         <div class="container">
           <div class="col-md-12">
-            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte
-              vorbehalten.</h5>
+            <h5 class="text-center white">© <span id="currentYear"></span> Wolkenhof GmbH. Alle Rechte vorbehalten.</h5>
           </div>
           <script>
             document.getElementById("currentYear").innerText = new Date().getFullYear();
@@ -447,47 +468,6 @@
       </div>
     </footer>
   </div>
-
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
-
-        var formData = new FormData(this);
-
-        fetch("https://wolkenhof.com/api/form.php", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("form-status").innerHTML = data; // Display the response in the form
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-  </script>
-  <script>
-    let slideIndex = 0;
-    showSlides();
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 10000); // Change image every 10 seconds
-    }
-  </script>
-
 </body>
 
 </html>

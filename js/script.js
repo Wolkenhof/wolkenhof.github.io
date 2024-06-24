@@ -531,3 +531,6 @@ let clickCount = 0;
             const specialDiv = document.getElementById('wh');
             specialDiv.classList.add('special-active');
         }
+
+		
+

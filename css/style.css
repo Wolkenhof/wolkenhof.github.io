@@ -7443,7 +7443,6 @@ span {
 
 .panel-heading a:before {
     font-family: 'Glyphicons Halflings';
-    content: "\e114";
     float: right;
     transition: all 0.5s;
 }

@@ -152,7 +152,9 @@
         </div>
     </header>
 
-    <div id="background-wrap" class="clouds"></div>
+    <!-- <div id="background-wrap" class=""
+      style="background-image: url(/upload/it/digital-security-lock-uhd-4k-wallpaper.jpg); background-size: cover;">
+    </div> -->
 
     <!-- Content Section -->
     <div id="content">
@@ -171,11 +173,11 @@
           <ul>
             <li>
               <a href="/"><i class="fa fa-home"></i></a>
-              >
+              <a>></a>
               <span class="">Leistungen</span>
-              >
-              <a href="../">IT></a>
-              >
+              <a>></a>
+              <a href="../" class="">IT</a>
+              <a>></a>
               <span class="">Consulting</span>
             </li>
           </ul>
@@ -184,11 +186,24 @@
           <!-- vertical tabs -->
           <div class="horizontal-tabs">
             <div class="title-section">
-              <div class="container ">
+              <div class="container">
                 <h1 class="blue">IT-Consulting</h1>
                 <h3>Lückenlose IT-Dokumentation</h3>
               </div>
             </div>
+
+            <script>
+              $('.panel-collapse').on('show.bs.collapse', function () {
+                $(this).siblings('.panel-heading').addClass('active');
+                $(this).siblings('.panel-heading').find('.title').addClass('active');
+              });
+
+              $('.panel-collapse').on('hide.bs.collapse', function () {
+                $(this).siblings('.panel-heading').removeClass('active');
+                $(this).siblings('.panel-heading').find('.title').removeClass('active');
+              });
+
+            </script>
 
             <div class="horizontal-tabs-box">
               <div class="container">
@@ -196,7 +211,7 @@
                 <!-- Nav tabs -->
                 <div class="no-tab-content">
                   <div class="tab-pane active" id="sicherheit">
-                    <img class="pb-20" alt="wolkenhof IT-Consulting" src="/upload/it/wolkenhof_it-consulting.jpg">
+                    <img class="pb-20" alt="wolkenhof IT-Sicherheit" src="/upload/it/wolkenhof_it-service.jpg">
                     <p>Haben Sie den Überblick über Ihre <strong>IT-Struktur</strong> und stimmt Ihr
                       <strong>Lizenzmanagement?</strong> Haben Sie einen schnellen Zugriff auf
                       <strong>Netzwerkdaten</strong> (<strong>IP-Adressen</strong> und <strong>Passwörter</strong>)?
@@ -210,102 +225,262 @@
                     </p>
                   </div>
                 </div>
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" id="myTab">
-                  <li class="active"><a href="#analyse" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i>
-                      &nbsp; IT-Analyse</a></li>
-                  <li><a href="#dokumentation" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i> &nbsp;
-                      Dokumentation</a></li>
-                  <li><a href="#lizenzmanagement" data-toggle="tab"><i class="fa fa-chevron-circle-right"></i> &nbsp;
-                      Lizenzmanagement</a></li>
-                </ul>
 
-                <div class="tab-content">
-                  <div class="tab-pane active" id="analyse">
-                    <h4>Basis für eine gesunde IT-Struktur – unsere <span
-                        class="blue"><strong>IT-Analyse</strong></span></h4><br>
-                    <p>Die <trong>Analyse</trong> ist das Fundament für eine gut strukturierte <strong>IT</strong>. Wir
-                      empfehlen eine <strong>IT-Analyse</strong>, um eine lückenlose <strong>Dokumentation</strong> von
-                      Ihrer <strong>IT-Struktur</strong> zu erhalten. Diese ist wiederum unerlässlich für eine
-                      <strong>rechtliche Absicherung</strong>, eine <strong>qualifizierte Budgetplanung</strong> und ein
-                      zuverlässiges <strong>Service- und Sicherheitskonzept</strong>.
-                    </p>
-                  </div>
-                  <div class="tab-pane" id="dokumentation">
-                    <h4>Alles unter Kontrolle – mit unserer <span class="blue"><strong>IT-Dokumentation</strong></span>
-                    </h4><br>
-                    <p>Sie sind verantwortlich für Ihre <strong>IT</strong>. Denn die Geschäftsführung haftet in der
-                      Regel persönlich bei fahrlässigem Verhalten, das zu <strong>Datenverlust</strong> führt. Damit Sie
-                      den Überblick behalten und kurzfristig reagieren können, wenn sich etwas verändert, sollten Sie
-                      die <strong>IT-Dokumentation</strong> ständig pflegen und in Ihrem sofortigen Zugriff haben.</p>
-                    <p>Mit unserer <strong>IT-Analyse</strong> und unserem <strong>IT-Service</strong> erhalten Sie eine
-                      lückenlose <strong>Dokumentation</strong> Ihrer <strong>IT-Struktur</strong>, inklusive
-                      <strong>Pflege</strong> der <strong>Dokumentation</strong>.
-                    </p>
-                  </div>
-                  <div class="tab-pane" id="lizenzmanagement">
-                    <h4>Immer aktuell und legal – mit unserm <span class="blue"><strong>IT
-                          Lizenzmanagement</strong></span></h4><br>
-                    <p>Die Firma Microsoft prüft, ob Unternehmen die verwendete Software in ausreichender Menge
-                      lizensiert haben. Ist das nicht der Fall, müssen Sie nachlizenzieren, was schnell sehr teuer
-                      werden kann.</p>
-                    <p>Mit unserer <strong>IT-Analyse</strong> prüfen wir die <strong>Lizensierung</strong> von
-                      <strong>Software</strong> und beraten Sie, welche <strong>Lizenzen</strong> wirklich benötigt
-                      werden.
-                    </p>
+                <h1 class="devider-50px">Leistungsüberblick</h1>
+
+
+                <div class="wrapper center-block">
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading active" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                          <a class="collapsed title" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            IT-Analyse
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingOne">
+                        <div class="panel-body">
+                          <h1>Basis für eine gesunde IT-Struktur – unsere IT-Analyse</h1>
+                          <h3><i class="fa fa-check"></i>Strukturierte IT-Grundlage</h3>
+                          Die Analyse bildet das Fundament für eine gut strukturierte IT. Eine gründliche IT-Analyse
+                          sorgt dafür, dass Ihre IT-Infrastruktur optimal aufgebaut und organisiert ist.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Lückenlose Dokumentation</h3>
+                          Eine IT-Analyse ermöglicht eine umfassende und lückenlose Dokumentation Ihrer IT-Struktur.
+                          Diese detaillierte Übersicht ist essenziell für das Verständnis und die Verwaltung Ihrer
+                          Systeme.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Rechtliche Absicherung</h3>
+                          Die Dokumentation Ihrer IT-Struktur durch eine IT-Analyse ist unerlässlich für die rechtliche
+                          Absicherung Ihres Unternehmens. Sie hilft, Compliance-Anforderungen zu erfüllen und rechtliche
+                          Risiken zu minimieren.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Qualifizierte Budgetplanung</h3>
+                          Eine IT-Analyse unterstützt Sie bei der qualifizierten Budgetplanung. Durch die genaue
+                          Kenntnis Ihrer IT-Struktur können Sie fundierte Entscheidungen über Investitionen und
+                          Ressourcen treffen.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Zuverlässiges Service- und Sicherheitskonzept</h3>
+                          Die IT-Analyse ist die Basis für ein zuverlässiges Service- und Sicherheitskonzept. Sie
+                          ermöglicht die Identifikation von Schwachstellen und die Implementierung effektiver Maßnahmen
+                          zur Sicherung Ihrer IT-Infrastruktur.
+                          <br>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Dokumentation
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                          <h1>Alles unter Kontrolle – mit unserer IT-Dokumentation</h1>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Verantwortung der Geschäftsführung</h3>
+                          Als Verantwortlicher für Ihre IT haften Sie persönlich bei fahrlässigem Verhalten, das zu
+                          Datenverlust führt. Daher ist es entscheidend, Ihre IT-Struktur im Griff zu haben.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Überblick und Reaktionsfähigkeit</h3>
+                          Um den Überblick zu behalten und kurzfristig reagieren zu können, wenn sich etwas verändert,
+                          sollten Sie Ihre IT-Dokumentation ständig pflegen und sofortigen Zugriff darauf haben.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Lückenlose Dokumentation</h3>
+                          Mit unserer IT-Analyse und unserem IT-Service erhalten Sie eine lückenlose Dokumentation Ihrer
+                          IT-Struktur. Diese umfassende Dokumentation ist essenziell für die Verwaltung und Sicherung
+                          Ihrer IT.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Pflege der Dokumentation</h3>
+                          Wir sorgen nicht nur für die Erstellung, sondern auch für die kontinuierliche Pflege Ihrer
+                          IT-Dokumentation. So stellen wir sicher, dass Ihre IT-Struktur immer aktuell und zugänglich
+                          ist.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                            href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Lizenzmanagement
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingThree">
+                        <div class="panel-body">
+                          <h1>Immer aktuell und legal – mit unserm IT Lizenzmanagement</h1>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Lizenzprüfung durch Microsoft</h3>
+                          Microsoft prüft regelmäßig, ob Unternehmen die verwendete Software in ausreichender Menge
+                          lizensiert haben. Bei fehlenden Lizenzen drohen teure Nachlizenzierungen.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Kostenkontrolle</h3>
+                          Fehlende Softwarelizenzen können schnell sehr teuer werden. Durch eine genaue Prüfung und
+                          Verwaltung Ihrer Lizenzen können unnötige Kosten vermieden werden.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Unsere IT-Analyse</h3>
+                          Mit unserer IT-Analyse prüfen wir die Lizensierung Ihrer Software. Wir stellen sicher, dass
+                          alle verwendeten Programme korrekt lizensiert sind.
+                          <br>
+                          <br>
+                          <h3><i class="fa fa-check"></i>Bedarfsgerechte Beratung</h3>
+                          Wir beraten Sie, welche Lizenzen wirklich benötigt werden. So können Sie sicherstellen, dass
+                          Sie nur für die Lizenzen zahlen, die Sie tatsächlich nutzen.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- End nav-tab -->
-              </div>
-              <div class="container pt-50">
+                <div class="devider-50px"></div>
+
+                <!-- Nav tabs -->
                 <div class="no-tab-content">
-                  <div class="tab-pane active">
-                    <p><a href="/">&nbsp;<i class="fa fa-arrow-circle-o-left"></i>&nbsp;<strong> Zurück zur
-                          Leistungsübersicht IT</strong></a></p>
+                  <div class="tab-pane active" id="sicherheit" style="margin-left: 150px;">
+                    <img class="pb-20" alt="wolkenhof IT-Sicherheit" src="../../upload/it/wolkenhof_it-service.jpg">
+                    <div class="toptext">
+                      <h1>Ihre Vorteile</h1>
+                      <p><i class="fa fa-check"></i>Individuelle Lösungen in den Bereichen
+                        IT-Support, IT-Sicherheit,
+                        IT-Infrastruktur und Cloud
+                        Computing</p>
+                      <p><i class="fa fa-check"></i>Flexibel anpassbare Services, die sich den
+                        Bedürfnissen Ihres
+                        Unternehmens anpassen</p>
+                      <p><i class="fa fa-check"></i>Expertise und Erfahrung, um Ihre
+                        IT-Herausforderungen zu meistern
+                      </p>
+                      <p><i class="fa fa-check"></i>Kontaktieren Sie uns für weitere Informationen
+                        darüber, wie wir
+                        Ihnen
+                        helfen können</p>
+                      <a class="content-text-button" style="color: #fff; margin-left: 20%;">
+                        Jetzt Anfragen!
+                      </a>
+                    </div>
+
                   </div>
                 </div>
+
+                <!-- ansprechpartner section -->
+                <div class="ansprechpartner">
+                  <div class="title-section">
+                    <div class="container">
+                      <h1 class="blue">Ansprechpartner</h1>
+                      <h3><span class="wolkenhof">wolkenhof</span> Abteilung IT</h3>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="staff-post-circle">
+                        <div class="col-md-2 col-md-offset-2 col-xs-4 image-sect pt-20">
+                          <img class="img-circle img-responsive" alt="Sönke Elbers, Abteilungsleiter IT"
+                            src="../../upload/SoenkeElbers_FotoJQuast_500.jpg">
+                        </div>
+                        <div class="col-md-8 plr-20">
+                          <ul class="tempcore-features">
+                            <li>
+                              <h4>Haben Sie Fragen oder wünschen Sie ein individuelles
+                                Angebot?</h4>
+                              <p>Wir helfen Ihnen gerne weiter!</p>
+                            </li>
+                          </ul>
+                          <div class="staff-post">
+                            <h3 class="blue text-left">Sönke Elbers</h3>
+                            <h5>Abteilungsleiter IT, Prokurist</h5>
+                            <h5 class="blue text-left pt-15"><a href="tel:+4958190360"><i class="fa fa-phone"></i> +49
+                                581
+                                9036-0</a><br>
+                              <i class="fa fa-envelope"></i> <a
+                                href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&colon;&#x73;&#x65;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;">&#x73;&#x65;&commat;&#x77;&#x6f;&#x6c;&#x6b;&#x65;&#x6e;&#x68;&#x6f;&#x66;&period;&#x63;&#x6f;&#x6d;</a>
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="devider-50px"></div>
+                <h1>Unsere Partner</h1>
               </div>
             </div>
           </div>
 
           <!-- foerder section -->
-          <div class="foerderer">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="container responsive text-center">
-                    <img class="img-responsive responsive" alt="Microsoft Gold Certified Partner"
-                      src="/upload/partner/microsoft_gold-certified_partner.jpg">
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="container responsive text-center">
-                    <a href="https://www.veeam.com/de" target="_blank"><img class="img-responsive responsive"
-                        alt="veeam ProPartner" src="/upload/partner/veeam_propartner.png"></a>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="container responsive text-center">
-                    <a href="https://www.wortmann.de" target="_blank"><img class="img-responsive responsive"
-                        alt="terra Value Partner" src="/upload/partner/terra_value-partner.png"></a>
-                  </div>
-                </div>
+          <div class="logo-slider">
+            <div class="logo-slide-track">
+
+
+              <div class="slide">
+                <img src="../../images/partner-logos/DATEVx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/ELOx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/FUJITSUx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/Microsoftx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/SECUREPOINTx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/TrendMicrox250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/VEEAMx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/WinWinx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/ARTEMIDEx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/ENREACHx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/EPSONx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/INTERSTUHLx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/KÖNIGNEURATHx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/TERRAx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/TOSHIBAx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/UTAXx250.png">
+              </div>
+              <div class="slide">
+                <img src="../../images/partner-logos/WALTERKNOLLx250.png">
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Sponsor Logos -->
-      <div class="foerderer">
-        <div class="title-section">
-          <div class="container">
-            <p>Errichtung einer neuen Betriebsstätte:<br>
-              Gefördert mit Mitteln des Europäischen Fonds für regionale Entwicklung.</p>
-          </div>
-        </div>
-        <div class="container text-center">
-          <img alt="Sponsors" src="/upload/efre-300x144.png">
         </div>
       </div>
     </div>
@@ -328,8 +503,8 @@
             <div class="col-xs-12 col-sm-6 col-md-7 ap-left">
               <div class="row">
                 <h3 class="col-xs-12" style="color: #fff;">Haben sie Fragen zum wolkenhof?</h3>
-                <div class="col-xs-12 col-md-6" id="contact-team-img"><a href="../../team/index.html"> <img
-                      loading="lazy" class="img-responsive contact-team-img" alt="IT-SERVICE.NETWORK Ansprechpartner"
+                <div class="col-xs-12 col-md-6" id="contact-team-img"><a href="../../team/index.html">
+                    <img loading="lazy" class="img-responsive contact-team-img" alt="IT-SERVICE.NETWORK Ansprechpartner"
                       src="../../images/wolkenhof-team.jpg"></a>
                 </div>
                 <div class="col-xs-12 col-md-6 ap-daten">

@@ -286,30 +286,30 @@
                     </ul>
                   </div>
                   <div class="col-md-6">
-                    <form id="contact-form" class="form-inline" method="post" action="">
-                      <h3>Senden Sie uns Ihr Anliegen</h3>
-                      <div class="text-fields">
-                        <div class="float-input">
-                          <input name="name" id="name" type="text" placeholder="Name*" required="required">
-                          <span><i class="fa fa-user"></i></span>
+                    <form id="contact-form" class="form-inline">
+                        <h3>Senden Sie uns Ihr Anliegen</h3>
+                        <div class="text-fields">
+                            <div class="float-input">
+                                <input name="name" id="name" type="text" placeholder="Name*" required="required">
+                                <span><i class="fa fa-user"></i></span>
+                            </div>
+                            <div class="float-input">
+                                <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
+                                <span><i class="fa fa-envelope-o"></i></span>
+                            </div>
+                            <div class="float-input">
+                                <input name="website" id="website" type="text" placeholder="Website">
+                                <span><i class="fa fa-link"></i></span>
+                            </div>
                         </div>
-                        <div class="float-input">
-                          <input name="mail" id="mail" type="text" placeholder="E-Mail*" required="required">
-                          <span><i class="fa fa-envelope-o"></i></span>
+                        <div class="submit-area">
+                            <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
+                            <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a href="/datenschutz"
+                                target="_blank"><strong>Datenschutzerklärung</strong></a> <strong>
+                                gelesen</strong><br>
+                            <input type="submit" id="submit" class="main-button" value="Senden">
+                            <div id="form-status"></div>
                         </div>
-                        <div class="float-input">
-                          <input name="website" id="website" type="text" placeholder="Website">
-                          <span><i class="fa fa-link"></i></span>
-                        </div>
-                      </div>
-                      <div class="submit-area">
-                        <textarea name="comment" id="comment" placeholder="Nachricht"></textarea>
-                        <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a
-                          href="/datenschutz" target="_blank"><strong>Datenschutzerklärung</strong></a> <strong>
-                          gelesen</strong><br>
-                        <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
-                        <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
-                      </div>
                     </form>
                   </div>
                 </div>
@@ -447,6 +447,26 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        var formData = new FormData(this);
+
+        fetch("https://wolkenhof.com/api/form.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("form-status").innerHTML = data; // Display the response in the form
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+  </script>
   <script>
     let slideIndex = 0;
     showSlides();

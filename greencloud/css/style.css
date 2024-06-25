@@ -6201,7 +6201,6 @@ https://mkrtchyan.ga
 .icon-card-back {
     background-size: cover;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25); */
-    border-radius: 10px;
     background-position: center;
     -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -6213,7 +6212,6 @@ https://mkrtchyan.ga
     text-align: center;
     min-height: 300px;
     height: auto;
-    border-radius: 50px;
     color: #fff;
     /* !! */
     font-size: 1.5rem;
@@ -6221,10 +6219,10 @@ https://mkrtchyan.ga
 }
 
 .icon-card-back {
-    background: #39AA34;
-    background: -webkit-linear-gradient(45deg, #39AA34 0%, #056598 100%);
-    background: -o-linear-gradient(45deg, #39AA34 0%, #056598 100%);
-    background: linear-gradient(45deg, #39AA34 0%, #056598 100%);
+    background: #EEEEEE;
+    background: -webkit-linear-gradient(45deg, #EEEEEE 0%, #fff 100%);
+    background: -o-linear-gradient(45deg, #EEEEEE 0%, #fff 100%);
+    background: linear-gradient(45deg, #EEEEEE 0%, #fff 100%);
 }
 
 .icon-card-front:after {
@@ -6239,7 +6237,6 @@ https://mkrtchyan.ga
     background-color: #fff;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 100px;
 }
 
 .icon-card-container:hover .icon-card-front,
@@ -6334,7 +6331,7 @@ https://mkrtchyan.ga
 }
 
 .icon-card-back .icon-card-inner p {
-    color: #fff;
+    color: #056598;
     font-size: 18px;
     line-height: 1.5;
     font-weight: 300;
@@ -6349,7 +6346,7 @@ https://mkrtchyan.ga
 }
 
 .icon-card-button a {
-    color: #fff;
+    color: #056598;
 }
 
 @media screen and (max-width: 64rem) {

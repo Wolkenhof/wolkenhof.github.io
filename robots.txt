@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /_404
+
+Sitemap: https://wolkenhof.github.io/sitemap.xml

@@ -7670,4 +7670,42 @@ span {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-  }
+}
+
+.share {
+    position: fixed;
+    top: 25%;
+    left: 0%;
+}
+
+.social {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: #FFF;
+}
+
+.social:hover {
+    background-color: #056598;
+    border-color: #056598;
+}
+
+.social svg {
+    margin-top: -1px;
+    fill: #056598;
+}
+
+.social:hover svg {
+    fill: #fff;
+}
+
+.social-1{}
+
+.social-2 {}
+
+.social-3 {}
+

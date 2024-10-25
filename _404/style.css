@@ -83,7 +83,8 @@ a {
 }
 
 .notfound .notfound-404 h1>span {
-    text-shadow: -8px 0 0 #fff
+    text-shadow: -8px 0 0 #fff;
+    font-size: 252px;
 }
 
 .notfound .notfound-404 h3 {
@@ -132,103 +133,6 @@ a {
     .notfound h2 {
         font-size: 16px
     }
-}
-
-
-/* Wolken */
-
-#background-wrap {
-    bottom: 0;
-    left: 0;
-    padding-top: 180px;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: -1;
-}
-
-/* KEYFRAMES */
-
-@-webkit-keyframes animateCloud {
-    0% {
-        margin-left: -1000px;
-    }
-
-    100% {
-        margin-left: 100%;
-    }
-}
-
-@-moz-keyframes animateCloud {
-    0% {
-        margin-left: -1000px;
-    }
-
-    100% {
-        margin-left: 100%;
-    }
-}
-
-@keyframes animateCloud {
-    0% {
-        margin-left: -1000px;
-    }
-
-    100% {
-        margin-left: 100%;
-    }
-}
-
-/* ANIMATIONS */
-
-.x1 {
-    -webkit-animation: animateCloud 35s linear infinite;
-    -moz-animation: animateCloud 35s linear infinite;
-    animation: animateCloud 35s linear infinite;
-
-    -webkit-transform: scale(0.65);
-    -moz-transform: scale(0.65);
-    transform: scale(0.65);
-}
-
-.x2 {
-    -webkit-animation: animateCloud 20s linear infinite;
-    -moz-animation: animateCloud 20s linear infinite;
-    animation: animateCloud 20s linear infinite;
-
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    transform: scale(0.3);
-}
-
-.x3 {
-    -webkit-animation: animateCloud 30s linear infinite;
-    -moz-animation: animateCloud 30s linear infinite;
-    animation: animateCloud 30s linear infinite;
-
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    transform: scale(0.5);
-}
-
-.x4 {
-    -webkit-animation: animateCloud 18s linear infinite;
-    -moz-animation: animateCloud 18s linear infinite;
-    animation: animateCloud 18s linear infinite;
-
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
-}
-
-.x5 {
-    -webkit-animation: animateCloud 25s linear infinite;
-    -moz-animation: animateCloud 25s linear infinite;
-    animation: animateCloud 25s linear infinite;
-
-    -webkit-transform: scale(0.55);
-    -moz-transform: scale(0.55);
-    transform: scale(0.55);
 }
 
 /* OBJECTS */
@@ -403,4 +307,91 @@ img:nth-child(4) {
 
 img:nth-child(5) {
     animation-delay: 32s;
+}
+
+
+@keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-webkit-keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-moz-keyframes move-clouds-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+@-ms-keyframes move-clouds-back {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 10000px 0;
+    }
+}
+
+.stars,
+.twinkling,
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.clouds {
+    background: transparent url("/images/da_clouds.png") repeat top center;
+    z-index: 3;
+
+    -moz-animation: move-clouds-back 600s linear infinite;
+    -ms-animation: move-clouds-back 600s linear infinite;
+    -o-animation: move-clouds-back 600s linear infinite;
+    -webkit-animation: move-clouds-back 600s linear infinite;
+    animation: move-clouds-back 600s linear infinite;
+}
+
+#container {
+    padding-top: 100px;
+    background-image: url("../images/Wolken.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#background-wrap {
+    bottom: 0;
+    left: 0;
+    padding-top: 180px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }

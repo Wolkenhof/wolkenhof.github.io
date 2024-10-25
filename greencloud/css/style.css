@@ -6372,3 +6372,103 @@ https://mkrtchyan.ga
     margin-left: 10px;
     margin-top: -15px;
 }
+
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+    text-align: left;
+}
+
+.panel-title>a,
+.panel-title>a:active {
+    display: block;
+    padding: 15px;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+}
+
+.panel-title>a:hover {
+    background-color: #39AA34;
+    color: #fff;
+}
+
+.panel-title>a.active {
+    background-color: #39AA34;
+    color: #fff;
+}
+
+.panel-heading a:before {
+    font-family: 'Glyphicons Halflings';
+    float: right;
+    transition: all 0.5s;
+}
+
+.panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.panel-body h3 {
+    color: #39AA34;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.panel-body {
+    text-align: left;
+}
+
+.panel-body strong {
+    font-weight: 400;
+}
+
+.panel-body h1 {
+    font-weight: 600;
+    text-align: left;
+}
+
+
+.share {
+    position: fixed;
+    top: 30%;
+    left: 0%;
+}
+
+.social {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: #FFF;
+}
+
+.social:hover {
+    background-color: #056598;
+    border-color: #056598;
+}
+
+.social svg {
+    margin-top: -1px;
+    fill: #056598;
+}
+
+.social:hover svg {
+    fill: #fff;
+}
+
+.social-1 {}
+
+.social-2 {}
+
+.social-3 {}
